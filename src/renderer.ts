@@ -27,4 +27,4 @@
  */
 
 import "./index.css";
-import "./init.jsx";
+import "./app.tsx";

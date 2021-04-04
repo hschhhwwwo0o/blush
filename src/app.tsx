@@ -1,11 +1,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import Index from "./index.jsx";
-
 function render() {
   ReactDOM.render(
-        <Index />,
+        <h2>Hello from React!</h2>, 
         document.querySelector("#root")
     );
 }
