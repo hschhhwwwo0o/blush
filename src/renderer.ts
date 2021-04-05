@@ -1,3 +1,3 @@
-import "./reset.styl";
-import "./index.styl";
+import "./assets/reset.styl";
+import "./assets/index.styl";
 import "./app.tsx";
