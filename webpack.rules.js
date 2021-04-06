@@ -2,48 +2,26 @@ module.exports = [
   // Add support for native node modules
   {
     test: /\.node$/,
-    use: 'node-loader',
+    use: "node-loader",
   },
   {
     test: /\.(m?js|node)$/,
     parser: { amd: false },
     use: {
-      loader: '@marshallofsound/webpack-asset-relocator-loader',
+      loader: "@marshallofsound/webpack-asset-relocator-loader",
       options: {
-        outputAssetBase: 'native_modules',
+        outputAssetBase: "native_modules",
       },
     },
   },
   {
-    test: /\.s[ac]ss$/i,
-    use: [
-      // Creates `style` nodes from JS strings
-      "style-loader",
-      // Translates CSS into CommonJS
-      "css-loader",
-      // Compiles Sass to CSS
-      "sass-loader",
-    ],
-  },
-  {
-    test: /\.styl$/i,
-    use: [
-      // Creates `style` nodes from JS strings
-      "style-loader",
-      // Translates CSS into CommonJS
-      "css-loader",
-      // Compiles Sass to CSS
-      "stylus-loader",
-    ],
-  },
-  {
-    test: /\.tsx?$/,
-    exclude: /(node_modules|\.webpack)/,
+    test: /\.jsx?$/,
     use: {
-      loader: 'ts-loader',
+      loader: "babel-loader",
       options: {
-        transpileOnly: true
+        exclude: /node_modules/,
+        presets: ["@babel/preset-react"]
       }
     }
-  },
+  }
 ];
