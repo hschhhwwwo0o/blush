@@ -1,5 +1,5 @@
 const fs = require("fs");
-const mm = require("music-metadata");
+const { parseFile } = require("C:\\Users\\Seva0\\Documents\\blush\\node_modules\\music-metadata\\lib\\index.js");
 
 // Create Store
 window.STORE = {}
@@ -41,13 +41,13 @@ const GET_AUDIO = (PATHS_DIRS) => {
         const blob = new Blob([buffer], { type: "audio/mp3" });
         const url = window.URL.createObjectURL(blob);
         
-        await mm.parseFile(path)
+        await parseFile(path)
         .then( (data) => {
 
             let cover = data.common.picture[0];
             let base64String = "";
 
-            for (var i = 0; i < cover.data.length; i++) {
+            for (let i = 0; i < cover.data.length; i++) {
                 base64String += String.fromCharCode(cover.data[i]);
             }
 
@@ -59,6 +59,7 @@ const GET_AUDIO = (PATHS_DIRS) => {
             TRACK.url       = url;
             TRACK.title     = data.common.title;
             TRACK.year      = data.common.year;
+
             console.log(data)
         } )
     
