@@ -1,42 +1,22 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
 
 import OS from "os";
 import fs from "fs";
 import { parseFile } from "music-metadata";
 
+import __GET_PATHS from "./utils/__GET_PATHS.js";
+
 const __HOME_DIR = OS.userInfo().homedir;
 
 const PATHS_DIRS = [
-    `${__HOME_DIR}\\Music\\test`,
+    `${__HOME_DIR}/Music/test`,
 ]
 
-console.log("start")
+const __RENDER = async () => {
 
-const __GET_PATHS = () => {
-    try {
-        let fls = new Array();
-
-        PATHS_DIRS.forEach( (path) => {
-            const files = fs.readdirSync(path)
-            const paths = files.map( (file) => {
-                return `${path}\\${file}`
-            } )
-
-            fls = [...fls, paths]
-        } )
-
-        return fls[0]
-
-    } catch (error) {
-        console.error(error)
-    }
-}
-
-const getMetaTags = async () => {
-
-
-    let data = __GET_PATHS().map( async (URI) => {
+    // Metadata
+    const data = __GET_PATHS(PATHS_DIRS).map( async (URI) => {
 
         const metadata = await parseFile(URI);
 
@@ -54,12 +34,13 @@ const getMetaTags = async () => {
 
     } )
 
+    // Wait metadata
     Promise.all(data)
     
-    .then( (data) => { 
+    .then( (data) => {
 
-        console.log(data)
-
+        // Render React 
+        
         function render() {
             console.log(data)
             ReactDOM.render( <h2>Blush</h2>, document.querySelector("#root"));
@@ -71,7 +52,4 @@ const getMetaTags = async () => {
 
 }
 
-
-getMetaTags()
-
-console.log(__GET_PATHS())
+__RENDER();
