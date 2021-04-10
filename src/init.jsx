@@ -43,7 +43,7 @@ const __RENDER = async () => {
         
         function render() {
             console.log(data)
-            ReactDOM.render( <h2>Blush</h2>, document.querySelector("#root"));
+            ReactDOM.render( <div id="win"></div>, document.querySelector("#root"));
         }
 
         render();
