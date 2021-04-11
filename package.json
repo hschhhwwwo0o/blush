@@ -1,8 +1,8 @@
 {
-  "name": "my-new-app",
-  "productName": "my-new-app",
+  "name": "blush",
+  "productName": "Blush",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "Shy Music App",
   "main": ".webpack/main",
   "scripts": {
     "start": "electron-forge start",
