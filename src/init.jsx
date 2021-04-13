@@ -24,8 +24,6 @@ const __RENDER = async () => {
         const blob = new Blob([buffer], { type: "audio/mp3" });
         const url = window.URL.createObjectURL(blob);
 
-        metadata.url = url;
-
         return {
             url:        url,
             artist:     metadata.common.artist,
