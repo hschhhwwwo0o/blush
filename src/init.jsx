@@ -41,7 +41,7 @@ const __RENDER = async () => {
         
         function render() {
             console.log(data)
-            ReactDOM.render( <div id="win"></div>, document.querySelector("#root"));
+            ReactDOM.render( <div id="app"></div>, document.querySelector("#root"));
         }
 
         render();
