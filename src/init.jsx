@@ -7,6 +7,8 @@ import { parseFile } from "music-metadata";
 
 import __GET_PATHS from "./utils/__GET_PATHS.js";
 
+import MainLayout from "./layout/index.jsx";
+
 const __HOME_DIR = OS.userInfo().homedir;
 
 const PATHS_DIRS = [
@@ -42,7 +44,7 @@ const __RENDER = async () => {
         function render() {
             console.log(data)
             ReactDOM.render( 
-                <main id="app" />, 
+                <MainLayout />, 
                 document.querySelector("#root")
             );
         }
