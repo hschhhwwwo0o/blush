@@ -1,12 +1,11 @@
+import OS from "os";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import OS from "os";
-import fs from "fs";
+import { readFileSync } from "fs";
 import { parseFile } from "music-metadata";
 
 import __GET_PATHS from "./utils/__GET_PATHS.js";
-
 import MainLayout from "./layout/index.jsx";
 
 const __HOME_DIR = OS.userInfo().homedir;
@@ -22,7 +21,7 @@ const __RENDER = async () => {
 
         const metadata = await parseFile(URI);
 
-        const buffer = fs.readFileSync(URI);
+        const buffer = readFileSync(URI);
         const blob = new Blob([buffer], { type: "audio/mp3" });
         const url = window.URL.createObjectURL(blob);
 
@@ -39,8 +38,6 @@ const __RENDER = async () => {
     
     .then( (data) => {
 
-        // Render React 
-        
         function render() {
             console.log(data)
             ReactDOM.render( 
