@@ -41,7 +41,7 @@ const __RENDER = async () => {
         function render() {
             console.log(data)
             ReactDOM.render( 
-                <MainLayout />, 
+                <MainLayout data={ data } />, 
                 document.querySelector("#root")
             );
         }
