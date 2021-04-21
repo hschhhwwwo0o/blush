@@ -2,7 +2,9 @@ import React from "react";
 
 const Index = ({ data }) => {
     return <>
-        <main id="app" />
+        <main id="app">
+            <div id="titlebar"></div>
+        </main>
     </>
 }
 
