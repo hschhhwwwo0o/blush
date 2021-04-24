@@ -1,8 +1,12 @@
-const rules = require('./webpack.rules');
+const rules = require("./webpack.rules");
 
 rules.push({
   test: /\.styl$/,
-  use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'stylus-loader' }],
+  use: [
+    { loader: "style-loader" }, 
+    { loader: "css-loader" }, 
+    { loader: "stylus-loader" }
+  ],
 });
 
 module.exports = {
