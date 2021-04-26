@@ -1,7 +1,7 @@
 import { remote } from "electron";
 import React from "react";
 
-const Index = ({ data }) => {
+const Index = ({ data }: any) => {
 
     const __windowClose = () => {
         window.top.close()

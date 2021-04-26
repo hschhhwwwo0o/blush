@@ -6,7 +6,7 @@ import { readFileSync } from "fs";
 import { parseFile } from "music-metadata";
 
 import __GET_PATHS from "./utils/__GET_PATHS.js";
-import MainLayout from "./layout/index.jsx";
+import MainLayout from "./layout/index";
 
 const __HOME_DIR = OS.userInfo().homedir;
 
@@ -17,7 +17,7 @@ const PATHS_DIRS = [
 const __RENDER = async () => {
 
     // Metadata
-    const data = __GET_PATHS(PATHS_DIRS).map( async (URI) => {
+    const data = __GET_PATHS(PATHS_DIRS).map( async (URI: string) => {
 
         const metadata = await parseFile(URI);
 

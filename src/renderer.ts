@@ -28,4 +28,5 @@
 
 import "./assets/reset.styl";
 import "./assets/index.styl";
-import "./init.jsx";
+
+import "./init.tsx";
