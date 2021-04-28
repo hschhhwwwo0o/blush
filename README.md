@@ -1,4 +1,4 @@
-![Preview](md/__header.jpg "Preview")
+![Preview](md/__header.png "Preview")
 ![Body](md/__body.png "Body")
 
 ## Blush
