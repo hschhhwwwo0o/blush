@@ -1,8 +1,8 @@
 {
-  "name": "lush",
+  "name": "blush",
   "productName": "Blush",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "Shy Music App",
   "main": ".webpack/main",
   "scripts": {
     "start": "electron-forge start",
@@ -11,7 +11,12 @@
     "publish": "electron-forge publish",
     "lint": "eslint --ext .ts ."
   },
-  "keywords": [],
+  "keywords": [
+    "Music App", "React",
+    "Native", "Electron",
+    "TypeScript", "JavaScript",
+    "Webpack"
+  ],
   "author": {
     "name": "Saveliy",
     "email": "seva007@hotmail.com"
