@@ -29,4 +29,4 @@
 import "./assets/reset.styl";
 import "./assets/index.styl";
 
-import "./init.tsx";
+import "./index.tsx";
