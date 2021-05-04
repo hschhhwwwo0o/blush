@@ -12,9 +12,21 @@ body
     width 100vw
     height 100vh
 
+    *
+        user-select none
+
+    &::-webkit-scrollbar
+        width 0
+
+
+    *::selection 
+        background-color rgb(0, 0, 0, 0, 0)
+
+
     h1 
         font-family "Open Sans Bold"
 
 
 @require "../components/TheTitlebar/index.styl"
+@require "../components/Track/index.styl"
         

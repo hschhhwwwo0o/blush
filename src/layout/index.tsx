@@ -13,7 +13,16 @@ const Index: React.FunctionComponent<{ data: ITrack[] }> = ({ data }) => {
             <ThePlayer />
             {
                 data.map( (track, id) => {
-                    return <Track key={id} />
+                    return <Track 
+                        url         = { track.url }
+                        artist      = { track.artist }
+                        album       = { track.album }
+                        duration    = { track.duration }
+                        title       = { track.title }
+                        key         = { id } 
+                        year        = { track.year }
+                        cover       = { track.cover }
+                    />
                 } )
             }
         </main>

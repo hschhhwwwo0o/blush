@@ -1,0 +1,93 @@
+$cover-size = 43.25px
+$h3-size = 14.25px
+$h4-size = 12.5px
+
+.track 
+    width 100%
+    height $cover-size
+    display flex
+    justify-content space-between
+    box-sizing: border-box
+
+    padding-left 32px
+    padding-right 32px
+
+    transition-duration .45s
+
+    opacity 0.75
+
+    &:hover 
+        opacity 0.95
+
+    margin-top 14px
+
+    > .track__left
+        display flex
+        flex-direction row
+
+        > .track__meta 
+            margin-left 14px
+            height 100%
+            display flex
+            flex-direction column
+            justify-content center
+
+            > h3
+                font-family "Open Sans Bold"
+                font-style normal
+                font-weight bold
+                font-size $h3-size
+                line-height 19px
+                text-transform capitalize
+                margin-top -3.5px
+                color #000000
+                cursor default 
+
+            > h4
+                font-family "Open Sans Bold"
+                font-style normal
+                font-weight bold
+                font-size $h4-size
+                line-height 16px
+                margin-top 1.25px
+                color #000000
+                opacity 0.75
+                cursor default
+
+
+        .track__cover
+            width $cover-size
+            height $cover-size
+            object-position center
+            object-fit cover
+
+            .track__block
+                width 100%
+                height 100%
+                opacity 0
+
+                position relative
+                margin-top -100%
+
+            img 
+                width 100%
+                height 100%
+
+                border-radius 1.5px
+
+
+    > .track__right
+        width $cover-size
+        height $cover-size
+
+        display flex
+        justify-content flex-end
+
+        .track__more
+            width 3px
+            height 13px
+
+            opacity 0.75
+
+            background-size cover
+            background-image url("../../icons/more.svg")
