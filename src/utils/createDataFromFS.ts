@@ -25,7 +25,7 @@ function createDataFromFS() {
                 url:        createMp3ObjectURL(URI),
                 artist:     metadata.common.artist,
                 album:      metadata.common.album,
-                cover:      createBase64String(metadata.common.picture[0]),
+                cover:      metadata.common.picture !== undefined ? createBase64String(metadata.common.picture[0]) : undefined,
                 duration:   metadata.format.duration,
                 title:      metadata.common.title,
                 year:       metadata.common.year
