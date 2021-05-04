@@ -8,14 +8,15 @@ import __GET_PATHS from "./__GET_PATHS.js";
 import createBase64String from "./createBase64String";
 import createMp3ObjectURL from "./createMp3ObjectURL";
 
-const __HOME_DIR: string = OS.userInfo().homedir;
+function createDataFromFS() {
 
-const PATHS_DIRS: string[] = [
-    `${__HOME_DIR}/Music/test`,
-]
+    const PATHS_DIRS = new Array(
+        `${OS.userInfo().homedir}/Music/test`,
+    );
 
-function __DATA() {
-    const data = __GET_PATHS(PATHS_DIRS).map( async (URI: string) => {
+    const data = __GET_PATHS(PATHS_DIRS)
+
+    .map( async (URI: string) => {
 
         const metadata: IAudioMetadata = await parseFile(URI);
 
@@ -27,11 +28,12 @@ function __DATA() {
             duration:   metadata.format.duration,
             title:      metadata.common.title,
             year:       metadata.common.year
-        }
+        };
 
-    } )
+    });
 
-    return Promise.all(data)
+    return Promise.all(data);
+    
 }
 
-export default __DATA;
+export default createDataFromFS;
