@@ -1,7 +1,7 @@
 import { remote } from "electron";
 import React from "react";
 
-const TheTitleBar = () => {
+const TheTitleBar: React.FunctionComponent = () => {
 
     const __windowClose = () => {
         window.top.close()
