@@ -1,11 +1,11 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import __GET_DATA from "./utils/__GET_DATA";
+import createDataFromFS from "./utils/createDataFromFS";
 import MainLayout from "./layout/index";
 
 async function __R() {
-    __GET_DATA().then((data) => {
+    createDataFromFS().then((data) => {
         ReactDOM.render( 
             <MainLayout data={ data } />, 
             document.querySelector("#root") 

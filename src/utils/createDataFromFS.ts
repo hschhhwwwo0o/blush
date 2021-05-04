@@ -3,7 +3,7 @@ import OS from "os";
 import { parseFile } from "music-metadata";
 import { IAudioMetadata } from "music-metadata/lib/type";
 
-import __GET_PATHS from "./__GET_PATHS.js";
+import getPathsFS from "./getPathsFS";
 
 import createBase64String from "./createBase64String";
 import createMp3ObjectURL from "./createMp3ObjectURL";
@@ -14,7 +14,7 @@ function createDataFromFS() {
         `${OS.userInfo().homedir}/Music/test`,
     );
 
-    const data = __GET_PATHS(PATHS_DIRS)
+    const data = getPathsFS(PATHS_DIRS)
 
     .map( async (URI: string) => {
 
