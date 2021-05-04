@@ -18,16 +18,18 @@ function createDataFromFS() {
 
     .map( async (URI: string) => {
 
-        const metadata: IAudioMetadata = await parseFile(URI);
+        if( URI.split(".")[1] === "mp3" ) {
+            const metadata: IAudioMetadata = await parseFile(URI);
 
-        return {
-            url:        createMp3ObjectURL(URI),
-            artist:     metadata.common.artist,
-            album:      metadata.common.album,
-            cover:      createBase64String(metadata.common.picture[0]),
-            duration:   metadata.format.duration,
-            title:      metadata.common.title,
-            year:       metadata.common.year
+            return {
+                url:        createMp3ObjectURL(URI),
+                artist:     metadata.common.artist,
+                album:      metadata.common.album,
+                cover:      createBase64String(metadata.common.picture[0]),
+                duration:   metadata.format.duration,
+                title:      metadata.common.title,
+                year:       metadata.common.year
+            }; 
         };
 
     });
