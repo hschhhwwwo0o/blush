@@ -1,7 +1,13 @@
 import React from "react";
 import TheTitlebar from "../components/TheTitlebar";
 
-const Index = ({ data }: any) => {
+import { ITrack } from "../types";
+
+interface IData {
+    data: ITrack[]
+}
+
+const Index: React.FunctionComponent<IData> = ({ data }) => {
     return <>
         <main id="app">
             <TheTitlebar />
