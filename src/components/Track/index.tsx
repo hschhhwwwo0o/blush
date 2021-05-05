@@ -4,25 +4,26 @@ import { ITrack } from "../../types";
 const Track: React.FunctionComponent<ITrack> = (track) => {
     return <>
         <div className="track">
-            <div className="track__left">
-                <div className="track__cover">
-                    <img 
-                        src={ track.cover } 
-                        alt="cover"
-                    />
-                    <div className="track__block"></div>
-                </div>
-                <div className="track__meta">
-                    <h3>
-                        { track.title }
+            <div className="track__cover">
+                <img src={track.cover} alt=""/>
+            </div>
+            <div className="track__meta-body">
+                <div className="track__title">
+                    <h3 className="track__name">
+                        {track.title}
                     </h3>
-                    <h4>
-                        { track.artist }
+                    <h4 className="track__album">
+                        {track.album}
                     </h4>
                 </div>
+                <div className="track__artist">
+                    <h3>
+                        {track.artist}
+                    </h3>
+                </div>
             </div>
-            <div className="track__right">
-                <div className="track__more">
+            <div className="track__more">
+                <div>
                     
                 </div>
             </div>
