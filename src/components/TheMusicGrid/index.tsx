@@ -11,7 +11,9 @@ const MusicGrid: React.FunctionComponent = ({ children }) => {
                 <h4>ARTIST</h4>
             </div>
         </header>
-        { children }
+        <div id="grid-tmp3">
+            { children }
+        </div>
     </>
 }
 
