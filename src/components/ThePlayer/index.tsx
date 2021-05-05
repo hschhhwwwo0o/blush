@@ -47,6 +47,8 @@ const ThePlayer: React.FunctionComponent<IThePlayer> = (props) => {
         if( play === false ) {
             audioRef.current.play();
             setPlay(true);
+
+            console.log(audioRef)
         } else {
             audioRef.current.pause();
             setPlay(false);
@@ -64,6 +66,10 @@ const ThePlayer: React.FunctionComponent<IThePlayer> = (props) => {
             autoPlay    = { props.autoplay } 
             loop        = { loop }
             ref         = { audioRef }
+            onEnded     = { () => {
+                console.log("Ended");
+                __next();
+            } }
         />
         <div id="player-container">
             <div id="player">
