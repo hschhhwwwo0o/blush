@@ -2,10 +2,10 @@ $cover-size = 43.25px
 
 #grid-tmp3
     width 100vw
-    height calc(100vh - 180px)
+    height calc(100vh - 160px)
     overflow: scroll
     position relative
-    top: 180px
+    top: 160px
 
     &::-webkit-scrollbar
         width 0
@@ -13,15 +13,15 @@ $cover-size = 43.25px
 
 
 #grid__header
+    position: fixed
+
     width calc(100% - 60px)
     height 25px
+
     margin-left 30px
-    margin-top 20px
+    margin-top 130px
+
     display: grid
-
-    position: fixed
-    margin-top 140px
-
     grid-template-columns: $cover-size 1fr 1fr
 
     h4
