@@ -5,27 +5,25 @@ const Track: React.FunctionComponent<ITrack> = (track) => {
     return <>
         <div className="track">
             <div className="track__cover">
-                <img src={track.cover} alt=""/>
+                <img src={ track.cover } alt=""/>
             </div>
             <div className="track__meta-body">
                 <div className="track__title">
                     <h3 className="track__name">
-                        {track.title}
+                        { track.title }
                     </h3>
                     <h4 className="track__album">
-                        {track.album}
+                        { track.album }
                     </h4>
                 </div>
                 <div className="track__artist">
                     <h3>
-                        {track.artist}
+                        { track.artist }
                     </h3>
                 </div>
             </div>
             <div className="track__more">
-                <div>
-                    
-                </div>
+                <div></div>
             </div>
         </div>
     </>
