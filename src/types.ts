@@ -6,4 +6,7 @@ export interface ITrack {
     duration: number
     title: string
     year: number
+    setNow?: any
+    id: number
+    setAutoplay?: any
 } 

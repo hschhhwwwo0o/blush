@@ -3,7 +3,12 @@ import { ITrack } from "../../types";
 
 const Track: React.FunctionComponent<ITrack> = (track) => {
     return <>
-        <div className="track">
+        <div 
+            className="track" 
+            onClick={ () => {
+                track.setNow(track.id)
+            } } 
+        >
             <div className="track__cover">
                 <img src={ track.cover } alt=""/>
             </div>
