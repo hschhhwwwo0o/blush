@@ -22,7 +22,13 @@ $cover-size = 43.25px
     margin-top 130px
 
     display: grid
-    grid-template-columns: $cover-size 1fr 1fr
+    grid-template-columns: $cover-size 1fr .75fr $cover-size
+
+    .one
+        margin-left 16px
+
+    .two
+        margin-left 4px
 
     h4
         font-family: "Open Sans Bold";
@@ -32,5 +38,3 @@ $cover-size = 43.25px
         line-height: 16px;
 
         color: #000000;
-
-        margin-left 16px
