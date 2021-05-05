@@ -13,7 +13,9 @@ const TheTitleBar: React.FunctionComponent = () => {
 
     return <>
         <div id="titlebar">
-            <div></div>
+            <div>
+                <div id="titlebar__logo"></div>
+            </div>
             <div id="titlebar__tools">
                 <div 
                     className   = "titlebar__button" 
