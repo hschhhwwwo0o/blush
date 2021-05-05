@@ -6,7 +6,11 @@ const Track: React.FunctionComponent<ITrack> = (track) => {
         <div 
             className="track" 
             onClick={ () => {
-                track.setNow(track.id)
+                track.setNow(track.id);
+                console.log(track.setPlay);
+                
+                track.setPlay(true);
+                track.setAutoplay(true);
             } } 
         >
             <div className="track__cover">

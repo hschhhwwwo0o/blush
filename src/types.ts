@@ -9,4 +9,7 @@ export interface ITrack {
     setNow?: any
     id: number
     setAutoplay?: any
+
+    play?: boolean
+    setPlay?: any
 } 

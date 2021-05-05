@@ -10,6 +10,9 @@ interface IThePlayer {
     len?: number
     autoplay?: boolean
     setAutoplay?: any
+
+    play?: boolean
+    setPlay?: any
 }
 
 const ThePlayer: React.FunctionComponent<IThePlayer> = (props) => {
@@ -17,7 +20,6 @@ const ThePlayer: React.FunctionComponent<IThePlayer> = (props) => {
     const audioRef = useRef(null);
 
     const [ loop, setLoop ] = useState(false);
-    const [ play, setPlay ] = useState(false);
 
     const len = props.len - 1;
 
@@ -28,7 +30,7 @@ const ThePlayer: React.FunctionComponent<IThePlayer> = (props) => {
             props.setNow(props.now + 1)
         }
         
-        setPlay(true)
+        props.setPlay(true)
         props.setAutoplay(true)
     }
 
@@ -39,19 +41,19 @@ const ThePlayer: React.FunctionComponent<IThePlayer> = (props) => {
             props.setNow(props.now - 1)
         }
 
-        setPlay(true)
+        props.setPlay(true)
         props.setAutoplay(true)
     }
 
     function __play() {
-        if( play === false ) {
+        if( props.play === false ) {
             audioRef.current.play();
-            setPlay(true);
+            props.setPlay(true);
 
             console.log(audioRef)
         } else {
             audioRef.current.pause();
-            setPlay(false);
+            props.setPlay(false);
         }
     }
 
@@ -81,7 +83,7 @@ const ThePlayer: React.FunctionComponent<IThePlayer> = (props) => {
                     <div />
                 </div>
                 <div 
-                    className   = { play ? "button play" : "button pause" }
+                    className   = { props.play ? "button play" : "button pause" }
                     onClick     = { __play }
                 >
                     <div />

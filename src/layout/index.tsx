@@ -12,6 +12,7 @@ const Index: React.FunctionComponent<{ data: ITrack[] }> = ({ data }) => {
     const [ now, setNow ] = useState(0);
 
     const [ autoplay, setAutoplay ] = useState(false);
+    const [ play, setPlay ] = useState(false);
 
     return <>
         <main id="app">
@@ -27,6 +28,9 @@ const Index: React.FunctionComponent<{ data: ITrack[] }> = ({ data }) => {
                 autoplay    = { autoplay }
                 setAutoplay = { setAutoplay }
                 len         = { data.length }
+
+                play = { play }
+                setPlay = { setPlay }
             />
             <TheMusicGrid>
                 {
@@ -45,6 +49,9 @@ const Index: React.FunctionComponent<{ data: ITrack[] }> = ({ data }) => {
                             title       = { track.title }
                             year        = { track.year }
                             cover       = { track.cover }
+
+                            play = { play }
+                            setPlay = { setPlay }
                         />
                     } )
                 }
