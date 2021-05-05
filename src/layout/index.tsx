@@ -11,7 +11,11 @@ const Index: React.FunctionComponent<{ data: ITrack[] }> = ({ data }) => {
     return <>
         <main id="app">
             <TheTitlebar />
-            <ThePlayer />
+            <ThePlayer 
+                cover   = { data[0].cover }
+                title   = { data[0].title }
+                artist  = { data[0].artist }
+            />
             <TheMusicGrid>
                 {
                     data.map( (track, id) => {

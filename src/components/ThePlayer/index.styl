@@ -1,0 +1,120 @@
+#player-container
+    width calc( 100% - 60px )
+    margin-left 30px
+    height: 84px;
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+
+#player
+    width 100%
+    height 43.5px
+
+    display: grid
+    grid-template-columns: 43.5px 43.5px 43.5px 43.5px 43.5px 1fr 10px
+    gap 6px
+
+    .button
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color transparent
+        opacity 0.8
+        transition-duration: .45s
+        border: 1px solid #fff
+
+        &:hover 
+            opacity 1
+            border: 1px solid #E2E2E2
+
+        > div
+            background-size: cover
+            background-position: center
+            width 18px
+            height 18px
+
+    #prev
+        > div
+            background-image url("../../icons/prev.svg")
+
+    #play
+        > div
+            width 20px
+            height 20px
+            background-image url("../../icons/pause.svg")
+
+    #next
+        > div
+            background-image url("../../icons/next.svg")  
+
+    #shuffle
+        > div
+            width 17.25px
+            height 17.25px
+            background-image url("../../icons/shuffle.svg")
+
+    #loop
+        > div
+            width 22px
+            height 22px
+            background-image url("../../icons/loop.svg")  
+
+    #player__tekm
+        display: grid
+        grid-template-columns: 43.5px 1fr
+
+        #player__cover
+            height 100%
+
+            img
+                object-position: center
+                object-fit: cover
+                width 100%
+                height 100%
+
+        #player__meta
+            width 100%
+            height 100%
+            display: flex
+            flex-direction: column
+            justify-content: space-evenly
+
+            margin-left 16px
+
+            h3
+                font-family: "Open Sans Regular";
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 19px;
+                /* identical to box height */
+
+                text-transform: capitalize;
+
+                color: #000000;    
+
+            h4
+                font-family: "Open Sans Regular";
+                font-style: normal;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 16px;
+
+                color: #000000;
+
+                opacity: 0.85;
+
+    #player__more
+        display: flex
+        justify-content: flex-end
+
+        > div
+            width: 2.54px
+            height: 11.6px
+
+            opacity 0.8
+
+            background-size: cover
+            background-image url("../../icons/more.svg")
