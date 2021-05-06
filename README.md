@@ -1,5 +1,5 @@
 ![Preview](md/__header.png "Preview")
-![Body](md/__frame.png "Body")
+![Body](md/__frm.png "Body")
 ![Preview](md/__preview.png "Preview")
 
 ## Blush
