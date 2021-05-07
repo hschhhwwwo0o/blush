@@ -30,6 +30,16 @@ const Track: React.FunctionComponent<ITrack> = (track) => {
                         { track.artist }
                     </h3>
                 </div>
+                <div className="track__year">
+                    <h3>
+                        { track.year }
+                    </h3>
+                </div>
+                <div className="track__time">
+                    <h3>
+                        2:20
+                    </h3>
+                </div>
             </div>
             <div className="track__more">
                 <div></div>

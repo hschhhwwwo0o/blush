@@ -25,7 +25,13 @@ $h4-size = 12px
         padding-left: 14px
 
         display: grid
-        grid-template-columns: 1fr .75fr
+        grid-template-columns: 1fr 0.71fr
+
+        @media screen and ( min-width: 800px )
+            grid-template-columns: 1fr 0.71fr 0.6fr
+
+        @media screen and ( min-width: 900px )
+            grid-template-columns: 1fr 0.71fr 0.6fr 0.41fr
 
         > .track__title
             display: flex
@@ -38,10 +44,6 @@ $h4-size = 12px
                 font-family: "Open Sans Regular"
                 font-size: 14px
                 line-height: 19px
-
-                // font-weight bold
-                // text-shadow: 0px 0px 0px black
-
                 text-transform: capitalize
 
                 color: #000000
@@ -51,13 +53,12 @@ $h4-size = 12px
                 font-weight: 600
                 font-size: 12px
                 line-height: 16px
+                opacity: 0.85
 
                 color: #000000
 
-                opacity: 0.85
 
-
-        > .track__artist
+        > .track__artist, .track__year, .track__time
             box-sizing: border-box
             padding-top: 4px
 
@@ -69,6 +70,17 @@ $h4-size = 12px
                 line-height: 16px
 
                 color: #000000
+
+        .track__year, .track__time
+            display: none
+
+        .track__year
+            @media screen and ( min-width: 800px )
+                display: block
+
+        .track__time
+            @media screen and ( min-width: 900px )
+                display: block
 
 
     .track__more

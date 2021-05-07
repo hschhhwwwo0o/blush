@@ -22,7 +22,14 @@ $cover-size = 43.25px
     margin-top 130px
 
     display: grid
-    grid-template-columns: $cover-size 1fr .75fr $cover-size
+
+    grid-template-columns: $cover-size 1fr 0.71fr $cover-size
+
+    @media screen and ( min-width: 800px )
+        grid-template-columns: $cover-size 1fr 0.71fr 0.6fr $cover-size
+
+    @media screen and ( min-width: 900px )
+        grid-template-columns: $cover-size 1fr 0.71fr 0.6fr 0.41fr $cover-size
 
     .one
         margin-left 16px

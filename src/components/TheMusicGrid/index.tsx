@@ -10,6 +10,12 @@ const MusicGrid: React.FunctionComponent = ({ children }) => {
             <div className="two">
                 <h4>ARTIST</h4>
             </div>
+            <div className="two">
+                <h4>YEAR</h4>
+            </div>
+            <div>
+                <h4>TIME</h4>
+            </div>
             <div></div>
         </header>
         <div id="grid-tmp3">

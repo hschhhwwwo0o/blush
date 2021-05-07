@@ -24,10 +24,19 @@
     flex-direction: row
     gap 10px
 
+    @media screen and (min-width: 800px)
+        justify-content: space-between
+
+
     #player__controls-elements
         display: grid
         grid-template-columns: 43.5px 43.5px 43.5px 43.5px 43.5px
         gap 10px
+
+        @media screen and (min-width: 800px)
+            order: 1
+            position relative
+            left: -150px
 
         .button
             display: flex
@@ -86,6 +95,10 @@
         grid-template-columns: 43.5px 1fr
         width 100%
 
+        @media screen and (min-width: 800px)
+            order: 0
+            max-width: 300px
+
         #player__cover
             height 100%
 
@@ -131,6 +144,7 @@
     #player__more
         display: flex
         justify-content: flex-end
+        order: 3
 
         > div
             width: 2.54px
