@@ -106,7 +106,7 @@ const ThePlayer: React.FunctionComponent<IThePlayer> = (props) => {
                         id          = "loop" 
                         className   = "button"
                         onClick     = { __loop }
-                        style       = {{ border: `2px solid ${ loop ? "black" : "white" }` }}
+                        style       = {{ border: `2px solid ${ loop ? "black" : "#FAFAFA" }` }}
                     >
                         <div />
                     </div>

@@ -1,17 +1,23 @@
-$cover-size = 43.25px
+$cover-size = 45.15px
 $h3-size = 14.25px
 $h4-size = 12px
 
 .track
     width calc(100% - 60px)
     height $cover-size
-    margin-top 12px
+    margin-top 10px
     margin-left 30px
 
     display: grid
     grid-template-columns: $cover-size 1fr $cover-size
 
-    opacity 0.98
+    opacity 0.95
+
+    transition-duration: .35s
+
+    &:hover
+        // background-color #F4F4F4
+        opacity 1
 
     .track__cover
         img
@@ -19,7 +25,7 @@ $h4-size = 12px
             height 100%
             object-fit: cover
             object-position: center
-            border-radius: 1.5px;
+            border-radius: 2px;
             
 
     .track__meta-body
@@ -40,7 +46,7 @@ $h4-size = 12px
             flex-direction: column
             justify-content: space-evenly
 
-            margin-top -2.25px
+            margin-top -0.5px
 
             h3
                 font-family: "Open Sans Regular"
@@ -56,6 +62,7 @@ $h4-size = 12px
                 font-size: 12px
                 line-height: 16px
                 opacity: 0.85
+                margin-top -1px
 
                 color: #000000
 
@@ -70,6 +77,7 @@ $h4-size = 12px
                 font-weight: 600
                 font-size: 12px
                 line-height: 16px
+                margin-top 2px
 
                 color: #000000
 
