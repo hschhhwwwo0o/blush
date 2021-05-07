@@ -29,8 +29,12 @@ module.exports = [
             {
                 loader: "file-loader",
                 options: {
-                    publicPath: "../.", // move up from 'main_window'
-                    context: "src", // set relative working folder to src
+                    
+                    // move up from 'main_window'
+                    publicPath: "../.",
+
+                    // set relative working folder to src
+                    context: "src",
                 }
             },
         ],
