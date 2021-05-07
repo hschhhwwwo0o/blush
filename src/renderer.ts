@@ -16,4 +16,4 @@
 import "./assets/reset.styl";
 import "./index.styl";
 
-import "./index.tsx";
+import "./index.app.tsx";
