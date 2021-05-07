@@ -4,8 +4,6 @@ $cover-size = 43.25px
     width 100vw
     height calc(100vh - 177px)
     overflow: scroll
-    position relative
-    top: 175px
 
     &::-webkit-scrollbar
         width 0
@@ -13,15 +11,11 @@ $cover-size = 43.25px
 
 
 #grid__header
-    position: fixed
     width calc(100% - 60px)
     height 25px
-    
     margin-left 30px
-    margin-top 145px
 
     display: grid
-
     grid-template-columns: $cover-size 1fr 0.71fr $cover-size
 
     @media screen and ( min-width: 800px )
