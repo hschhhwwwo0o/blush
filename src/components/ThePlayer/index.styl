@@ -20,64 +20,71 @@
     padding-right: 30px
     height 43.5px
 
-    display: grid
-    grid-template-columns: 43.5px 43.5px 43.5px 43.5px 43.5px 1fr 10px
-    gap 6px
+    display: flex
+    flex-direction: row
+    gap 10px
 
-    .button
-        display: flex
-        align-items: center
-        justify-content: center
-        background-color transparent
-        opacity 0.8
-        transition-duration: .45s
-        border: 1px solid #fff
+    #player__controls-elements
+        display: grid
+        grid-template-columns: 43.5px 43.5px 43.5px 43.5px 43.5px
+        gap 10px
 
-        &:hover 
-            opacity 1
-            border: 1px solid #E2E2E2
+        .button
+            display: flex
+            align-items: center
+            justify-content: center
+            background-color transparent
+            opacity 0.8
+            transition-duration: .45s
+            border: 1px solid #fff
 
-        > div
-            background-size: cover
-            background-position: center
-            width 18px
-            height 18px
+            &:hover 
+                opacity 1
+                border: 1px solid #E2E2E2
 
-    #prev
-        > div
-            background-image url("../../icons/prev.svg")
+            > div
+                background-size: cover
+                background-position: center
+                width 18px
+                height 18px
 
-    .play
-        > div
-            width 20px
-            height 20px
-            background-image url("../../icons/pause.svg")
+        #prev
+            > div
+                background-image url("../../icons/prev.svg")
 
-    .pause
-        > div
-            width 20px
-            height 22px
-            background-image url("../../icons/play.svg")
+        .play
+            > div
+                width 20px
+                height 20px
+                background-image url("../../icons/pause.svg")
 
-    #next
-        > div
-            background-image url("../../icons/next.svg")  
+        .pause
+            > div
+                width 20px
+                height 22px
+                background-image url("../../icons/play.svg")
 
-    #shuffle
-        > div
-            width 17px
-            height 17px
-            background-image url("../../icons/shuffle.svg")
+        #next
+            > div
+                background-image url("../../icons/next.svg")  
 
-    #loop
-        > div
-            width 22px
-            height 22px
-            background-image url("../../icons/loop.svg")  
+        #shuffle
+            > div
+                width 17px
+                height 17px
+                background-image url("../../icons/shuffle.svg")
+
+        #loop
+            > div
+                width 22px
+                height 22px
+                background-image url("../../icons/loop.svg")  
+
 
     #player__tekm
         display: grid
         grid-template-columns: 43.5px 1fr
+        width 100%
 
         #player__cover
             height 100%

@@ -75,39 +75,41 @@ const ThePlayer: React.FunctionComponent<IThePlayer> = (props) => {
         />
         <div id="player-container">
             <div id="player">
-                <div 
-                    id          = "prev" 
-                    className   = "button"
-                    onClick     = { __prev }
-                >
-                    <div />
-                </div>
-                <div 
-                    className   = { props.play ? "button play" : "button pause" }
-                    onClick     = { __play }
-                >
-                    <div />
-                </div>
-                <div 
-                    id          = "next" 
-                    className   = "button"
-                    onClick     = { __next }
-                >
-                    <div />
-                </div>
-                <div 
-                    id          = "shuffle" 
-                    className   = "button"
-                >
-                    <div />
-                </div>
-                <div 
-                    id          = "loop" 
-                    className   = "button"
-                    onClick     = { __loop }
-                    style       = {{ border: `2px solid ${ loop ? "black" : "white" }` }}
-                >
-                    <div />
+                <div id="player__controls-elements">
+                    <div 
+                        id          = "prev" 
+                        className   = "button"
+                        onClick     = { __prev }
+                    >
+                        <div />
+                    </div>
+                    <div 
+                        className   = { props.play ? "button play" : "button pause" }
+                        onClick     = { __play }
+                    >
+                        <div />
+                    </div>
+                    <div 
+                        id          = "next" 
+                        className   = "button"
+                        onClick     = { __next }
+                    >
+                        <div />
+                    </div>
+                    <div 
+                        id          = "shuffle" 
+                        className   = "button"
+                    >
+                        <div />
+                    </div>
+                    <div 
+                        id          = "loop" 
+                        className   = "button"
+                        onClick     = { __loop }
+                        style       = {{ border: `2px solid ${ loop ? "black" : "white" }` }}
+                    >
+                        <div />
+                    </div>
                 </div>
                 <div id="player__tekm">
                     <div id="player__cover">
