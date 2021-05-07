@@ -14,7 +14,10 @@ const TheTitleBar: React.FunctionComponent = () => {
     return <>
         <div id="titlebar">
             <div>
-                <div id="titlebar__logo"></div>
+                <div id="titlebar__logo">
+                    <span>BLUSH</span>
+                    <span>Music</span>
+                </div>
             </div>
             <div id="titlebar__tools">
                 <div 

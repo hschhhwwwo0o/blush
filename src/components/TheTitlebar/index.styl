@@ -5,7 +5,7 @@
     display flex
     justify-content space-between
     box-sizing border-box
-    padding-left 10px
+    padding-left 25px
     padding-right 15px
 
     position: fixed
@@ -14,13 +14,20 @@
     top: 0
 
     &__logo
-        width 97px
-        height 16px
-
-        background-image url("../../icons/logo.png")
-        background-size cover
-        background-position center
         margin-top 9px
+
+        span:nth-child(1)
+            font-family: "Open Sans Bold";
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+
+        span:nth-child(2)
+            font-family: "Open Sans SemiBold";
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            margin-left 2px
 
     > div 
         height 100%
