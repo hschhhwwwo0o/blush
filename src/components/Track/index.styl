@@ -18,7 +18,7 @@ $h4-size = 12px
     display: grid
     grid-template-columns: $cover-size 1fr $cover-size
 
-    opacity 0.92
+    opacity 1
     transition-duration: .35s
 
     &:hover
@@ -31,6 +31,8 @@ $h4-size = 12px
             object-fit: cover
             object-position: center
             border-radius: 2px;
+            opacity 0.96
+            filter: grayscale(10%)
             
 
     .track__meta-body
@@ -76,7 +78,7 @@ $h4-size = 12px
                 font-weight: 600
                 font-size: 12px
                 line-height: 16px
-                opacity: 0.85
+                opacity: 0.9
                 margin-top -1px
                 text-transform: capitalize
 
