@@ -8,6 +8,9 @@ $h4-size = 12px
     margin-top 10px
     margin-left 30px
 
+    &:nth-child(1)
+        margin-top 0
+
     display: grid
     grid-template-columns: $cover-size 1fr $cover-size
 
@@ -16,7 +19,6 @@ $h4-size = 12px
     transition-duration: .35s
 
     &:hover
-        // background-color #F4F4F4
         opacity 1
 
     .track__cover
