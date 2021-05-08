@@ -106,9 +106,9 @@ const ThePlayer: React.FunctionComponent<IThePlayer> = (props) => {
                         id          = "loop" 
                         className   = "button"
                         onClick     = { __loop }
-                        style       = {{ border: `2px solid ${ loop ? "black" : "transparent" }` }}
+                        style       = {{ backgroundColor: `${ loop ? "#1C1C1C" : "transparent" }` }}
                     >
-                        <div />
+                        <div style={{ filter: `${ loop ? "invert(100%)" : "invert(0)" }` }} />
                     </div>
                 </div>
                 <div id="player__tekm">
