@@ -7,6 +7,8 @@ $h4-size = 12px
 .track
     width calc(100% - 36px)
     height $cover-size
+    max-height: $cover-size
+    overflow: hidden
     margin-top 12px
     margin-left $padding
 
@@ -61,6 +63,12 @@ $h4-size = 12px
                 line-height: 19px
                 text-transform: capitalize
 
+                width: 90%
+                max-width: 26vw
+                white-space: nowrap
+                overflow: hidden
+                text-overflow: ellipsis
+
                 color: #000000
             
             h4
@@ -70,6 +78,12 @@ $h4-size = 12px
                 line-height: 16px
                 opacity: 0.85
                 margin-top -1px
+                text-transform: capitalize
+
+                white-space: nowrap
+                overflow: hidden
+                text-overflow: ellipsis
+                max-width: 24.5vw
 
                 color: #000000
 
@@ -85,6 +99,11 @@ $h4-size = 12px
                 font-size: 12px
                 line-height: 16px
                 margin-top 2px
+
+                white-space: nowrap
+                overflow: hidden
+                text-overflow: ellipsis
+                max-width: 18.5vw
 
                 color: #000000
 
