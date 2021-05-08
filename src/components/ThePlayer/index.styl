@@ -30,8 +30,8 @@ $cover-size = 45px
 
 
     #player__controls-elements
-        display: grid
-        grid-template-columns: $cover-size $cover-size $cover-size $cover-size $cover-size
+        display: flex
+        flex-direction: row
         gap 10px
 
         @media screen and (min-width: 800px)
@@ -46,7 +46,9 @@ $cover-size = 45px
             background-color transparent
             opacity 0.8
             transition-duration: .45s
-            border: 1px solid #FAFAFA
+            border: 1px solid transparent
+            width: $cover-size
+            height: $cover-size
 
             &:hover 
                 opacity 1
@@ -59,32 +61,50 @@ $cover-size = 45px
                 height 18px
 
         #prev
+            order: 0
+            @media screen and (min-width: 800px)
+                order: 1
             > div
                 background-image url("../../icons/prev.svg")
 
         .play
+            order: 1
+            @media screen and (min-width: 800px)
+                order: 2
             > div
                 width 20px
                 height 20px
                 background-image url("../../icons/pause.svg")
 
         .pause
+            order: 1
+            @media screen and (min-width: 800px)
+                order: 2
             > div
                 width 20px
                 height 22px
                 background-image url("../../icons/play.svg")
 
         #next
+            order: 2
+            @media screen and (min-width: 800px)
+                order: 3
             > div
                 background-image url("../../icons/next.svg")  
 
         #shuffle
+            order: 3
+            @media screen and (min-width: 800px)
+                order: 4
             > div
                 width 17px
                 height 17px
                 background-image url("../../icons/shuffle.svg")
 
         #loop
+            order: 4
+            @media screen and (min-width: 800px)
+                order 0
             > div
                 width 22px
                 height 22px
