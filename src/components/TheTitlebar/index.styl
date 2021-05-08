@@ -1,3 +1,5 @@
+@require "../../assets/.env.styl"
+
 #titlebar
     -webkit-app-region drag
     width 100vw
@@ -5,8 +7,10 @@
     display flex
     justify-content space-between
     box-sizing border-box
-    padding-left 25px
-    padding-right 15px
+    padding-left $padding
+
+    $padd = $padding - 10px
+    padding-right $padd
     background-color #F8F8F8
 
     &__logo

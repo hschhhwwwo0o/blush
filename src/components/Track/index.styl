@@ -1,12 +1,14 @@
+@require "../../assets/.env.styl"
+
 $cover-size = 45px
 $h3-size = 14.25px
 $h4-size = 12px
 
 .track
-    width calc(100% - 60px)
+    width calc(100% - 36px)
     height $cover-size
-    margin-top 10px
-    margin-left 30px
+    margin-top 12px
+    margin-left $padding
 
     &:nth-child(1)
         margin-top 0
@@ -15,7 +17,6 @@ $h4-size = 12px
     grid-template-columns: $cover-size 1fr $cover-size
 
     opacity 0.95
-
     transition-duration: .35s
 
     &:hover
