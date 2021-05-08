@@ -22,6 +22,9 @@ $h4-size = 12px
     &:hover
         opacity 1
 
+        .track__meta-body
+            border-bottom: 1.99999px solid #E2E2E2
+
     .track__cover
         img
             width 100%
@@ -37,6 +40,10 @@ $h4-size = 12px
 
         display: grid
         grid-template-columns: 1fr 0.71fr
+
+        transition-duration: .45s
+
+        border-bottom: 1.99999px solid #F3F3F3
 
         @media screen and ( min-width: 800px )
             grid-template-columns: 1fr 0.71fr 0.6fr
