@@ -39,7 +39,7 @@ $cover-size = 45px
         @media screen and (min-width: 800px)
             order: 1
             position relative
-            left: -150px
+            left: -120px
 
         .button
             display: flex
@@ -168,12 +168,15 @@ $cover-size = 45px
         display: flex
         justify-content: flex-end
         order: 3
+        width $cover-size
+
+        display: flex
+        align-items: center
+        justify-content: center
 
         > div
-            width: 2.54px
-            height: 11.6px
-
-            opacity 0.8
-
+            width 16px
+            height 16px
+            background-image url("../../icons/also.svg")
             background-size: cover
-            background-image url("../../icons/more.svg")
+            background-position: center

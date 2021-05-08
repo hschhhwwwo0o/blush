@@ -98,13 +98,19 @@ $h4-size = 12px
 
     .track__more
         display: flex
-        justify-content: flex-end
+        align-items: center
+        justify-content: center
+
+        border: 1px solid transparent
+
+        transition-duration: .45s
+
+        &:hover
+            border 1px solid #EBEBEB
 
         > div
-            width: 2.54px
-            height: 11.6px
-
-            opacity 0.8
-
+            width 16px
+            height 16px
+            background-image url("../../icons/also.svg")
             background-size: cover
-            background-image url("../../icons/more.svg")
+            background-position: center

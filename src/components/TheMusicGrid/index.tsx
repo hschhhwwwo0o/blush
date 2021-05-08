@@ -4,16 +4,16 @@ const MusicGrid: React.FunctionComponent = ({ children }) => {
     return <>
         <header id="grid__header">
             <div></div>
-            <div className="one">
+            <div style={{ marginLeft: "14px" }}>
                 <h4>TITLE / ALBUM</h4>
             </div>
-            <div className="two">
+            <div style={{ marginLeft: "5px" }}>
                 <h4>ARTIST</h4>
             </div>
-            <div className="two grid__year">
+            <div className="two grid__year" style={{ marginLeft: "1px" }}>
                 <h4>YEAR</h4>
             </div>
-            <div className="grid__time">
+            <div className="grid__time" style={{ marginLeft: "-1px" }}>
                 <h4>TIME</h4>
             </div>
             <div></div>
