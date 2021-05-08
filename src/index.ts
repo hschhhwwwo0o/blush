@@ -10,12 +10,12 @@ const createWindow = (): void => {
     
     // Create the browser window.
     const mainWindow = new BrowserWindow({
-        width: 606,
+        width: 1150,
         minWidth: 606,
         maxWidth: 1150,
         minHeight: 723,
         maxHeight: 900,
-        height: 723,
+        height: 810,
         resizable: true,
         frame: false,
         webPreferences: {
