@@ -21,9 +21,6 @@ const Track: React.FunctionComponent<ITrack> = (track) => {
                     <h3 className="track__name">
                         { track.title }
                     </h3>
-                    <h4 className="track__album">
-                        { track.album }
-                    </h4>
                 </div>
                 <div className="track__artist">
                     <h3>

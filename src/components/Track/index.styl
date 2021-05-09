@@ -1,16 +1,19 @@
 @require "../../assets/.env.styl"
 
-$cover-size = 45px
-$h3-size = 14.25px
-$h4-size = 12px
+$cover-size = 40px
+$h3-size = 14px
+$h4-size = 14px
 
 .track
     width calc(100% - 36px)
     height $cover-size
     max-height: $cover-size
     overflow: hidden
-    margin-top 12px
     margin-left $padding
+
+    background-color transparent
+    padding-top: 5px
+    padding-bottom: 5px
 
     &:nth-child(1)
         margin-top 0
@@ -18,11 +21,14 @@ $h4-size = 12px
     display: grid
     grid-template-columns: $cover-size 1fr $cover-size
 
-    opacity 1
-    transition-duration: .35s
+    opacity 0.95
+    transition-duration: .55s
+
+    border-radius: 4px;
 
     &:hover
         opacity 1
+        background-color #F7F7F7
 
     .track__cover
         img
@@ -30,21 +36,20 @@ $h4-size = 12px
             height 100%
             object-fit: cover
             object-position: center
-            border-radius: 2px;
+            border-radius: 4px;
             opacity 0.96
             filter: grayscale(10%)
+            margin-left 5px
             
 
     .track__meta-body
         box-sizing: border-box
-        margin-left 14px
+        margin-left 18px
 
         display: grid
         grid-template-columns: 1fr 0.71fr
 
         transition-duration: .45s
-
-        border-bottom: 1.99999px solid #F3F3F3
 
         @media screen and ( min-width: 800px )
             grid-template-columns: 1fr 0.71fr 0.6fr
@@ -59,7 +64,7 @@ $h4-size = 12px
 
             // background-color red
             box-sizing: border-box
-            padding-bottom: 2px
+            padding-bottom: 3px
 
             h3
                 font-family: "Segoe UI Regular"
@@ -78,9 +83,9 @@ $h4-size = 12px
             h4
                 font-family: "Segoe UI Regular"
                 font-weight: 600
-                font-size: 12px
+                font-size: $h4-size
                 line-height: 16px
-                opacity: 0.9
+                opacity: 0.95
                 // margin-top -1px
                 text-transform: capitalize
 
@@ -94,13 +99,13 @@ $h4-size = 12px
 
         > .track__artist, .track__year, .track__time
             box-sizing: border-box
-            padding-top: 4px
+            padding-top: 9px
 
             h3
                 font-family: "Segoe UI Regular"
                 font-style: normal
                 font-weight: 600
-                font-size: 12px
+                font-size: $h4-size
                 line-height: 16px
                 margin-top 2px
 
@@ -108,6 +113,8 @@ $h4-size = 12px
                 overflow: hidden
                 text-overflow: ellipsis
                 max-width: 18.5vw
+
+                opacity: 0.85
 
                 color: #000000
 
@@ -131,6 +138,8 @@ $h4-size = 12px
         border: 1px solid transparent
 
         transition-duration: .45s
+
+        opacity: 0.8
 
         &:hover
             border 1px solid #EBEBEB

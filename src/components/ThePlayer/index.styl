@@ -1,6 +1,6 @@
 @require "../../assets/.env.styl"
 
-$cover-size = 45px
+$cover-size = 48px
 
 #player-container
     width 100%
@@ -10,7 +10,7 @@ $cover-size = 45px
     align-items: center
     justify-content: center
 
-    background-color #FDFDFD
+    background-color #FBFBFB
     z-index 100
 
     border-bottom: 2px solid #F2F2F2
@@ -46,11 +46,13 @@ $cover-size = 45px
             align-items: center
             justify-content: center
             background-color transparent
-            opacity 0.8
+            opacity 0.95
             transition-duration: .45s
             border: 1px solid transparent
             width: $cover-size
             height: $cover-size
+
+            border-radius: 4px;
 
             &:hover 
                 opacity 1
@@ -74,6 +76,7 @@ $cover-size = 45px
             @media screen and (min-width: 800px)
                 order: 2
             > div
+                transition-duration: 0
                 width 20px
                 height 20px
                 background-image url("../../icons/pause.svg")
@@ -83,6 +86,7 @@ $cover-size = 45px
             @media screen and (min-width: 800px)
                 order: 2
             > div
+                transition-duration: 0
                 width 20px
                 height 22px
                 background-image url("../../icons/play.svg")
@@ -105,6 +109,7 @@ $cover-size = 45px
 
         #loop
             order: 4
+            transition-duration: 1.15s
             @media screen and (min-width: 800px)
                 order 0
             > div
@@ -124,13 +129,14 @@ $cover-size = 45px
 
         #player__cover
             height 100%
+            border-radius: 4px;
 
             img
                 object-position: center
                 object-fit: cover
                 width 100%
                 height 100%
-                border-radius: 2px;
+                border-radius: 4px;
                 opacity 0.95
                 filter: grayscale(10%)
 
