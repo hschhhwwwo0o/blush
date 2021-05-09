@@ -10,7 +10,7 @@ const MusicGrid: React.FunctionComponent = ({ children }) => {
             <div style={{ marginLeft: "5px" }}>
                 <h4>ARTIST</h4>
             </div>
-            <div className="two grid__year" style={{ marginLeft: "1px" }}>
+            <div className="two grid__year" style={{ marginLeft: "2px" }}>
                 <h4>YEAR</h4>
             </div>
             <div className="grid__time" style={{ marginLeft: "-1px" }}>
