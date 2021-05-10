@@ -3,9 +3,11 @@ import Layout from "./layout/index";
 
 import { ITrack } from "./types";
 
+import TheTitleBar from "./components/TheTitleBar/index";
+
 const IndexApp: React.FunctionComponent<{ data: ITrack[] }> = ({ data }) => {
     return <Layout>
-        <h1>hi</h1>
+        <TheTitleBar />
     </Layout>
 }
 
