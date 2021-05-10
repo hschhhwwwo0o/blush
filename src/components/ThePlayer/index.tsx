@@ -81,7 +81,15 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
                         min             = "0" 
                         max             = "100" 
                         value           = { valueDuration }
-                        onChange        = { e => seValueDuration(+e.target.value) }
+                        onChange        = { e => {
+                            if( +e.target.value === 100 ) {
+                                seValueDuration(0)
+                            } else {
+                                seValueDuration(+e.target.value)
+                            }
+                            
+                            audioRef.current.currentTime = audioRef.current.duration * (+e.target.value / 100)
+                        } }
                     />
                 </section>
             </div>
