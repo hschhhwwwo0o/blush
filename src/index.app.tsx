@@ -10,8 +10,8 @@ const IndexApp: React.FunctionComponent<{ data: ITrack[] }> = ({ data }) => {
     return <Layout>
         <TheTitleBar />
         <TheMeta 
-            title   = "Frail State Of Mind"
-            artist  = "The 1975"
+            title   = { data[0].title }
+            artist  = { data[0].artist }
         />
     </Layout>
 }
