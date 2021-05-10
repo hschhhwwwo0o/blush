@@ -13,11 +13,13 @@ interface IThePlayer {
 const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
 
     const audioRef = useRef(null);
+    const rangeRef = useRef(null);
 
     const len = props.len - 1;
 
     const [ autoplay, setautoplay] = useState(false);
     const [ valueDuration, seValueDuration] = useState(0);
+    const [ intervalID, setIntervalID] = useState(null);
 
     function __next() {
         if( props.nowPlay === len ) {
@@ -25,6 +27,9 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
         } else {
             props.changeNowPlay(props.nowPlay + 1)
         }
+
+        seValueDuration(0)
+        clearInterval(undefined)
     }
 
     function __prev() {
@@ -33,19 +38,36 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
         } else {
             props.changeNowPlay( props.nowPlay - 1 )
         }
+
+        seValueDuration(0)
+        clearInterval(undefined)
     }
 
     function __play() {
         if( props.isPlay === true ) {
             audioRef.current.pause();
             props.setIsPlay(false);
+
+            clearInterval(intervalID)
         } else {
             audioRef.current.play();
             props.setIsPlay(true);
+
+            setIntervalID( setInterval( () => {
+                // rangeRef.current.value = Number.parseInt(rangeRef.current.value) + 1
+                // setRange(Number.parseInt(rangeRef.current.value) + 1)
+                // console.log(rangeRef.current.value)
+                seValueDuration(Number.parseInt(rangeRef.current.value) + 1)
+                console.log(audioRef.current.duration)
+            }, 1000 ) )
         }
         
         setautoplay(true);
     }
+
+    setTimeout( () => {
+        console.log(audioRef.current.duration)
+    }, 2000 )
 
     return <>
         <audio 
@@ -77,9 +99,11 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
                     </div>
                     <input 
                         id              = "ThePlayer__timeline"
+                        ref             = { rangeRef }
                         type            = "range" 
                         min             = "0" 
                         max             = "100" 
+                        step            = "any"
                         value           = { valueDuration }
                         onChange        = { e => {
                             if( +e.target.value === 100 ) {
