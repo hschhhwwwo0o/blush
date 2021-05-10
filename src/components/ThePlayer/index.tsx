@@ -17,6 +17,7 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
     const len = props.len - 1;
 
     const [ autoplay, setautoplay] = useState(false);
+    const [ valueDuration, seValueDuration] = useState(0);
 
     function __next() {
         if( props.nowPlay === len ) {
@@ -74,9 +75,14 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
                         <h2>0:00</h2>
                         <h2>4:20</h2>
                     </div>
-                    <div id="ThePlayer__timeline">
-                        <div id="timeline"></div>
-                    </div>
+                    <input 
+                        id              = "ThePlayer__timeline"
+                        type            = "range" 
+                        min             = "0" 
+                        max             = "100" 
+                        value           = { valueDuration }
+                        onChange        = { e => seValueDuration(+e.target.value) }
+                    />
                 </section>
             </div>
         </div>
