@@ -1,17 +1,12 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
+import React from "react";
+import Layout from "./layout/index";
 
-import createDataFromFS from "./utils/createDataFromFS";
-import MainLayout from "./layout/index";
-import removeUndefined from "./utils/removeUndefined";
+import { ITrack } from "./types";
 
-async function __R() {
-    createDataFromFS().then((data) => {
-        ReactDOM.render( 
-            <MainLayout data={ removeUndefined(data) } />, 
-            document.querySelector("#root") 
-        );
-    });
+const IndexApp: React.FunctionComponent<{ data: ITrack[] }> = ({ data }) => {
+    return <Layout>
+        <h1>hi</h1>
+    </Layout>
 }
 
-__R();
+export default IndexApp;
