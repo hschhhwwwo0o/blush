@@ -5,6 +5,7 @@ import { ITrack } from "./types";
 
 import TheTitleBar from "./components/TheTitleBar/index";
 import TheMeta from "./components/TheMeta";
+import ThePlayer from "./components/ThePlayer";
 
 const IndexApp: React.FunctionComponent<{ data: ITrack[] }> = ({ data }) => {
     return <Layout>
@@ -13,6 +14,7 @@ const IndexApp: React.FunctionComponent<{ data: ITrack[] }> = ({ data }) => {
             title   = { data[0].title }
             artist  = { data[0].artist }
         />
+        <ThePlayer />
     </Layout>
 }
 
