@@ -1,18 +1,70 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./index.styl";
 
-const ThePlayer:React.FunctionComponent = () => {
+interface IThePlayer {
+    nowPlay: any
+    changeNowPlay: any
+    audio: any
+    len: any
+    isPlay: any
+    setIsPlay: any
+}
+
+const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
+
+    const audioRef = useRef(null);
+
+    const len = props.len - 1;
+
+    const [ autoplay, setautoplay] = useState(false);
+
+    function __next() {
+        if( props.nowPlay === len ) {
+            props.changeNowPlay(0)
+        } else {
+            props.changeNowPlay(props.nowPlay + 1)
+        }
+    }
+
+    function __prev() {
+        if( props.nowPlay === 0 ) {
+            props.changeNowPlay(0)
+        } else {
+            props.changeNowPlay( props.nowPlay - 1 )
+        }
+    }
+
+    function __play() {
+        if( props.isPlay === true ) {
+            audioRef.current.pause();
+            props.setIsPlay(false);
+        } else {
+            audioRef.current.play();
+            props.setIsPlay(true);
+        }
+        
+        setautoplay(true);
+    }
+
     return <>
+        <audio 
+            src         = { props.audio }
+            ref         = { audioRef }
+            autoPlay    = { autoplay }
+            onEnded     = { () => {
+                __next();
+            } }
+        />
         <div id="ThePlayer">
             <div id="ThePlayer__controls">
                 <div id="ThePlayer__empty"></div>
-                <div id="ThePlayer__play">
+                <div id="ThePlayer__play" onClick={ __play } className={ !props.isPlay ? "play" : "pause" }>
                     <div />
                 </div>
-                <div id="ThePlayer__prev">
+                <div id="ThePlayer__prev" onClick={ __prev }>
                     <div />
                 </div>
-                <div id="ThePlayer__next">
+                <div id="ThePlayer__next" onClick={ __next }>
                     <div />
                 </div>
             </div>

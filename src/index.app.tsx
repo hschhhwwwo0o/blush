@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "./layout/index";
 
 import { ITrack } from "./types";
@@ -8,13 +8,24 @@ import TheMeta from "./components/TheMeta";
 import ThePlayer from "./components/ThePlayer";
 
 const IndexApp: React.FunctionComponent<{ data: ITrack[] }> = ({ data }) => {
+
+    const [ nowPlay, changeNowPlay ] = useState(0);
+    const [ isPlay, setIsPlay ] = useState(false);
+
     return <Layout>
         <TheTitleBar />
         <TheMeta 
-            title   = { data[0].title }
-            artist  = { data[0].artist }
+            title   = { data[nowPlay].title }
+            artist  = { data[nowPlay].artist }
         />
-        <ThePlayer />
+        <ThePlayer 
+            isPlay          = { isPlay }
+            setIsPlay       = { setIsPlay }
+            nowPlay         = { nowPlay }
+            changeNowPlay   = { changeNowPlay }
+            audio           = { data[nowPlay].url }
+            len             = { data.length }
+        />
     </Layout>
 }
 
