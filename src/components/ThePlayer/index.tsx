@@ -8,6 +8,7 @@ interface IThePlayer {
     len: any
     isPlay: any
     setIsPlay: any
+    dur: any
 }
 
 const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
@@ -34,11 +35,12 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
 
     function __prev() {
         if( props.nowPlay === 0 ) {
-            props.changeNowPlay(0)
+            props.changeNowPlay(0);
         } else {
             props.changeNowPlay( props.nowPlay - 1 )
         }
 
+        setautoplay(true);
         seValueDuration(0)
         clearInterval(undefined)
     }
@@ -47,11 +49,13 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
         if( props.isPlay === true ) {
             audioRef.current.pause();
             props.setIsPlay(false);
+            setautoplay(false);
 
             clearInterval(intervalID)
         } else {
             audioRef.current.play();
             props.setIsPlay(true);
+            setautoplay(true);
 
             setIntervalID( setInterval( () => {
                 // rangeRef.current.value = Number.parseInt(rangeRef.current.value) + 1
@@ -62,7 +66,6 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
             }, 1000 ) )
         }
         
-        setautoplay(true);
     }
 
     setTimeout( () => {
@@ -102,17 +105,17 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
                         ref             = { rangeRef }
                         type            = "range" 
                         min             = "0" 
-                        max             = "100" 
+                        max             = { props.dur } 
                         step            = "any"
                         value           = { valueDuration }
                         onChange        = { e => {
-                            if( +e.target.value === 100 ) {
+                            if( +e.target.value === props.dur ) {
                                 seValueDuration(0)
                             } else {
                                 seValueDuration(+e.target.value)
                             }
                             
-                            audioRef.current.currentTime = audioRef.current.duration * (+e.target.value / 100)
+                            audioRef.current.currentTime = audioRef.current.duration * (+e.target.value / props.dur)
                         } }
                     />
                 </section>
