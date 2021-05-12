@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import formatTime from "../../utils/formatTime";
 import "./index.styl";
 
 interface IThePlayer {
@@ -98,7 +99,7 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
                 <section>
                     <div id="ThePlayer__time">
                         <h2>0:00</h2>
-                        <h2>4:20</h2>
+                        <h2>{ formatTime(props.dur) }</h2>
                     </div>
                     <input 
                         id              = "ThePlayer__timeline"
