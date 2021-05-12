@@ -22,6 +22,7 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
     const [ autoplay, setautoplay] = useState(false);
     const [ valueDuration, seValueDuration] = useState(0);
     const [ intervalID, setIntervalID] = useState(null);
+    const [ currentTime, setCurrentTime] = useState("0:00");
 
     function __next() {
         if( props.nowPlay === len ) {
@@ -63,15 +64,11 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
                 // setRange(Number.parseInt(rangeRef.current.value) + 1)
                 // console.log(rangeRef.current.value)
                 seValueDuration(Number.parseInt(rangeRef.current.value) + 1)
-                console.log(audioRef.current.duration)
+                setCurrentTime(formatTime(audioRef.current.currentTime));
             }, 1000 ) )
         }
         
     }
-
-    setTimeout( () => {
-        console.log(audioRef.current.duration)
-    }, 2000 )
 
     return <>
         <audio 
@@ -98,7 +95,7 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
             <div id="ThePlayer__timer">
                 <section>
                     <div id="ThePlayer__time">
-                        <h2>0:00</h2>
+                        <h2>{ currentTime }</h2>
                         <h2>{ formatTime(props.dur) }</h2>
                     </div>
                     <input 
