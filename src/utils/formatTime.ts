@@ -3,10 +3,23 @@ function formatTime(time: number): string {
     let minutes = time / 60;
     let secs = time % 60;
 
-    let formatMinutes = minutes.toString().split(".")[0];
-    let formatSecunds = secs.toFixed().toString().length === 1 ? `0${secs.toFixed().toString()}` : secs.toFixed().toString(); 
+    let formatSeconds;
 
-    return `${formatMinutes}:${formatSecunds}`;
+    if( secs.toFixed().toString().length === 1 ) {
+        formatSeconds = `0${secs.toFixed().toString()}`
+    } else {
+        formatSeconds = secs.toFixed().toString()
+    }
+    
+    let formatMinutes = minutes.toString().split(".")[0];
+
+    if( formatSeconds == "60" ) {
+        minutes++
+
+        return `${formatMinutes}:00`
+    }
+
+    return `${formatMinutes}:${formatSeconds}`;
 }
 
 export default formatTime;
