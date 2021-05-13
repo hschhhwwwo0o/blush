@@ -20,7 +20,7 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
     const len = props.len - 1;
 
     const [ autoplay, setautoplay] = useState(false);
-    const [ valueDuration, seValueDuration] = useState(0);
+    const [ currentTimeLine, setCurrentTimeLine] = useState(0);
     const [ intervalID, setIntervalID] = useState(null);
     const [ currentTime, setCurrentTime] = useState("0:00");
 
@@ -31,43 +31,38 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
             props.changeNowPlay(props.nowPlay + 1)
         }
 
-        seValueDuration(0)
+        setCurrentTimeLine(0)
         clearInterval(undefined)
     }
 
     function __prev() {
-        if( props.nowPlay === 0 ) {
+        clearInterval(undefined);
+        setCurrentTimeLine(0);
+        if(props.nowPlay === 0) {
             props.changeNowPlay(0);
         } else {
             props.changeNowPlay( props.nowPlay - 1 )
         }
 
         setautoplay(true);
-        seValueDuration(0)
-        clearInterval(undefined)
     }
 
     function __play() {
         if( props.isPlay === true ) {
+            clearInterval(intervalID)
             audioRef.current.pause();
             props.setIsPlay(false);
             setautoplay(false);
-
-            clearInterval(intervalID)
         } else {
             audioRef.current.play();
             props.setIsPlay(true);
             setautoplay(true);
 
             setIntervalID( setInterval( () => {
-                // rangeRef.current.value = Number.parseInt(rangeRef.current.value) + 1
-                // setRange(Number.parseInt(rangeRef.current.value) + 1)
-                // console.log(rangeRef.current.value)
-                seValueDuration(Number.parseInt(rangeRef.current.value) + 1)
+                setCurrentTimeLine(Number.parseInt(rangeRef.current.value) + 1)
                 setCurrentTime(formatTime(audioRef.current.currentTime));
             }, 1000 ) )
         }
-        
     }
 
     return <>
@@ -105,12 +100,12 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
                         min             = "0" 
                         max             = { props.dur } 
                         step            = "any"
-                        value           = { valueDuration }
+                        value           = { currentTimeLine }
                         onChange        = { e => {
                             if( +e.target.value === props.dur ) {
-                                seValueDuration(0)
+                                setCurrentTimeLine(0)
                             } else {
-                                seValueDuration(+e.target.value)
+                                setCurrentTimeLine(+e.target.value)
                             }
                             
                             audioRef.current.currentTime = audioRef.current.duration * (+e.target.value / props.dur)
