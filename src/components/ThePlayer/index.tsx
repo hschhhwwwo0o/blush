@@ -25,14 +25,22 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
     const [ currentTime, setCurrentTime] = useState("0:00");
 
     function __next() {
+        setCurrentTimeLine(0);
+        clearInterval(undefined);
+        clearInterval(intervalID);
         if( props.nowPlay === len ) {
             props.changeNowPlay(0)
         } else {
             props.changeNowPlay(props.nowPlay + 1)
         }
 
-        setCurrentTimeLine(0)
-        clearInterval(undefined)
+        setIntervalID( setInterval( () => {
+            setCurrentTimeLine(Number.parseInt(rangeRef.current.value) + 1)
+            setCurrentTime(formatTime(audioRef.current.currentTime));
+        }, 1000 ) )
+
+        props.setIsPlay(true);
+        setautoplay(true);
     }
 
     function __prev() {
@@ -44,6 +52,7 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
             props.changeNowPlay( props.nowPlay - 1 )
         }
 
+        props.setIsPlay(true);
         setautoplay(true);
     }
 
