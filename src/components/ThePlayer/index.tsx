@@ -73,22 +73,32 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
                 }}>
                     <div />
                 </div>
-                <div id="ThePlayer__prev" onClick={ () => {
-                    dispatch({ type: "PREV" });
-                } }>
+                <div 
+                    id="ThePlayer__prev" 
+                    onClick={ () => {
+                        dispatch({ type: "PREV" });
+                    }}
+                >
                     <div />
                 </div>
-                <div id="ThePlayer__next" onClick={ () => {
-                    dispatch({ type: "NEXT" });
-                } }>
+                <div 
+                    id="ThePlayer__next" 
+                    onClick={ () => {
+                        dispatch({ type: "NEXT" });
+                    }}
+                >
                     <div />
                 </div>
             </div>
             <div id="ThePlayer__timer">
                 <section>
                     <div id="ThePlayer__time">
-                        <h2>{ formatTime(currentTime) }</h2>
-                        <h2>{ formatTime(props.dur) }</h2>
+                        <h2>
+                            { formatTime(currentTime) }
+                        </h2>
+                        <h2>
+                            { formatTime(props.dur) }
+                        </h2>
                     </div>
                     <input 
                         id              = "ThePlayer__timeline"
