@@ -1,4 +1,4 @@
-function PlayerReducer(state = intialStatePlayer, action) {
+function PlayerReducer(state, action) {
     switch (action.type) {
         case "PLAY":
             return {
