@@ -11,9 +11,12 @@
     "publish": "electron-forge publish"
   },
   "keywords": [
-    "Music App", "React",
-    "Native", "Electron",
-    "TypeScript", "JavaScript",
+    "Music App",
+    "React",
+    "Native",
+    "Electron",
+    "TypeScript",
+    "JavaScript",
     "Webpack"
   ],
   "author": {
@@ -94,6 +97,8 @@
     "music-metadata": "^7.8.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4",
+    "redux": "^4.1.0",
     "stylus": "^0.54.8",
     "stylus-loader": "4.3.1"
   }

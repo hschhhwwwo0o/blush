@@ -5,10 +5,15 @@ import App from "./index.app";
 import createDataFromFS from "./utils/createDataFromFS";
 import removeUndefined from "./utils/removeUndefined";
 
+import { Provider } from "react-redux";
+import store from "./redux/index";
+
 async function __R() {
     createDataFromFS().then((data) => {
         ReactDOM.render( 
-            <App data={ removeUndefined(data) } />, 
+            <Provider store={store}>
+                <App data={ removeUndefined(data) } />
+            </Provider>, 
             document.querySelector("#root") 
         );
     });

@@ -3,14 +3,15 @@ import Layout from "./layout/index";
 
 import { ITrack } from "./types";
 
+import { useSelector, useDispatch } from 'react-redux'
+
 import TheTitleBar from "./components/TheTitleBar/index";
 import TheMeta from "./components/TheMeta";
 import ThePlayer from "./components/ThePlayer";
 
 const IndexApp: React.FunctionComponent<{ data: ITrack[] }> = ({ data }) => {
 
-    const [ nowPlay, changeNowPlay ] = useState(0);
-    const [ isPlay, setIsPlay ] = useState(false);
+    const nowPlay: number = useSelector( (state: any) => state.nowPlay);
 
     return <Layout>
         <TheTitleBar />
@@ -19,10 +20,6 @@ const IndexApp: React.FunctionComponent<{ data: ITrack[] }> = ({ data }) => {
             artist  = { data[nowPlay].artist }
         />
         <ThePlayer 
-            isPlay          = { isPlay }
-            setIsPlay       = { setIsPlay }
-            nowPlay         = { nowPlay }
-            changeNowPlay   = { changeNowPlay }
             audio           = { data[nowPlay].url }
             len             = { data.length }
             dur             = { data[nowPlay].duration }
