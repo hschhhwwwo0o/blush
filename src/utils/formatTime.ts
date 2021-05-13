@@ -14,11 +14,8 @@ function formatTime(time: number): string {
     let formatMinutes = minutes.toString().split(".")[0];
 
     if( formatSeconds == "60" ) {
-        minutes++
-
-        let formatMinutes = minutes.toString().split(".")[0];
-
-        return `${formatMinutes}:00`
+        minutes++;
+        return `${minutes.toString().split(".")[0]}:00`
     }
 
     return `${formatMinutes}:${formatSeconds}`;
