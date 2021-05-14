@@ -13,7 +13,7 @@
  *
  */
 
-import "./assets/reset.styl";
+import "./assets/reset.css";
 import "./index.styl";
 
 import "./index.render.tsx";
