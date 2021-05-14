@@ -1,8 +1,17 @@
 import { IStore } from "../interface.store";
+import { 
+    PLAY,
+    PAUSE,
+    NEXT,
+    PREV,
+    TIMELINE_PLAY,
+    TIMELINE_PAUSE,
+    CHANGE_TIMELINE
+} from "../actions";
 
 function PlayerReducer(state: IStore, action: any): IStore {
     switch (action.type) {
-        case "PLAY":
+        case PLAY:
             return {
                 isPlay: true,
                 nowPlay: state.nowPlay,
@@ -11,7 +20,7 @@ function PlayerReducer(state: IStore, action: any): IStore {
                 currentTime: state.currentTime,
             }
 
-        case "PAUSE":
+        case PAUSE:
             return {
                 isPlay: false,
                 nowPlay: state.nowPlay,
@@ -20,7 +29,7 @@ function PlayerReducer(state: IStore, action: any): IStore {
                 currentTime: state.currentTime,
             }
 
-        case "NEXT":
+        case NEXT:
             return {
                 isPlay: true,
                 nowPlay: state.nowPlay + 1,
@@ -29,7 +38,7 @@ function PlayerReducer(state: IStore, action: any): IStore {
                 currentTime: 0,
             }
 
-        case "PREV":
+        case PREV:
             return {
                 isPlay: true,
                 nowPlay: state.nowPlay - 1,
@@ -38,7 +47,7 @@ function PlayerReducer(state: IStore, action: any): IStore {
                 currentTime: 0,
             }
 
-        case "TIMELINE_PLAY":
+        case TIMELINE_PLAY:
             return {
                 isPlay: state.isPlay,
                 nowPlay: state.nowPlay,
@@ -47,7 +56,7 @@ function PlayerReducer(state: IStore, action: any): IStore {
                 currentTime: state.currentTime + 1,
             }
 
-        case "TIMELINE_PAUSE":
+        case TIMELINE_PAUSE:
             return {
                 isPlay: state.isPlay,
                 nowPlay: state.nowPlay,
@@ -56,7 +65,7 @@ function PlayerReducer(state: IStore, action: any): IStore {
                 currentTime: state.currentTime,
             }
 
-        case "CHANGE_TIMELINE":
+        case CHANGE_TIMELINE:
             return {
                 isPlay: state.isPlay,
                 nowPlay: state.nowPlay,

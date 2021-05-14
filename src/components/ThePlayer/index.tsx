@@ -3,6 +3,15 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { IThePlayer } from "./interface";
 import { IStore } from "../../redux/interface.store";
+import {
+    PLAY,
+    PAUSE,
+    NEXT,
+    PREV,
+    TIMELINE_PLAY,
+    TIMELINE_PAUSE,
+    CHANGE_TIMELINE
+} from "../../redux/actions";
 
 import ControlButtons from "./ControlButtons";
 import Time from "./Time";
@@ -28,23 +37,23 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
 
     function currentTimePlay() {
         setIntervalState(setInterval( () => {
-            dispatch({ type: "TIMELINE_PLAY" });
+            dispatch({ type: TIMELINE_PLAY });
         }, 1000 ))
     }
 
     function currentTimePause() {
         setIntervalState(clearInterval(interval))
-        dispatch({ type: "TIMELINE_PAUSE" });
+        dispatch({ type: TIMELINE_PAUSE });
     }
 
     function playPause(isPlay: boolean): void {
         if( isPlay !== true  ) {
-            dispatch({ type: "PLAY" });
-            dispatch({ type: "CHANGE_TIMELINE", currentTimeLine: audioRef.current.currentTime });
+            dispatch({ type: PLAY });
+            dispatch({ type: CHANGE_TIMELINE, currentTimeLine: audioRef.current.currentTime });
             currentTimePlay();
             audioRef.current.play();
         } else {
-            dispatch({ type: "PAUSE" });
+            dispatch({ type: PAUSE });
             currentTimePause();
             audioRef.current.pause();
         }
@@ -52,17 +61,17 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
 
     function nextPlay(): void {
         currentTimePause();
-        dispatch({ type: "NEXT" });
-        dispatch({ type: "PLAY" });
-        dispatch({ type: "CHANGE_TIMELINE", currentTimeLine: 0 });
+        dispatch({ type: NEXT });
+        dispatch({ type: PLAY });
+        dispatch({ type: CHANGE_TIMELINE, currentTimeLine: 0 });
         currentTimePlay();
     }
 
     function prevPlay(): void {
         currentTimePause();
-        dispatch({ type: "NEXT" });
-        dispatch({ type: "PLAY" });
-        dispatch({ type: "CHANGE_TIMELINE", currentTimeLine: 0 });
+        dispatch({ type: PREV });
+        dispatch({ type: PLAY });
+        dispatch({ type: CHANGE_TIMELINE, currentTimeLine: 0 });
         currentTimePlay();
     }
 
@@ -72,7 +81,7 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
             ref         = { audioRef }
             autoPlay    = { isAutoPlay }
             onEnded     = { () => {
-                dispatch({ type: "NEXT" });
+                nextPlay();
             } }
         />
         <div id="ThePlayer">
