@@ -1,18 +1,9 @@
 import React, { useRef, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import formatTime from "../../utils/formatTime";
+import { IThePlayer } from "./interface";
+
 import "./index.styl";
-
-import { useSelector, useDispatch } from "react-redux"
-
-interface IThePlayer {
-    nowPlay?: any
-    changeNowPlay?: any
-    audio?: any
-    len?: any
-    isPlay?: any
-    setIsPlay?: any
-    dur?: any
-}
 
 const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
 
