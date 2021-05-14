@@ -3,6 +3,8 @@ import PlayPauseSVG from "../PlayPauseSVG";
 
 import { ControlButtonsElement } from "./interface";
 
+import "./index.styl";
+
 const ControlButtons: React.FunctionComponent<ControlButtonsElement> = (props) => {
     return <>
         <div id="ThePlayer__controls">

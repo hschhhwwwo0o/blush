@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import formatTime from "../../../utils/formatTime";
 
 import { ITimeElement } from "./interface";
+import "./index.styl";
 
 const Time: React.FunctionComponent<ITimeElement> = (props) => {
 
