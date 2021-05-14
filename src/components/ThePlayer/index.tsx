@@ -67,7 +67,7 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
                         audioRef.current.play();
                     } else {
                         dispatch({ type: "PAUSE" });
-                        currentTimePause()
+                        currentTimePause();
                         audioRef.current.pause();
                     } 
                 }}>
@@ -76,7 +76,11 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
                 <div 
                     id="ThePlayer__prev" 
                     onClick={ () => {
+                        currentTimePause();
                         dispatch({ type: "PREV" });
+                        dispatch({ type: "PLAY" });
+                        dispatch({ type: "CHANGE_TIMELINE", currentTimeLine: 0 });
+                        currentTimePlay();
                     }}
                 >
                     <div />
@@ -84,7 +88,11 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
                 <div 
                     id="ThePlayer__next" 
                     onClick={ () => {
+                        currentTimePause();
                         dispatch({ type: "NEXT" });
+                        dispatch({ type: "PLAY" });
+                        dispatch({ type: "CHANGE_TIMELINE", currentTimeLine: 0 });
+                        currentTimePlay();
                     }}
                 >
                     <div />
