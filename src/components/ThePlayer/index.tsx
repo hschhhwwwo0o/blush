@@ -1,10 +1,11 @@
 import React, { useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+
+import { IThePlayer } from "./interface";
 import formatTime from "../../utils/formatTime";
-import PlayPauseSVG from "./PlayPauseSVG";
+
 import ControlButtons from "./ControlButtons";
 import Time from "./Time";
-import { IThePlayer } from "./interface";
 
 import "./index.styl";
 
