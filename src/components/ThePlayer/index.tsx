@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import { IThePlayer } from "./interface";
+import { IStore } from "../../redux/interface.store";
 
 import ControlButtons from "./ControlButtons";
 import Time from "./Time";
@@ -14,7 +15,7 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
 
     const dispatch = useDispatch();
 
-    const { isPlay, isAutoPlay, currentTimeLine, currentTime } = useSelector((state: any) => {
+    const { isPlay, isAutoPlay, currentTimeLine, currentTime } = useSelector((state: IStore) => {
         return {
             isPlay: state.isPlay,
             isAutoPlay: state.isAutoPlay,
