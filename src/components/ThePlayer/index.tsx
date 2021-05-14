@@ -43,6 +43,35 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
         dispatch({ type: "TIMELINE_PAUSE" });
     }
 
+    function playPause(isPlay: boolean): void {
+        if( isPlay !== true  ) {
+            dispatch({ type: "PLAY" });
+            dispatch({ type: "CHANGE_TIMELINE", currentTimeLine: audioRef.current.currentTime });
+            currentTimePlay();
+            audioRef.current.play();
+        } else {
+            dispatch({ type: "PAUSE" });
+            currentTimePause();
+            audioRef.current.pause();
+        }
+    }
+
+    function nextPlay(): void {
+        currentTimePause();
+        dispatch({ type: "NEXT" });
+        dispatch({ type: "PLAY" });
+        dispatch({ type: "CHANGE_TIMELINE", currentTimeLine: 0 });
+        currentTimePlay();
+    }
+
+    function prevPlay(): void {
+        currentTimePause();
+        dispatch({ type: "NEXT" });
+        dispatch({ type: "PLAY" });
+        dispatch({ type: "CHANGE_TIMELINE", currentTimeLine: 0 });
+        currentTimePlay();
+    }
+
     return <>
         <audio 
             src         = { props.audio }
@@ -54,21 +83,9 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
         />
         <div id="ThePlayer">
             <div id="ThePlayer__controls">
-                <div id="ThePlayer__empty"></div>
-                <div 
-                    id          = "ThePlayer__play"
-                    onClick     = {() => {
-
-                    if( isPlay !== true  ) {
-                        dispatch({ type: "PLAY" });
-                        dispatch({ type: "CHANGE_TIMELINE", currentTimeLine: audioRef.current.currentTime });
-                        currentTimePlay();
-                        audioRef.current.play();
-                    } else {
-                        dispatch({ type: "PAUSE" });
-                        currentTimePause();
-                        audioRef.current.pause();
-                    } 
+                <div id="ThePlayer__empty" />
+                <div id = "ThePlayer__play" onClick = {() => {
+                    playPause(isPlay);
                 }}>
                     { 
                     !isPlay && <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -89,28 +106,10 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
                     </svg>
                     }
                 </div>
-                <div 
-                    id="ThePlayer__prev" 
-                    onClick={ () => {
-                        currentTimePause();
-                        dispatch({ type: "PREV" });
-                        dispatch({ type: "PLAY" });
-                        dispatch({ type: "CHANGE_TIMELINE", currentTimeLine: 0 });
-                        currentTimePlay();
-                    }}
-                >
+                <div id="ThePlayer__prev" onClick={ prevPlay }>
                     <div />
                 </div>
-                <div 
-                    id="ThePlayer__next" 
-                    onClick={ () => {
-                        currentTimePause();
-                        dispatch({ type: "NEXT" });
-                        dispatch({ type: "PLAY" });
-                        dispatch({ type: "CHANGE_TIMELINE", currentTimeLine: 0 });
-                        currentTimePlay();
-                    }}
-                >
+                <div id="ThePlayer__next" onClick={ nextPlay }>
                     <div />
                 </div>
             </div>
