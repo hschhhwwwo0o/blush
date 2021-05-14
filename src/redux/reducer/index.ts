@@ -1,4 +1,6 @@
-function PlayerReducer(state, action) {
+import { IStore } from "../interface.store";
+
+function PlayerReducer(state: IStore, action: any): IStore {
     switch (action.type) {
         case "PLAY":
             return {

@@ -1,7 +1,8 @@
 import { createStore } from "redux";
+import { IStore } from "./interface.store";
 import reducer from "./reducer";
 
-const intialStatePlayer = {
+const intialStatePlayer: IStore = {
     isPlay: false,
     isAutoPlay: false,
     nowPlay: 0,
