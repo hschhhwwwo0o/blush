@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import { IThePlayer } from "./interface";
-import formatTime from "../../utils/formatTime";
 
 import ControlButtons from "./ControlButtons";
 import Time from "./Time";
@@ -83,9 +82,8 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
                 playPause   = { playPause }
             />
             <Time 
-                currentTime         = { formatTime(currentTime) }
-                duration            = { formatTime(props.dur) }
-                dur                 = { props.dur }
+                currentTime         = { currentTime }
+                duration            = { props.duration }
                 currentTimeLine     = { currentTimeLine }
                 audioRef            = { audioRef }
             />

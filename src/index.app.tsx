@@ -21,8 +21,8 @@ const IndexApp: React.FunctionComponent<{ data: ITrack[] }> = ({ data }) => {
         />
         <ThePlayer 
             audio           = { data[nowPlay].url }
-            len             = { data.length }
-            dur             = { data[nowPlay].duration }
+            lengthData      = { data.length }
+            duration        = { data[nowPlay].duration }
         />
     </Layout>
 }

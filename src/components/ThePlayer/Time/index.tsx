@@ -1,7 +1,10 @@
 import React, { useRef } from "react";
 import { useDispatch } from "react-redux";
+import formatTime from "../../../utils/formatTime";
 
-const Time: React.FunctionComponent<any> = (props) => {
+import { ITimeElement } from "./interface";
+
+const Time: React.FunctionComponent<ITimeElement> = (props) => {
 
     const rangeRef = useRef(null);
     const dispatch = useDispatch();
@@ -11,10 +14,10 @@ const Time: React.FunctionComponent<any> = (props) => {
             <section>
                 <div id="ThePlayer__time">
                     <h2>
-                        { props.currentTime }
+                        { formatTime(props.currentTime) }
                     </h2>
                     <h2>
-                        { props.duration }
+                        { formatTime(props.duration) }
                     </h2>
                 </div>
                 <input 
@@ -22,13 +25,13 @@ const Time: React.FunctionComponent<any> = (props) => {
                     ref             = { rangeRef }
                     type            = "range" 
                     min             = "0" 
-                    max             = { props.dur } 
+                    max             = { props.duration } 
                     step            = "any"
                     value           = { props.currentTimeLine }
                     onChange        = { e => {
-                        dispatch({ type: "CHANGE_TIMELINE", currentTimeLine: props.audioRef.current.duration * (+e.target.value / props.dur) });
-                        props.audioRef.current.currentTime = props.audioRef.current.duration * (+e.target.value / props.dur)
-                    } }
+                        dispatch({ type: "CHANGE_TIMELINE", currentTimeLine: props.audioRef.current.duration * (+e.target.value / props.duration) });
+                        props.audioRef.current.currentTime = props.audioRef.current.duration * (+e.target.value / props.duration)
+                    }}
                 />
             </section>
         </div>
