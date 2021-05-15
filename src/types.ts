@@ -1,3 +1,5 @@
+export type ID = number
+
 export interface ITrack {
     url: string
     artist: string
@@ -6,5 +8,13 @@ export interface ITrack {
     duration: number
     title: string
     year: number
-    id: number
+    id: ID
 } 
+
+export interface ISkin {
+    __id: ID
+    image: string
+    mainColor: string
+    secondColor: string
+    thirdColor: string
+}
