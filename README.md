@@ -3,7 +3,7 @@
 
 ## Blush
 
-**Developed with [ElectronJS]** <br>
+**Developed with [ElectronJS]** <br />
 
 ## Documentation
 
