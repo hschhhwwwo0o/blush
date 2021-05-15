@@ -11,6 +11,10 @@ const Time: React.FunctionComponent<ITimeElement> = (props) => {
     const rangeRef = useRef(null);
     const dispatch = useDispatch();
 
+    let valueLine = (props.currentTimeLine * 100) / props.duration;
+    let currentColor = "#F96243";
+    let gradient = `-webkit-linear-gradient(left, ${currentColor} 0%, ${currentColor} ${valueLine}%, #fff ${valueLine}%, #fff 100%)`;
+
     return <>
         <div id="ThePlayer__timer">
             <section>
@@ -34,6 +38,7 @@ const Time: React.FunctionComponent<ITimeElement> = (props) => {
                         dispatch({ type: CHANGE_TIMELINE, currentTimeLine: props.audioRef.current.duration * (+e.target.value / props.duration) });
                         props.audioRef.current.currentTime = props.audioRef.current.duration * (+e.target.value / props.duration)
                     }}
+                    style={{ background: gradient }}
                 />
             </section>
         </div>
