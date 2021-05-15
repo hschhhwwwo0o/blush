@@ -18,14 +18,6 @@ const Time: React.FunctionComponent<ITimeElement> = (props) => {
     return <>
         <div id="ThePlayer__timer">
             <section>
-                <div id="ThePlayer__time">
-                    <h2>
-                        { formatTime(props.currentTime) }
-                    </h2>
-                    <h2>
-                        { formatTime(props.duration) }
-                    </h2>
-                </div>
                 <input 
                     id              = "ThePlayer__timeline"
                     ref             = { rangeRef }
@@ -40,6 +32,14 @@ const Time: React.FunctionComponent<ITimeElement> = (props) => {
                     }}
                     style={{ background: gradient }}
                 />
+                <div id="ThePlayer__time">
+                    <h2>
+                        { formatTime(props.currentTime) }
+                    </h2>
+                    <h2>
+                        { formatTime(props.duration) }
+                    </h2>
+                </div>
             </section>
         </div>
     </>

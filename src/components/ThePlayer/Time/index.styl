@@ -7,16 +7,27 @@
 
     > section 
         margin-top -10px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+    #ThePlayer__timeline:hover
+        opacity 0.6
+
+    #ThePlayer__timeline:hover ~ #ThePlayer__time h2:nth-child(1)
+        opacity 0.6
 
     #ThePlayer__time
         display: flex
         flex-direction: row
         justify-content: space-between
+        order: 1
 
         h2
             &:nth-child(1)
                 color: #CA5230;
 
+            transition-duration: .65s
             font-family: "Cormorant Garamond"
             font-style: normal
             font-weight: 300
@@ -29,9 +40,11 @@
             margin-bottom 10px
 
     #ThePlayer__timeline
+        order: 2
         -webkit-appearance: none
         width 402px
         height 4px
+        transition-duration: .65s
 
         &::-webkit-slider-thumb
             opacity 0
