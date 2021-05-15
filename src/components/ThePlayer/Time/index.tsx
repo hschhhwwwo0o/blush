@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { useDispatch } from "react-redux";
+import { CHANGE_TIMELINE } from "../../../redux/actions";
 import formatTime from "../../../utils/formatTime";
 
 import { ITimeElement } from "./interface";
@@ -30,7 +31,7 @@ const Time: React.FunctionComponent<ITimeElement> = (props) => {
                     step            = "any"
                     value           = { props.currentTimeLine }
                     onChange        = { e => {
-                        dispatch({ type: "CHANGE_TIMELINE", currentTimeLine: props.audioRef.current.duration * (+e.target.value / props.duration) });
+                        dispatch({ type: CHANGE_TIMELINE, currentTimeLine: props.audioRef.current.duration * (+e.target.value / props.duration) });
                         props.audioRef.current.currentTime = props.audioRef.current.duration * (+e.target.value / props.duration)
                     }}
                 />
