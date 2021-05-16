@@ -90,12 +90,16 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
                 prevPlay    = { prevPlay }
                 nextPlay    = { nextPlay }
                 playPause   = { playPause }
+                mainColor   = { props.mainColor }
+                secondColor = { props.secondColor }
+                thirdColor  = { props.thirdColor }
             />
             <Time 
                 currentTime         = { currentTime }
                 duration            = { props.duration }
                 currentTimeLine     = { currentTimeLine }
                 audioRef            = { audioRef }
+                color               = { props.mainColor }
             />
         </div>
     </>

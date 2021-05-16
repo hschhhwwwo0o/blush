@@ -3,4 +3,5 @@ export interface ITimeElement {
     duration: number
     currentTimeLine: number
     audioRef: any
+    color?: string
 }
