@@ -3,13 +3,13 @@ import { useSelector } from "react-redux";
 
 import Layout from "./layout/index";
 
-import { ITrack } from "./types";
+import { ITrack, ISkin } from "./types";
 
 import TheTitleBar from "./components/TheTitleBar/index";
 import TheMeta from "./components/TheMeta";
 import ThePlayer from "./components/ThePlayer";
 
-const IndexApp: React.FunctionComponent<{ data: ITrack[], skins?: any }> = ({ data, skins }) => {
+const IndexApp: React.FunctionComponent<{ data: ITrack[], skins?: ISkin[] }> = ({ data, skins }) => {
 
     const nowPlay: number = useSelector((state: any) => state.nowPlay);
 

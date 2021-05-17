@@ -9,7 +9,7 @@ export interface ITrack {
     title: string
     year: number
     id: ID
-    skin_id?: number | string
+    skin_id?: number
 } 
 
 export interface ISkin {
