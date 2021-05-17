@@ -12,9 +12,13 @@
 - [ElectronJS] - Build cross-platform desktop apps with JavaScript, HTML, and CSS
 - [TypeScript] - TypeScript extends JavaScript by adding types to the language.
 - [Stylus] - CSS Preprocessor
+- [Redux/React-Redux] - A Predictable State Container for JS Apps
+- [Webpack] - Bundler
 
 [NodeJS]: <https://nodejs.org/en/>
 [ReactJS]: <https://reactjs.org/>
 [ElectronJS]: <https://www.electronjs.org/>
 [TypeScript]: <https://www.typescriptlang.org/>
 [Stylus]: <https://stylus-lang.com/>
+[Redux/React-Redux]: <https://react-redux.js.org/>
+[Webpack]: <https://webpack.js.org/>
