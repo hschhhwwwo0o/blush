@@ -16,12 +16,12 @@ function createDataFromFS(skinsLength?: any) {
             const metadata: IAudioMetadata = await parseFile(URI);
             return {
                 url:        createMp3ObjectURL(URI),
-                artist:     metadata.common.artist,
-                album:      metadata.common.album,
+                artist:     metadata.common?.artist,
+                album:      metadata.common?.album,
                 cover:      metadata.common.picture !== undefined ? createBase64String(metadata.common.picture[0]) : undefined,
-                duration:   metadata.format.duration,
-                title:      metadata.common.title,
-                year:       metadata.common.year,
+                duration:   metadata.format?.duration,
+                title:      metadata.common?.title,
+                year:       metadata.common?.year,
                 skin_id:    skinsLength !== undefined ? Math.floor(Math.random() * skinsLength) : undefined
             }; 
         };
