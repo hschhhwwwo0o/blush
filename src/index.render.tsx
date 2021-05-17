@@ -11,7 +11,7 @@ import { Provider } from "react-redux";
 import App from "./index.app";
 import store from "./redux/index";
 
-async function __R() {
+async function __render() {
     getSkins().then((skins: IPromiseSkins) => {
         createDataFromFS(skins.skins.length).then((data) => {
             ReactDOM.render( 
@@ -27,4 +27,4 @@ async function __R() {
     });
 };
 
-__R();
+__render();
