@@ -73,9 +73,9 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
             src         = { props.audio }
             ref         = { audioRef }
             autoPlay    = { isAutoPlay }
-            onEnded     = { () => {
+            onEnded     = {() => {
                 nextPlay();
-            } }
+            }}
         />
         <div id="ThePlayer">
             <ControlButtons 
