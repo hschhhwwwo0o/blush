@@ -5,7 +5,7 @@ import getPathsFS from "./getPathsFS";
 import createBase64String from "./createBase64String";
 import createMp3ObjectURL from "./createMp3ObjectURL";
 
-function createDataFromFS(skinsLength?: any) {
+function createDataFromFS(skinsLength?: number) {
     const PATHS_DIRS = new Array(
         `${OS.userInfo().homedir}/Music/test`,
     );
