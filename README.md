@@ -1,9 +1,9 @@
 ![Preview](md/__head.png "Preview")
-![Preview](md/__preview.png "Preview")
+![Preview](md/__frame.png "Preview")
 
 ## Blush
 
-**Developed with [ElectronJS]** <br />
+**Developed with [ElectronJS]**
 
 ## Documentation
 
