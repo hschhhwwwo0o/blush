@@ -4,7 +4,7 @@ const createBase64String = (cover: IPicture): string => {
 
     let base64String = "";
 
-    cover.data.forEach( (el: any) => {
+    cover.data.forEach((el: number) => {
         base64String += String.fromCharCode(el);
     });
 
