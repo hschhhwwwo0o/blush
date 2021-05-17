@@ -1,4 +1,5 @@
 import { IStore } from "../interface.store";
+import { IAction } from "../actions/type";
 import { 
     PLAY,
     PAUSE,
@@ -9,7 +10,7 @@ import {
     CHANGE_TIMELINE
 } from "../actions";
 
-function PlayerReducer(state: IStore, action: any): IStore {
+function PlayerReducer(state: IStore, action: IAction): IStore {
     switch (action.type) {
         case PLAY:
             return {
