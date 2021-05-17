@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-
 import { IThePlayer } from "./interface";
 import { IStore } from "../../redux/interface.store";
 import {
@@ -12,17 +11,15 @@ import {
     TIMELINE_PAUSE,
     CHANGE_TIMELINE
 } from "../../redux/actions";
-
 import ControlButtons from "./ControlButtons";
 import Time from "./Time";
-
 import "./index.styl";
 
 const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
 
     const audioRef = useRef(null);
-
     const dispatch = useDispatch();
+    const [ interval, setIntervalState ] = useState(null);
 
     const { isPlay, isAutoPlay, currentTimeLine, currentTime } = useSelector((state: IStore) => {
         return {
@@ -33,18 +30,16 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
         }
     });
 
-    const [ interval, setIntervalState ] = useState(null);
-
     function currentTimePlay() {
         setIntervalState(setInterval( () => {
             dispatch({ type: TIMELINE_PLAY });
-        }, 1000 ))
-    }
+        }, 1000 ));
+    };
 
     function currentTimePause() {
-        setIntervalState(clearInterval(interval))
+        setIntervalState(clearInterval(interval));
         dispatch({ type: TIMELINE_PAUSE });
-    }
+    };
 
     function playPause(isPlay: boolean): void {
         if( isPlay !== true  ) {
@@ -53,27 +48,25 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
             currentTimePlay();
             audioRef.current.play();
         } else {
-            dispatch({ type: PAUSE });
             currentTimePause();
+            dispatch({ type: PAUSE });
             audioRef.current.pause();
-        }
-    }
+        };
+    };
 
     function nextPlay(): void {
         currentTimePause();
         dispatch({ type: NEXT });
-        dispatch({ type: PLAY });
         dispatch({ type: CHANGE_TIMELINE, currentTimeLine: 0 });
         currentTimePlay();
-    }
+    };
 
     function prevPlay(): void {
         currentTimePause();
         dispatch({ type: PREV });
-        dispatch({ type: PLAY });
         dispatch({ type: CHANGE_TIMELINE, currentTimeLine: 0 });
         currentTimePlay();
-    }
+    };
 
     return <>
         <audio 
