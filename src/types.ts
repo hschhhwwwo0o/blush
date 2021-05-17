@@ -8,7 +8,6 @@ export interface ITrack {
     duration: number
     title: string
     year: number
-    id: ID
     skin_id?: number
 } 
 
