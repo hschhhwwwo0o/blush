@@ -12,7 +12,8 @@ function createDataFromFS(skinsLength?: number) {
     );
 
     const data = getPathsFS(PATHS_DIRS).map(async(URI: string) => {
-        if(checkFileFormat(URI.split(".")[1])) {
+        let format = URI.split(".")[1];
+        if(checkFileFormat(format)) {
             const metadata: IAudioMetadata = await parseFile(URI);
             return {
                 url:        createMp3ObjectURL(URI),
