@@ -19,3 +19,7 @@ export interface ISkin {
     secondColor: string
     thirdColor: string
 }
+
+export interface IPromiseSkins {
+    skins: ISkin[]
+}

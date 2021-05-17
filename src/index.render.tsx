@@ -1,16 +1,18 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import App from "./index.app";
 import createDataFromFS from "./utils/createDataFromFS";
-import getSkins from "./utils/getSkins";
 import removeUndefined from "./utils/removeUndefined";
+import getSkins from "./utils/getSkins";
+
+import { IPromiseSkins } from "./types";
 
 import { Provider } from "react-redux";
+import App from "./index.app";
 import store from "./redux/index";
 
 async function __R() {
-    getSkins().then((skins) => {
+    getSkins().then((skins: IPromiseSkins) => {
         createDataFromFS(skins.skins.length).then((data) => {
             ReactDOM.render( 
                 <Provider store={store}>
