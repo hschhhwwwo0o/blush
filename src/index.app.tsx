@@ -1,9 +1,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-import Layout from "./layout/index";
-
 import { ITrack, ISkin } from "./types";
+
+import Layout from "./layout/index";
 
 import TheTitleBar from "./components/TheTitleBar/index";
 import TheMeta from "./components/TheMeta";
