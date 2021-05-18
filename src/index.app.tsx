@@ -17,9 +17,9 @@ const IndexApp: React.FunctionComponent<{ data: ITrack[], skins?: ISkin[] }> = (
         <Layout>
             <TheTitleBar />
             <TheMeta 
-                title   = {data[nowPlay].title}
-                artist  = {data[nowPlay].artist}
-                color   = {skins[data[nowPlay].skin_id].mainColor}
+                title       = {data[nowPlay].title}
+                artist      = {data[nowPlay].artist}
+                mainColor   = {skins[data[nowPlay].skin_id].mainColor}
             />
             <ThePlayer 
                 audio           = { data[nowPlay].url }

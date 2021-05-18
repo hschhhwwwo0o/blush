@@ -3,11 +3,11 @@ import { ITheMeta } from "./interface";
 
 import "./index.styl";
 
-const TheMeta: React.FunctionComponent<ITheMeta> = ({ title, artist, color }) => {
+const TheMeta: React.FunctionComponent<ITheMeta> = ({ title, artist, mainColor }) => {
 
     return <>
         <div id="TheMeta">
-            <h1 style={{ color: color }}>{ title }</h1>
+            <h1 style={{ color: mainColor }}>{ title }</h1>
             <h2>{ artist }</h2>
         </div>
     </>
