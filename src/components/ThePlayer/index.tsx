@@ -21,12 +21,13 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
     const dispatch = useDispatch();
     const [ interval, setIntervalState ] = useState(null);
 
-    const { isPlay, isAutoPlay, currentTimeLine, currentTime } = useSelector((state: IStore) => {
+    const { isPlay, isAutoPlay, currentTimeLine, currentTime, nowPlay } = useSelector((state: IStore) => {
         return {
             isPlay: state.isPlay,
             isAutoPlay: state.isAutoPlay,
             currentTimeLine: state.currentTimeLine,
-            currentTime: state.currentTime
+            currentTime: state.currentTime,
+            nowPlay: state.nowPlay
         }
     });
 
@@ -55,17 +56,25 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
     };
 
     function nextPlay(): void {
-        currentTimePause();
-        dispatch({ type: NEXT });
-        dispatch({ type: CHANGE_TIMELINE, currentTimeLine: 0 });
-        currentTimePlay();
+        if(nowPlay < props.lengthData - 1) {
+           currentTimePause();
+            dispatch({ type: NEXT });
+            dispatch({ type: CHANGE_TIMELINE, currentTimeLine: 0 });
+            currentTimePlay(); 
+        } else {
+            dispatch({ type: "CHANGE_TRACK", nowPlay: 0 });
+        };
     };
 
     function prevPlay(): void {
-        currentTimePause();
-        dispatch({ type: PREV });
-        dispatch({ type: CHANGE_TIMELINE, currentTimeLine: 0 });
-        currentTimePlay();
+        if(nowPlay !== 0){
+            currentTimePause();
+            dispatch({ type: PREV });
+            dispatch({ type: CHANGE_TIMELINE, currentTimeLine: 0 });
+            currentTimePlay();
+        } else {
+            console.log("overflow");
+        };
     };
 
     return <>
