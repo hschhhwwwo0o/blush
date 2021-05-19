@@ -25,7 +25,14 @@
         align-items: center
         justify-content: center
 
-        transition-duration: 2s
+        transition-duration: .25s
+
+        &:hover
+            svg
+                transform: translateY(-4px)
+
+        svg
+            transition-duration: .35s
 
     > #ThePlayer__prev
         width: 96px
@@ -33,11 +40,15 @@
         background: #FFCD36
         border-radius: 0px 99px 99px 0px
 
-        transition-duration: 1.5s
+        transition-duration: .5s
 
         display: flex
         align-items: center
         justify-content: center
+
+        &:hover
+            div
+                transform: translateX(-4px)
 
         > div
             width 31px
@@ -45,6 +56,7 @@
             background-size cover
             background-position: center
             background-image url("../../../icons/prev.svg")
+            transition-duration: .35s
 
     > #ThePlayer__next
         width: 96px
@@ -56,9 +68,16 @@
         align-items: center
         justify-content: center
 
+        transition-duration: .65s
+
+        &:hover
+            div
+                transform: translateX(4px)
+
         > div
             width 31px
             height 30px
             background-size cover
             background-position: center
             background-image url("../../../icons/next.svg")
+            transition-duration: .35s
