@@ -1,0 +1,44 @@
+{
+    "skins": [
+        {
+            "__id": 0,
+            "image": "https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxRwF_5-Z2zdBG9tIKXlVb8Og",
+            "mainColor": "#9EA03A",
+            "secondColor": "#AAA644",
+            "thirdColor": "#211914",
+            "autor": "James Haskell"
+        },
+        {
+            "__id": 1,
+            "image": "https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxRaUUzuN7Xeqy2rFI00avHJA",
+            "mainColor": "#F5915C",
+            "secondColor": "#FFA16C",
+            "thirdColor": "#211914",
+            "autor": "James Haskell"
+        },
+        {
+            "__id": 2,
+            "image": "https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxRZiuHdD7WLUU3LsOh3KME3w",
+            "mainColor": "#FF601D",
+            "secondColor": "#FC6825",
+            "thirdColor": "#211914",
+            "autor": "James Haskell"
+        },
+        {
+            "__id": 3,
+            "image": "https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxR8WGGiWNqFpt1p9Qqdl6Nfg",
+            "mainColor": "#F5915C",
+            "secondColor": "#FF9D68",
+            "thirdColor": "#211914",
+            "autor": "James Haskell"
+        },
+        {
+            "__id": 4,
+            "image": "https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxR8KNpV22VRBj8V0nWKmCykQ",
+            "mainColor": "#E2284E",
+            "secondColor": "#F1375D",
+            "thirdColor": "#211914",
+            "autor": "James Haskell"
+        }
+    ]
+}
