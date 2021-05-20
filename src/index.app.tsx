@@ -18,13 +18,16 @@ const App: React.FunctionComponent<IApp> = ({ data, skins }) => {
 
     const nowPlay: number = useSelector((state: IStore) => state.nowPlay);
 
-    return <main style={{ backgroundImage: `url(${skins[data[nowPlay].skin_id].image})` }}>
+    const useImage = { backgroundImage: `url(${skins[data[nowPlay].skin_id].image})` };
+    const useStandartColor = { backgroundColor: "#461027" };
+
+    return <main style={ skins !== undefined ? useImage : useStandartColor }>
         <Layout>
             <TheTitleBar />
             <TheMeta 
-                title       = {data[nowPlay].title}
-                artist      = {data[nowPlay].artist}
-                mainColor   = {skins[data[nowPlay].skin_id].mainColor}
+                title       = { data[nowPlay].title }
+                artist      = { data[nowPlay].artist }
+                mainColor   = { skins[data[nowPlay].skin_id].mainColor }
             />
             <ThePlayer 
                 audio           = { data[nowPlay].url }
