@@ -23,6 +23,10 @@ const App: React.FunctionComponent<IApp> = ({ data, skins, online }) => {
         return skins[data[nowPlay].skin_id];
     };
 
+    function getTrack(nowPlay: number): ITrack {
+        return data[nowPlay];
+    };
+
     const useImage = { backgroundImage: `url(${getSkin(nowPlay).image})` };
     const useStandartColor = { backgroundColor: "#461027" };
 
@@ -30,14 +34,14 @@ const App: React.FunctionComponent<IApp> = ({ data, skins, online }) => {
         <Layout>
             <TheTitleBar />
             <TheMeta 
-                title       = { data[nowPlay].title }
-                artist      = { data[nowPlay].artist }
-                mainColor   = { skins[data[nowPlay].skin_id].mainColor }
+                title       = { getTrack(nowPlay).title }
+                artist      = { getTrack(nowPlay).artist }
+                mainColor   = { getSkin(nowPlay).mainColor }
             />
             <ThePlayer 
-                audio           = { data[nowPlay].url }
+                audio           = { getTrack(nowPlay).url }
                 lengthData      = { data.length }
-                duration        = { data[nowPlay].duration }
+                duration        = { getTrack(nowPlay).duration }
                 mainColor       = { getSkin(nowPlay).mainColor }
                 secondColor     = { getSkin(nowPlay).secondColor }
                 thirdColor      = { getSkin(nowPlay).thirdColor }
