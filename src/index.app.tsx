@@ -12,16 +12,17 @@ import { IStore } from "./redux/interface.store";
 interface IApp {
     data: ITrack[]
     skins?: ISkin[] | undefined
+    online?: boolean
 }
 
-const App: React.FunctionComponent<IApp> = ({ data, skins }) => {
+const App: React.FunctionComponent<IApp> = ({ data, skins, online }) => {
 
     const nowPlay: number = useSelector((state: IStore) => state.nowPlay);
 
     const useImage = { backgroundImage: `url(${skins[data[nowPlay].skin_id].image})` };
     const useStandartColor = { backgroundColor: "#461027" };
 
-    return <main style={ skins !== undefined ? useImage : useStandartColor }>
+    return <main style={ online ? useImage : useStandartColor }>
         <Layout>
             <TheTitleBar />
             <TheMeta 

@@ -19,6 +19,7 @@ async function __render() {
                     <App 
                         data={removeUndefined(data)} 
                         skins={skins.skins} 
+                        online={true}
                     />
                 </Provider>, 
                 document.querySelector("#root") 
