@@ -1,17 +1,22 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
-import { ITrack, ISkin } from "./types";
-
 import Layout from "./layout/index";
-
 import TheTitleBar from "./components/TheTitleBar/index";
 import TheMeta from "./components/TheMeta";
 import ThePlayer from "./components/ThePlayer";
 
-const IndexApp: React.FunctionComponent<{ data: ITrack[], skins?: ISkin[] }> = ({ data, skins }) => {
+import { ITrack, ISkin } from "./types";
+import { IStore } from "./redux/interface.store";
 
-    const nowPlay: number = useSelector((state: any) => state.nowPlay);
+interface IApp {
+    data: ITrack[]
+    skins?: ISkin[]
+}
+
+const App: React.FunctionComponent<IApp> = ({ data, skins }) => {
+
+    const nowPlay: number = useSelector((state: IStore) => state.nowPlay);
 
     return <main style={{ backgroundImage: `url(${skins[data[nowPlay].skin_id].image})` }}>
         <Layout>
@@ -33,4 +38,4 @@ const IndexApp: React.FunctionComponent<{ data: ITrack[], skins?: ISkin[] }> = (
     </main>
 }
 
-export default IndexApp;
+export default App;
