@@ -17,6 +17,7 @@ export interface ISkin {
     mainColor: string
     secondColor: string
     thirdColor: string
+    autor?: string
 }
 
 export interface IPromiseSkins {
