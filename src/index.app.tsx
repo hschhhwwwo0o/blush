@@ -11,7 +11,7 @@ import { IStore } from "./redux/interface.store";
 
 interface IApp {
     data: ITrack[]
-    skins?: ISkin[]
+    skins?: ISkin[] | undefined
 }
 
 const App: React.FunctionComponent<IApp> = ({ data, skins }) => {
