@@ -3,7 +3,7 @@ import path from "path";
 import { parseFile } from "music-metadata";
 import { IAudioMetadata } from "music-metadata/lib/type";
 import getPathsFS from "./getPathsFS";
-import checkFileFormat from "./checkFileFormat";
+import checkFileExtension from "./checkFileExtension";
 import createBase64String from "./createBase64String";
 import createMp3ObjectURL from "./createMp3ObjectURL";
 
@@ -14,7 +14,7 @@ function createDataFromFS(skinsLength?: number) {
 
     const data = getPathsFS(PATHS_DIRS).map(async(URI: string) => {
         let ext = path.extname(URI);
-        if(checkFileFormat(ext)) {
+        if(checkFileExtension(ext)) {
             const metadata: IAudioMetadata = await parseFile(URI);
             console.log(metadata)
             return {
