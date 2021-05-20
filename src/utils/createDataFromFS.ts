@@ -16,7 +16,6 @@ function createDataFromFS(skinsLength?: number) {
         let ext = path.extname(URI);
         if(checkFileExtension(ext)) {
             const metadata: IAudioMetadata = await parseFile(URI);
-            console.log(metadata)
             return {
                 url:        createMp3ObjectURL(URI),
                 artist:     metadata.common?.artist,
