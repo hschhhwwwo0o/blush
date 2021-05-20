@@ -19,7 +19,11 @@ const App: React.FunctionComponent<IApp> = ({ data, skins, online }) => {
 
     const nowPlay: number = useSelector((state: IStore) => state.nowPlay);
 
-    const useImage = { backgroundImage: `url(${skins[data[nowPlay].skin_id].image})` };
+    function getSkin(nowPlay: number): ISkin {
+        return skins[data[nowPlay].skin_id];
+    };
+
+    const useImage = { backgroundImage: `url(${getSkin(nowPlay).image})` };
     const useStandartColor = { backgroundColor: "#461027" };
 
     return <main style={ online ? useImage : useStandartColor }>
@@ -34,12 +38,12 @@ const App: React.FunctionComponent<IApp> = ({ data, skins, online }) => {
                 audio           = { data[nowPlay].url }
                 lengthData      = { data.length }
                 duration        = { data[nowPlay].duration }
-                mainColor       = { skins[data[nowPlay].skin_id].mainColor }
-                secondColor     = { skins[data[nowPlay].skin_id].secondColor }
-                thirdColor      = { skins[data[nowPlay].skin_id].thirdColor }
+                mainColor       = { getSkin(nowPlay).mainColor }
+                secondColor     = { getSkin(nowPlay).secondColor }
+                thirdColor      = { getSkin(nowPlay).thirdColor }
             />
         </Layout>
     </main>
-}
+};
 
 export default App;
