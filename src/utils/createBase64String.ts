@@ -1,7 +1,6 @@
 import { IPicture } from "music-metadata/lib/type";
 
-const createBase64String = (cover: IPicture): string => {
-
+const createBase64String: Function = (cover: IPicture): string => {
     let base64String = "";
 
     cover.data.forEach((el: number) => {
