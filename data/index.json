@@ -9,18 +9,10 @@
             "autor": "James Haskell"
         },
         {
-            "__id": 1,
-            "image": "https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxRaUUzuN7Xeqy2rFI00avHJA",
-            "mainColor": "#F5915C",
-            "secondColor": "#FFA16C",
-            "thirdColor": "#211914",
-            "autor": "James Haskell"
-        },
-        {
             "__id": 2,
             "image": "https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxRZiuHdD7WLUU3LsOh3KME3w",
-            "mainColor": "#FF601D",
-            "secondColor": "#FC6825",
+            "mainColor": "#EA7543",
+            "secondColor": "#F17C4A",
             "thirdColor": "#211914",
             "autor": "James Haskell"
         },
@@ -34,9 +26,9 @@
         },
         {
             "__id": 4,
-            "image": "https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxR8KNpV22VRBj8V0nWKmCykQ",
-            "mainColor": "#E2284E",
-            "secondColor": "#F1375D",
+            "image": "https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxRKSE62Pl9cGmmNzoXWQW2Cg",
+            "mainColor": "#D9BD85",
+            "secondColor": "#D9BD85",
             "thirdColor": "#211914",
             "autor": "James Haskell"
         },
@@ -173,6 +165,30 @@
             "image": "https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxR4xxjX1luU7aDoaKK0Uhz5w",
             "mainColor": "#DA9B7D",
             "secondColor": "#E9AA8C",
+            "thirdColor": "#211914",
+            "autor": "James Haskell"
+        },
+        {
+            "__id": 22,
+            "image": "https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxROt37-SnP2w8aUpZYYX8uSg",
+            "mainColor": "#987F63",
+            "secondColor": "#A2896D",
+            "thirdColor": "#211914",
+            "autor": "James Haskell"
+        },
+        {
+            "__id": 23,
+            "image": "https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxRMK0c-osyCGzR38oicvgeWg",
+            "mainColor": "#C99C68",
+            "secondColor": "#CFA26E",
+            "thirdColor": "#211914",
+            "autor": "James Haskell"
+        },
+        {
+            "__id": 24,
+            "image": "https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxReSxQtw5JS88iS_JKpbLDhA",
+            "mainColor": "#A98E6F",
+            "secondColor": "#A98E6F",
             "thirdColor": "#211914",
             "autor": "James Haskell"
         }
