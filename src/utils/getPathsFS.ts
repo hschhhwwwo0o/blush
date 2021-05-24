@@ -1,13 +1,13 @@
 import { readdirSync } from "fs";
 
-function getPathsFS(PATHS_DIRS: string[]): string[] {
+function getPathsFS(dirs: string[]): string[] {
     let fls = new Array();
 
-    PATHS_DIRS.forEach((path: string) => {
+    dirs.forEach((path: string) => {
         if(path !== "") {
             const files = readdirSync(path);
-            const paths = files.map( (file) => {
-                return `${path}\\${file}`
+            const paths = files.map((file) => {
+                return `${path}\\${file}`;
             });
 
             fls = [...fls, paths];
