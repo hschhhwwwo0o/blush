@@ -10,6 +10,4 @@ const intialStatePlayer: IStore = {
     currentTime: 0,
 }
   
-const store = createStore(reducer, intialStatePlayer);
-
-export default store;
+export default createStore(reducer, intialStatePlayer);
