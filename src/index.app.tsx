@@ -1,11 +1,12 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { ITrack, ISkin } from "./types";
+import { IStore, IStoreSample } from "./redux/interface.store";
 import Layout from "./layout/index";
 import TheTitleBar from "./components/TheTitleBar/index";
 import TheMeta from "./components/TheMeta";
 import ThePlayer from "./components/ThePlayer";
-import { ITrack, ISkin } from "./types";
-import { IStore } from "./redux/interface.store";
+import BG from "./components/BG";
 
 interface IApp {
     data: ITrack[]
@@ -15,7 +16,11 @@ interface IApp {
 
 const App: React.FunctionComponent<IApp> = ({ data, skins, online }) => {
 
-    const nowPlay: number = useSelector((state: IStore) => state.nowPlay);
+    const { nowPlay }: IStoreSample = useSelector((state: IStore) => {
+        return {
+            nowPlay: state.nowPlay
+        }
+    });
 
     function getSkin(nowPlay: number): ISkin {
         return skins[data[nowPlay].skin_id];
@@ -25,27 +30,26 @@ const App: React.FunctionComponent<IApp> = ({ data, skins, online }) => {
         return data[nowPlay];
     };
 
-    const useImage = { backgroundImage: `url(${getSkin(nowPlay).image})` };
-    const useStandartColor = { backgroundColor: "#461027" };
-
-    return <main style={ online ? useImage : useStandartColor }>
-        <Layout>
-            <TheTitleBar />
-            <TheMeta 
-                title       = { getTrack(nowPlay).title }
-                artist      = { getTrack(nowPlay).artist }
-                mainColor   = { getSkin(nowPlay).mainColor }
-            />
-            <ThePlayer 
-                audio           = { getTrack(nowPlay).url }
-                lengthData      = { data.length }
-                duration        = { getTrack(nowPlay).duration }
-                mainColor       = { getSkin(nowPlay).mainColor }
-                secondColor     = { getSkin(nowPlay).secondColor }
-                thirdColor      = { getSkin(nowPlay).thirdColor }
-            />
-        </Layout>
-    </main>
+    return <Layout>
+        <TheTitleBar />
+        <TheMeta 
+            title       = { getTrack(nowPlay).title }
+            artist      = { getTrack(nowPlay).artist }
+            mainColor   = { getSkin(nowPlay).mainColor }
+        />
+        <ThePlayer 
+            audio           = { getTrack(nowPlay).url }
+            lengthData      = { data.length }
+            duration        = { getTrack(nowPlay).duration }
+            mainColor       = { getSkin(nowPlay).mainColor }
+            secondColor     = { getSkin(nowPlay).secondColor }
+            thirdColor      = { getSkin(nowPlay).thirdColor }
+        />
+        <BG 
+            online  = { online } 
+            image   = { getSkin(nowPlay).image } 
+        />
+    </Layout>
 };
 
 export default App;
