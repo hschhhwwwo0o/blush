@@ -1,13 +1,10 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-
 import getSkins from "./utils/getSkins";
 import { IPromiseSkins } from "./types";
-
 import createDataFromFS from "./utils/createDataFromFS";
 import removeUndefined from "./utils/removeUndefined";
-
 import App from "./index.app";
 import store from "./redux/index";
 
