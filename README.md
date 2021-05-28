@@ -1,7 +1,7 @@
 ![Preview](md/__head.png "Preview")
 ![Preview](md/__frme.png "Preview")
 
-## Blush
+## Blush Music
 
 **Developed with [ElectronJS]**
 
