@@ -1,6 +1,7 @@
 import React from "react";
 import { remote } from "electron";
 import ListICO from "./ListICO";
+import TheTracklist from "../TheTracklist";
 import "./index.styl";
 
 const TheTitleBar: React.FunctionComponent = () => {
