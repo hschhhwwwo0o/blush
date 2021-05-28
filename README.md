@@ -18,8 +18,8 @@
 
 ## Assets/Fonts
 
-- **[Google-Fonts]/[Open-Sans]**
-- **[Google-Fonts]/[Cormorant-Garamond]**
+- **[Google-Fonts] / [Open-Sans]**
+- **[Google-Fonts] / [Cormorant-Garamond]**
 
 ## Assets/Pictures
 
