@@ -1,23 +1,20 @@
 import React from "react";
 import { remote } from "electron";
-
+import ListICO from "./ListICO";
 import "./index.styl";
 
 const TheTitleBar: React.FunctionComponent = () => {
-
     const __windowClose = () => {
         window.top.close();
     }
-
     const __windowMinimize = () => {
         remote.getCurrentWindow().minimize();
     }
-
     return <>
         <header>
             <section id="TheTitlebar">
                 <div id="TheTitlebar__logo">BLUSH</div>
-                <div id="TheTitlebar__list"></div>
+                <ListICO />
                 <div id="TheTitlebar__controls">
                     <div id="TheTitlebar__hide" onClick={__windowMinimize}>
                         <div />

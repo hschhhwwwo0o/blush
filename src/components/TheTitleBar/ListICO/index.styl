@@ -1,0 +1,29 @@
+.ListICO
+    -webkit-app-region: no-drag
+    width: 20px
+    height: 10px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    transition-duration: .45s
+    transition-delay: .1s
+    opacity: 1
+    padding-top: 6px
+    padding-bottom: 6px
+
+    &:hover
+        opacity: 0.6
+
+    > div
+        transition-duration: .45s
+        transition-delay: .1s
+        height: 2px
+        width: 100%
+        background-color: white
+
+.closeICO
+    > div:nth-child(1)
+        transform: rotate(45deg) translateY(5.5px)
+
+    > div:nth-child(2)
+        transform: rotate(-45deg) translateY(-5.5px)
