@@ -16,14 +16,14 @@
 - **[Stylus]** - CSS Preprocessor
 - **[Figma]** - Interface development
 
+## Assets/Pictures
+
+**Pictures by <a href="https://www.tretyakovgallery.ru/">Tretyakov Gallery</a>**
+
 ## Assets/Fonts
 
 - **[Google-Fonts] / [Open-Sans]**
 - **[Google-Fonts] / [Cormorant-Garamond]**
-
-## Assets/Pictures
-
-**Pictures by <a href="https://www.tretyakovgallery.ru/">Tretyakov Gallery</a>**
 
 [NodeJS]: <https://nodejs.org/en/>
 [ReactJS]: <https://reactjs.org/>
