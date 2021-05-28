@@ -25,6 +25,11 @@
 - **[Google-Fonts] / [Open-Sans]**
 - **[Google-Fonts] / [Cormorant-Garamond]**
 
+## Design
+
+**<a href="https://dribbble.com/shots/7076055-Play">Original Design Concept</a>**
+**Design Author - <a href="https://dribbble.com/Tamarashvili">Giga Tamarashvili</a>**
+
 [NodeJS]: <https://nodejs.org/en/>
 [ReactJS]: <https://reactjs.org/>
 [ElectronJS]: <https://www.electronjs.org/>
