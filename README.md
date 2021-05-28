@@ -18,12 +18,12 @@
 
 ## Design
 
-**<a href="https://dribbble.com/shots/7076055-Play">Original Design Concept</a>** \
-**Design Author - <a href="https://dribbble.com/Tamarashvili">Giga Tamarashvili</a>**
+**The original design is presented on <a href="https://dribbble.com/shots/7076055-Play">Dribble</a>** \
+**Author of the original design: <a href="https://dribbble.com/Tamarashvili">Giga Tamarashvili</a>**
 
 ## Assets/Pictures
 
-**Pictures by <a href="https://www.tretyakovgallery.ru/">Tretyakov Gallery</a>**
+**The pictures are taken from <a href="https://www.tretyakovgallery.ru/">Tretyakov Gallery</a>**
 
 ## Assets/Fonts
 
