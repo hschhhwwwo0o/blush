@@ -14,7 +14,9 @@ const TheTitleBar: React.FunctionComponent = () => {
         <header>
             <section id="TheTitlebar">
                 <div id="TheTitlebar__logo">BLUSH</div>
-                <ListICO />
+                <div>
+                    <ListICO />
+                </div>
                 <div id="TheTitlebar__controls">
                     <div id="TheTitlebar__hide" onClick={__windowMinimize}>
                         <div />
