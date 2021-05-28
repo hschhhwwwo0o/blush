@@ -3,7 +3,7 @@
 
 ## BLUSH Music
 
-**Developed with [ElectronJS]**
+**BLUSH Music is a music player written in the [ElectronJS] framework**
 
 ## Documentation
 
