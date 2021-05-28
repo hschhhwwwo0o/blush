@@ -14,6 +14,7 @@
 - [Stylus] - CSS Preprocessor
 - [Redux/React-Redux] - A Predictable State Container for JS Apps
 - [Webpack] - Bundler
+- [Figma] - Interface development
 
 [NodeJS]: <https://nodejs.org/en/>
 [ReactJS]: <https://reactjs.org/>
@@ -22,3 +23,4 @@
 [Stylus]: <https://stylus-lang.com/>
 [Redux/React-Redux]: <https://react-redux.js.org/>
 [Webpack]: <https://webpack.js.org/>
+[Figma]: <https://www.figma.com/>
