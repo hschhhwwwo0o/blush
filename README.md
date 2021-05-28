@@ -16,6 +16,15 @@
 - [Webpack] - Bundler
 - [Figma] - Interface development
 
+## Assets/Fonts
+
+- **[Google-Fonts]/[Open-Sans]**
+- **[Google-Fonts]/[Cormorant-Garamond]**
+
+## Assets/Pictures
+
+**Pictures by <a href="https://www.tretyakovgallery.ru/">Tretyakov Gallery</a>**
+
 [NodeJS]: <https://nodejs.org/en/>
 [ReactJS]: <https://reactjs.org/>
 [ElectronJS]: <https://www.electronjs.org/>
@@ -24,3 +33,6 @@
 [Redux/React-Redux]: <https://react-redux.js.org/>
 [Webpack]: <https://webpack.js.org/>
 [Figma]: <https://www.figma.com/>
+[Open-Sans]: <https://fonts.google.com/specimen/Open+Sans>
+[Google-Fonts]: <https://fonts.google.com/>
+[Cormorant-Garamond]: <https://fonts.google.com/specimen/Cormorant+Garamond?query=Cormorant+Garamond>
