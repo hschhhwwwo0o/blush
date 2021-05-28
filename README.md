@@ -23,11 +23,11 @@
 ## Assets/Fonts
 
 - **[Google-Fonts] / [Open-Sans]**
-- **[Google-Fonts] / [Cormorant-Garamond]**
+- **[Google-Fonts] / [Cormorant-Garamond]** 
 
 ## Design
 
-**<a href="https://dribbble.com/shots/7076055-Play">Original Design Concept</a>**
+**<a href="https://dribbble.com/shots/7076055-Play">Original Design Concept</a>** \
 **Design Author - <a href="https://dribbble.com/Tamarashvili">Giga Tamarashvili</a>**
 
 [NodeJS]: <https://nodejs.org/en/>
