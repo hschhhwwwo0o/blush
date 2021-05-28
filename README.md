@@ -7,14 +7,14 @@
 
 ## Documentation
 
-- [NodeJS] - Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
-- [ReactJS] - A JavaScript library for building user interfaces
-- [ElectronJS] - Build cross-platform desktop apps with JavaScript, HTML, and CSS
-- [TypeScript] - TypeScript extends JavaScript by adding types to the language.
-- [Stylus] - CSS Preprocessor
-- [Redux/React-Redux] - A Predictable State Container for JS Apps
-- [Webpack] - Bundler
-- [Figma] - Interface development
+- **[NodeJS]** - Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+- **[TypeScript]** - TypeScript extends JavaScript by adding types to the language.
+- **[Webpack]** - Bundler JavaScript
+- **[ElectronJS]** - Build cross-platform desktop apps with JavaScript, HTML, and CSS
+- **[ReactJS]** - A JavaScript library for building user interfaces
+- **[Redux/React-Redux]** - A Predictable State Container for JS Apps
+- **[Stylus]** - CSS Preprocessor
+- **[Figma]** - Interface development
 
 ## Assets/Fonts
 
