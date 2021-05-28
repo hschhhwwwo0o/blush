@@ -7,8 +7,8 @@
 
 ## Documentation
 
-- **[NodeJS]** - Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
-- **[TypeScript]** - TypeScript extends JavaScript by adding types to the language.
+- **[NodeJS]** - Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine
+- **[TypeScript]** - TypeScript extends JavaScript by adding types to the language
 - **[Webpack]** - Bundler JavaScript
 - **[ElectronJS]** - Build cross-platform desktop apps with JavaScript, HTML, and CSS
 - **[ReactJS]** - A JavaScript library for building user interfaces
