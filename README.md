@@ -25,6 +25,10 @@
 
 **The pictures are taken from <a href="https://www.tretyakovgallery.ru/">Tretyakov Gallery</a>**
 
+## Assets/Icons
+
+**Icons to take from [Flaticon]**
+
 ## Assets/Fonts
 
 - **[Google-Fonts] / [Open-Sans]**
@@ -40,4 +44,5 @@
 [Figma]: <https://www.figma.com/>
 [Open-Sans]: <https://fonts.google.com/specimen/Open+Sans>
 [Google-Fonts]: <https://fonts.google.com/>
+[Flaticon]: <https://www.flaticon.com/>
 [Cormorant-Garamond]: <https://fonts.google.com/specimen/Cormorant+Garamond?query=Cormorant+Garamond>
