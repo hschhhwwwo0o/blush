@@ -1,8 +1,6 @@
 import React from "react";
 import PlayPauseSVG from "../PlayPauseSVG";
-
 import { ControlButtonsElement } from "./interface";
-
 import "./index.styl";
 
 const ControlButtons: React.FunctionComponent<ControlButtonsElement> = (props) => {
