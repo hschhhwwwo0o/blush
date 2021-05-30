@@ -30,7 +30,7 @@ const TheTitleBar: React.FunctionComponent = () => {
             <section id="TheTitlebar">
                 <div id="TheTitlebar__logo">BLUSH</div>
                 <div onClick={windowOpenTracklist}>
-                    <ListICO />
+                    <ListICO isOpen={isTracklist} />
                 </div>
                 <div id="TheTitlebar__controls">
                     <div id="TheTitlebar__hide" onClick={windowMinimize}>
