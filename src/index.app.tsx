@@ -16,9 +16,10 @@ interface IApp {
 
 const App: React.FunctionComponent<IApp> = ({ data, skins, online }) => {
 
-    const { nowPlay }: IStoreSample = useSelector((state: IStore) => {
+    const { nowPlay, isTracklist }: IStoreSample = useSelector((state: IStore) => {
         return {
-            nowPlay: state.nowPlay
+            nowPlay: state.nowPlay,
+            isTracklist: state.isTracklist
         }
     });
 
@@ -32,7 +33,7 @@ const App: React.FunctionComponent<IApp> = ({ data, skins, online }) => {
 
     return <Layout>
         <TheTitleBar />
-        <section>
+        <section style={{ opacity: isTracklist ? "0" : "1" }}>
             <TheMeta 
                 title       = { getTrack(nowPlay).title }
                 artist      = { getTrack(nowPlay).artist }
