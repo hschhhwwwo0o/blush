@@ -6,7 +6,8 @@ import {
     PLAY, PAUSE, NEXT,
     PREV, TIMELINE_PLAY,
     TIMELINE_PAUSE,
-    CHANGE_TIMELINE
+    CHANGE_TIMELINE,
+    CHANGE_TRACK
 } from "../../redux/actions";
 import TheTracklist from "../TheTracklist";
 import ControlButtons from "./ControlButtons";
@@ -56,12 +57,12 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
 
     function nextPlay(): void {
         if(nowPlay < props.lengthData - 1) {
-           currentTimePause();
+            currentTimePause();
             dispatch({ type: NEXT });
             dispatch({ type: CHANGE_TIMELINE, currentTimeLine: 0 });
             currentTimePlay(); 
         } else {
-            dispatch({ type: "CHANGE_TRACK", nowPlay: 0 });
+            dispatch({ type: CHANGE_TRACK, nowPlay: 0 });
         };
     };
 
@@ -75,6 +76,14 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
             console.log("overflow");
         };
     };
+
+    function setPlayFromTheTracklist(newPlay: number): void {
+        currentTimePause();
+        dispatch({ type: CHANGE_TRACK, nowPlay: newPlay });
+        dispatch({ type: PLAY });
+        dispatch({ type: CHANGE_TIMELINE, currentTimeLine: 0 });
+        currentTimePlay(); 
+    }
 
     return <>
         <audio 
@@ -104,7 +113,10 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
             />
         </div>
         {
-            isTracklist && <TheTracklist data={props.data} />
+            isTracklist && <TheTracklist 
+                data={props.data} 
+                setPlayFromTheTracklist={setPlayFromTheTracklist}
+            />
         }
     </>
 }

@@ -4,19 +4,17 @@ import { IStore } from "../../redux/interface.store";
 import { ITheTracklist } from "./interface";
 import "./index.styl";
 
-const TheTracklist: React.FunctionComponent<ITheTracklist> = ({ data }) => {
-
+const TheTracklist: React.FunctionComponent<ITheTracklist> = ({ data, setPlayFromTheTracklist }) => {
     const { nowPlay } = useSelector((store: IStore) => {
         return {
             nowPlay: store.nowPlay,
         };
     });
-
     return <>
         <div id="theTracklist">
             {
                 data.map(({ title, artist }, index) => {
-                    return <h1 key={`${title} - ${artist}. ${index}`}>
+                    return <h1 onClick={() => { setPlayFromTheTracklist(index) }} key={`${index}`}>
                         { title } - <span> { artist }</span>
                     </h1>
                 })
