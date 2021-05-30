@@ -8,7 +8,8 @@ import {
     TIMELINE_PLAY,
     TIMELINE_PAUSE,
     CHANGE_TIMELINE,
-    CHANGE_TRACK
+    CHANGE_TRACK,
+    SET_TRACKLIST
 } from "../actions";
 
 function PlayerReducer(state: IStore, action: IAction): IStore {
@@ -91,6 +92,16 @@ function PlayerReducer(state: IStore, action: IAction): IStore {
                 currentTimeLine: 0,
                 currentTime: 0,
                 isTracklist: state.isTracklist,
+            }
+
+        case SET_TRACKLIST:
+            return {
+                isPlay: state.isPlay,
+                nowPlay: state.nowPlay,
+                isAutoPlay: state.isAutoPlay,
+                currentTimeLine: state.currentTimeLine,
+                currentTime: state.currentTime,
+                isTracklist: action.isTracklist,
             }
 
         default:
