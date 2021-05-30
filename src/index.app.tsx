@@ -32,19 +32,21 @@ const App: React.FunctionComponent<IApp> = ({ data, skins, online }) => {
 
     return <Layout>
         <TheTitleBar />
-        <TheMeta 
-            title       = { getTrack(nowPlay).title }
-            artist      = { getTrack(nowPlay).artist }
-            mainColor   = { getSkin(nowPlay).mainColor }
-        />
-        <ThePlayer 
-            audio           = { getTrack(nowPlay).url }
-            lengthData      = { data.length }
-            duration        = { getTrack(nowPlay).duration }
-            mainColor       = { getSkin(nowPlay).mainColor }
-            secondColor     = { getSkin(nowPlay).secondColor }
-            thirdColor      = { getSkin(nowPlay).thirdColor }
-        />
+        <section>
+            <TheMeta 
+                title       = { getTrack(nowPlay).title }
+                artist      = { getTrack(nowPlay).artist }
+                mainColor   = { getSkin(nowPlay).mainColor }
+            />
+            <ThePlayer 
+                audio           = { getTrack(nowPlay).url }
+                lengthData      = { data.length }
+                duration        = { getTrack(nowPlay).duration }
+                mainColor       = { getSkin(nowPlay).mainColor }
+                secondColor     = { getSkin(nowPlay).secondColor }
+                thirdColor      = { getSkin(nowPlay).thirdColor }
+            />
+        </section>
         <BG 
             online  = { online } 
             image   = { getSkin(nowPlay).image } 
