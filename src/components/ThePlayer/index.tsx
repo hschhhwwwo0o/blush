@@ -104,7 +104,7 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
             />
         </div>
         {
-            isTracklist && <TheTracklist />
+            isTracklist && <TheTracklist data={props.data} />
         }
     </>
 }

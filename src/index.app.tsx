@@ -39,6 +39,7 @@ const App: React.FunctionComponent<IApp> = ({ data, skins, online }) => {
                 mainColor   = { getSkin(nowPlay).mainColor }
             />
             <ThePlayer 
+                data            = { data }
                 audio           = { getTrack(nowPlay).url }
                 lengthData      = { data.length }
                 duration        = { getTrack(nowPlay).duration }
