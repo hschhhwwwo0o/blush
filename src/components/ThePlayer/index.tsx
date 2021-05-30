@@ -3,14 +3,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { IThePlayer } from "./interface";
 import { IStore } from "../../redux/interface.store";
 import {
-    PLAY,
-    PAUSE,
-    NEXT,
-    PREV,
-    TIMELINE_PLAY,
+    PLAY, PAUSE, NEXT,
+    PREV, TIMELINE_PLAY,
     TIMELINE_PAUSE,
     CHANGE_TIMELINE
 } from "../../redux/actions";
+import TheTracklist from "../TheTracklist";
 import ControlButtons from "./ControlButtons";
 import Time from "./Time";
 import "./index.styl";
@@ -21,13 +19,14 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
     const dispatch = useDispatch();
     const [ interval, setIntervalState ] = useState(null);
 
-    const { isPlay, isAutoPlay, currentTimeLine, currentTime, nowPlay } = useSelector((state: IStore) => {
+    const { isPlay, isAutoPlay, currentTimeLine, currentTime, nowPlay, isTracklist } = useSelector((state: IStore) => {
         return {
             isPlay: state.isPlay,
             isAutoPlay: state.isAutoPlay,
             currentTimeLine: state.currentTimeLine,
             currentTime: state.currentTime,
-            nowPlay: state.nowPlay
+            nowPlay: state.nowPlay,
+            isTracklist: state.isTracklist
         }
     });
 
@@ -86,7 +85,7 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
                 nextPlay();
             }}
         />
-        <div id="ThePlayer">
+        <div id="ThePlayer" style={{ opacity: isTracklist ? "0" : "1" }}>
             <ControlButtons 
                 isPlay      = { isPlay }
                 prevPlay    = { prevPlay }
@@ -104,6 +103,9 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
                 color               = { props.mainColor }
             />
         </div>
+        {
+            isTracklist && <TheTracklist />
+        }
     </>
 }
 
