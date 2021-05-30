@@ -8,6 +8,7 @@ const intialStatePlayer: IStore = {
     nowPlay: 0,
     currentTimeLine: 0,
     currentTime: 0,
+    isTracklist: false
 }
   
 export default createStore(reducer, intialStatePlayer);

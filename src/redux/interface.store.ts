@@ -4,6 +4,7 @@ export interface IStore {
     nowPlay: number
     currentTimeLine: number
     currentTime: number
+    isTracklist?: boolean
 }
 
 export interface IStoreSample {
@@ -12,4 +13,5 @@ export interface IStoreSample {
     nowPlay?: number
     currentTimeLine?: number
     currentTime?: number
+    isTracklist?: boolean
 }

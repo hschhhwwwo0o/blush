@@ -20,6 +20,7 @@ function PlayerReducer(state: IStore, action: IAction): IStore {
                 isAutoPlay: true,
                 currentTimeLine: state.currentTimeLine,
                 currentTime: state.currentTime,
+                isTracklist: state.isTracklist,
             }
 
         case PAUSE:
@@ -29,6 +30,7 @@ function PlayerReducer(state: IStore, action: IAction): IStore {
                 isAutoPlay: true,
                 currentTimeLine: state.currentTimeLine,
                 currentTime: state.currentTime,
+                isTracklist: state.isTracklist,
             }
 
         case NEXT:
@@ -38,6 +40,7 @@ function PlayerReducer(state: IStore, action: IAction): IStore {
                 isAutoPlay: true,
                 currentTimeLine: 0,
                 currentTime: 0,
+                isTracklist: state.isTracklist,
             }
 
         case PREV:
@@ -47,6 +50,7 @@ function PlayerReducer(state: IStore, action: IAction): IStore {
                 isAutoPlay: true,
                 currentTimeLine: 0,
                 currentTime: 0,
+                isTracklist: state.isTracklist,
             }
 
         case TIMELINE_PLAY:
@@ -56,6 +60,7 @@ function PlayerReducer(state: IStore, action: IAction): IStore {
                 isAutoPlay: state.isAutoPlay,
                 currentTimeLine: state.currentTimeLine + 1,
                 currentTime: state.currentTime + 1,
+                isTracklist: state.isTracklist,
             }
 
         case TIMELINE_PAUSE:
@@ -65,6 +70,7 @@ function PlayerReducer(state: IStore, action: IAction): IStore {
                 isAutoPlay: state.isAutoPlay,
                 currentTimeLine: state.currentTimeLine,
                 currentTime: state.currentTime,
+                isTracklist: state.isTracklist,
             }
 
         case CHANGE_TIMELINE:
@@ -74,6 +80,7 @@ function PlayerReducer(state: IStore, action: IAction): IStore {
                 isAutoPlay: state.isAutoPlay,
                 currentTimeLine: action.currentTimeLine,
                 currentTime: action.currentTimeLine,
+                isTracklist: state.isTracklist,
             }
 
         case CHANGE_TRACK:
@@ -83,6 +90,7 @@ function PlayerReducer(state: IStore, action: IAction): IStore {
                 isAutoPlay: true,
                 currentTimeLine: 0,
                 currentTime: 0,
+                isTracklist: state.isTracklist,
             }
 
         default:

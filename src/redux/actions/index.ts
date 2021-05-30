@@ -6,3 +6,4 @@ export const TIMELINE_PLAY: string = "TIMELINE_PLAY";
 export const TIMELINE_PAUSE: string = "TIMELINE_PAUSE";
 export const CHANGE_TIMELINE: string = "CHANGE_TIMELINE";
 export const CHANGE_TRACK: string = "CHANGE_TRACK";
+export const SET_TRACKLIST: string = "SET_TRACKLIST";
