@@ -13,10 +13,10 @@ const TheTitleBar: React.FunctionComponent = () => {
             isTracklist: state.isTracklist,
         };
     });
-    const __windowClose = () => {
+    const windowClose = () => {
         window.top.close();
     };
-    const __windowMinimize = () => {
+    const windowMinimize = () => {
         remote.getCurrentWindow().minimize();
     };
     const windowOpenTracklist = () => {
@@ -33,10 +33,10 @@ const TheTitleBar: React.FunctionComponent = () => {
                     <ListICO />
                 </div>
                 <div id="TheTitlebar__controls">
-                    <div id="TheTitlebar__hide" onClick={__windowMinimize}>
+                    <div id="TheTitlebar__hide" onClick={windowMinimize}>
                         <div />
                     </div>
-                    <div id="TheTitlebar__close" onClick={__windowClose}>
+                    <div id="TheTitlebar__close" onClick={windowClose}>
                         <div />
                     </div>
                 </div>
