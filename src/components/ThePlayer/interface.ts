@@ -1,3 +1,5 @@
+import { ITrack } from "../../types";
+
 export interface IThePlayer {
     duration: number
     audio: string
@@ -5,4 +7,5 @@ export interface IThePlayer {
     mainColor?: string
     secondColor?: string
     thirdColor?: string
+    data?: ITrack[]
 }
