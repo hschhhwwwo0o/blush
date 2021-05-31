@@ -3,7 +3,8 @@
 
 ## BLUSH Music
 
-**BLUSH Music is a music player written in the [ElectronJS] framework**
+**BLUSH Music is a music player written in the [ElectronJS] framework** \
+**Used package manager: [Yarn]**
 
 ## Documentation
 
@@ -45,4 +46,5 @@
 [Open-Sans]: <https://fonts.google.com/specimen/Open+Sans>
 [Google-Fonts]: <https://fonts.google.com/>
 [Flaticon]: <https://www.flaticon.com/>
+[Yarn]: <https://yarnpkg.com/>
 [Cormorant-Garamond]: <https://fonts.google.com/specimen/Cormorant+Garamond?query=Cormorant+Garamond>
