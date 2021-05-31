@@ -7,8 +7,7 @@
 **The project was built using Electron-Forge** \
 **Used package manager: [Yarn]**
 
-**BLUSH Music on [Behance]** \
-**BLUSH Music on [Dribbble]**
+**BLUSH Music on [Behance], [Dribbble]** \
 
 ## Documentation
 
