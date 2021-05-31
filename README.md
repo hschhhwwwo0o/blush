@@ -7,6 +7,9 @@
 **The project was built using Electron-Forge** \
 **Used package manager: [Yarn]**
 
+**BLUSH Music on [Behance]** \
+**BLUSH Music on [Dribbble]**
+
 ## Documentation
 
 - **[NodeJS]** - Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine
@@ -49,5 +52,7 @@
 [Google-Fonts]: <https://fonts.google.com/>
 [Flaticon]: <https://www.flaticon.com/>
 [Yarn]: <https://yarnpkg.com/>
+[Behance]: <https://www.behance.net/gallery/120582893/BLUSH-Music-App>
+[Dribbble]: <https://dribbble.com/shots/15757496-BLUSH-Music-App>
 [Electron-Forge]: <https://www.electronforge.io/>
 [Cormorant-Garamond]: <https://fonts.google.com/specimen/Cormorant+Garamond?query=Cormorant+Garamond>
