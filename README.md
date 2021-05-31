@@ -4,6 +4,7 @@
 ## BLUSH Music
 
 **BLUSH Music is a music player written in the [ElectronJS] framework** \
+**The project was built using Electron-Forge** \
 **Used package manager: [Yarn]**
 
 ## Documentation
@@ -12,6 +13,7 @@
 - **[TypeScript]** - TypeScript extends JavaScript by adding types to the language
 - **[Webpack]** - Bundler JavaScript
 - **[ElectronJS]** - Build cross-platform desktop apps with JavaScript, HTML, and CSS
+- **[Electron-Forge]** - Electron Forge is a complete tool for creating, publishing, and installing modern Electron applications.
 - **[ReactJS]** - A JavaScript library for building user interfaces
 - **[Redux/React-Redux]** - A Predictable State Container for JS Apps
 - **[Stylus]** - CSS Preprocessor
@@ -47,4 +49,5 @@
 [Google-Fonts]: <https://fonts.google.com/>
 [Flaticon]: <https://www.flaticon.com/>
 [Yarn]: <https://yarnpkg.com/>
+[Electron-Forge]: <https://www.electronforge.io/>
 [Cormorant-Garamond]: <https://fonts.google.com/specimen/Cormorant+Garamond?query=Cormorant+Garamond>
