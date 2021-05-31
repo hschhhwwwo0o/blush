@@ -15,11 +15,9 @@ import Time from "./Time";
 import "./index.styl";
 
 const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
-
     const audioRef = useRef(null);
     const dispatch = useDispatch();
     const [ interval, setIntervalState ] = useState(null);
-
     const { isPlay, isAutoPlay, currentTimeLine, currentTime, nowPlay, isTracklist } = useSelector((state: IStore) => {
         return {
             isPlay: state.isPlay,
