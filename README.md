@@ -52,6 +52,6 @@
 [Flaticon]: <https://www.flaticon.com/>
 [Yarn]: <https://yarnpkg.com/>
 [Behance]: <https://www.behance.net/gallery/120582893/BLUSH-Music-App>
-[Dribbble]: <https://dribbble.com/shots/15757496-BLUSH-Music-App>
+[Dribbble]: <https://dribbble.com/shots/15761581-BLUSH-Music-App>
 [Electron-Forge]: <https://www.electronforge.io/>
 [Cormorant-Garamond]: <https://fonts.google.com/specimen/Cormorant+Garamond?query=Cormorant+Garamond>
