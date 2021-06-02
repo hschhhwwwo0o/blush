@@ -9,7 +9,7 @@
 
 **BLUSH Music on [Behance], [Dribbble]**
 
-## Documentation
+## Tech Stack
 
 - **[NodeJS]** - Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine
 - **[TypeScript]** - TypeScript extends JavaScript by adding types to the language
