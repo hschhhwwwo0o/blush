@@ -24,20 +24,41 @@ import "./index.styl";
 */
 
 const BG: React.FunctionComponent<IBG> = ({ online, image }) => {
+
+    /**
+     * 
+     * Object for inline styles backgroundImage
+     * 
+     * @name useImage
+     * 
+    */
     const useImage = { backgroundImage: `url(${image})` };
+
+    /**
+     * 
+     * Object for inline styles backgroundColor if online == false
+     * 
+     * @name useStandartColor
+     * 
+    */
     const useStandartColor = { backgroundColor: "#461027" };
 
+    /**
+     * Get store values
+    */
     const { isTracklist } = useSelector((store: IStore) => {
         return {
             isTracklist: store.isTracklist,
         }
-    })
+    });
 
-    return <div 
-        id="bg" 
-        style={ online ? useImage : useStandartColor } 
-        className={ isTracklist ? "bright" : "" }
-    />
+    return (
+        <div 
+            id="bg" 
+            style={ online ? useImage : useStandartColor } 
+            className={ isTracklist ? "bright" : "" }
+        />
+    )
 }
 
 export default BG;
