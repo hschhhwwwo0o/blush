@@ -1,6 +1,29 @@
 import React from "react";
 
-const PlayPauseSVG: React.FunctionComponent<{ isPlay: boolean, color?: string }> = ({ isPlay, color }) => {
+/**
+ * 
+ * Interface for component
+ * 
+ * @interface
+ * 
+ */
+interface IPlayPauseSVG {
+    isPlay: boolean
+    color?: string
+}
+
+/**
+ * 
+ * PlayPauseSVG button for ThePlayer component
+ * 
+ * @param {boolean} isPlay 
+ * @param {string} color 
+ * 
+ * @returns {React.FunctionComponent}
+ * 
+ */
+
+const PlayPauseSVG: React.FunctionComponent<IPlayPauseSVG> = ({ isPlay, color }) => {
     return <>
         { 
         !isPlay && <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">

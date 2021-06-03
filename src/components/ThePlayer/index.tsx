@@ -36,32 +36,40 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
      * 
      * Ref for audio tag. 
      * 
+     * Refs documentation: https://reactjs.org/docs/refs-and-the-dom.html
+     * 
      * @name audioRef
      * 
-    */
+     */
     const audioRef = useRef(null);
 
     /**
      * 
      * React/Redux function for change global redux state 
      * 
+     * react-redux documentation: https://react-redux.js.org/api/hooks
+     * 
      * @hook dispatch
      * 
-    */
+     */
     const dispatch = useDispatch();
 
     /**
      * 
      * React local state.
      * 
-    */
+     * useState documentation: https://learn-reactjs.ru/core/hooks/state-hook
+     * 
+     */
     const [ interval, setIntervalState ] = useState(null);
 
     /**
      * 
-     * React/Redux function for get global redux state
+     * React/Redux hook for get global redux state
      * 
-    */
+     * react-redux documentation: https://react-redux.js.org/api/hooks
+     * 
+     */
     const { isPlay, isAutoPlay, currentTimeLine, currentTime, nowPlay, isTracklist } = useSelector((state: IStore) => {
         return {
             isPlay: state.isPlay,
@@ -85,7 +93,7 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
      * 
      * @example currentTimePlay()
      * 
-    */
+     */
     function currentTimePlay() {
         setIntervalState(setInterval( () => {
             dispatch({ type: TIMELINE_PLAY });
@@ -104,7 +112,7 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
      * 
      * @example currentTimePause()
      * 
-    */
+     */
     function currentTimePause() {
         setIntervalState(clearInterval(interval));
         dispatch({ type: TIMELINE_PAUSE });
@@ -123,7 +131,7 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
      * 
      * @example playPause(true)
      * 
-    */
+     */
     function playPause(isPlay: boolean): void {
         if(isPlay !== true) {
             dispatch({ type: PLAY });
@@ -152,7 +160,7 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
      * 
      * @example nextPlay()
      * 
-    */
+     */
     function nextPlay(): void {
         if(nowPlay < props.lengthData - 1) {
             currentTimePause();
@@ -179,7 +187,7 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
      * 
      * @example prevPlay()
      * 
-    */
+     */
     function prevPlay(): void {
         if(nowPlay !== 0){
             currentTimePause();
@@ -208,7 +216,7 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
      * 
      * @example setPlayFromTheTracklist(10)
      * 
-    */
+     */
     function setPlayFromTheTracklist(newPlay: number): void {
         currentTimePause();
         dispatch({ type: CHANGE_TRACK, nowPlay: newPlay });
