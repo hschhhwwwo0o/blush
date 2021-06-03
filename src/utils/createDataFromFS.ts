@@ -7,6 +7,16 @@ import getPathsFS from "./getPathsFS";
 import checkFileExtension from "./checkFileExtension";
 import createMp3ObjectURL from "./createMp3ObjectURL";
 
+/**
+ * 
+ * Function create music data from filesystem user
+ * 
+ * @param {number} skinsLength Length fetched skins 
+ * 
+ * @returns Promise with data
+ * 
+ */
+
 function createDataFromFS(skinsLength?: number) {
     const dirs = InitializeDirectories([
         `${OS.userInfo().homedir}/Music/test`,
