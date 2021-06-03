@@ -1,7 +1,9 @@
 /**
  *  The function determines whether the format is valid
  * 
+ * @function
  * @method
+ * 
  * @param {string} format File format. Examples: ".mp3", .ogg
  * 
  * @returns {boolean} Return true if format is valid else false

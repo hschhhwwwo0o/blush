@@ -7,12 +7,13 @@ import "./index.styl";
 /**
  * Component for Background of player.
  *
+ * @function
  * @component
  * 
  * @param {boolean} online Online / Offline status 
  * @param {string} image Image string 
  * 
- * @returns {JSX} JSX Component
+ * @returns {React.FunctionComponent | React.FC} JSX Component
  * 
  * @example 
  * import React from "react";

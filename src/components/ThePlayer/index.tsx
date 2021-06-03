@@ -21,12 +21,14 @@ import "./index.styl";
  * The most important component.
  * The component responsible for playing music, switching it.
  * 
+ * @function
  * @component
  * 
  * @param {Object} props ReactJS props. See interface for more info.
  * 
- * @returns {JSX}
- */
+ * @returns {React.FunctionComponent | React.FC}
+ * 
+*/
 
 const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
 

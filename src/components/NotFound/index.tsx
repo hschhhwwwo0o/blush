@@ -8,9 +8,10 @@ import TheMeta from "../TheMeta";
  * 
  * NotFound music 404 page  
  * 
+ * @function
  * @component
  * 
- * @returns {JSX} JSX Component
+ * @returns {React.FunctionComponent | React.FC} JSX Component
  * 
  */
 

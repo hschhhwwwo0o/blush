@@ -10,7 +10,10 @@ import { SET_TRACKLIST } from "../../redux/actions";
  * 
  * Component JSX Titlebar window
  * 
- * @returns {JSX} JSX Component
+ * @function
+ * @component
+ * 
+ * @returns {React.FunctionComponent | React.FC} JSX Component
  * 
 */
 
