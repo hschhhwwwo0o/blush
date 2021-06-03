@@ -8,10 +8,23 @@ interface ILayout {
  * 
  * Layout component
  * 
+ * @component
  * 
  * @param children JSX component || components
  * 
  * @returns {JSX} Return Layout component
+ * 
+ * @example
+ * 
+ * import React from "react";
+ * import Layout from "./layout";
+ * 
+ * const App = () => {
+ *  return <Layout>
+ *   <h1>Hello World!</h1>
+ *  </Layout>
+ * }
+ * 
 */
 
 const Layout: React.FunctionComponent<ILayout> = ({ children }) => {
