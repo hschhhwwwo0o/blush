@@ -8,11 +8,12 @@ interface ILayout {
  * 
  * Layout component
  * 
+ * @function
  * @component
  * 
- * @param children JSX component || components
+ * @param {React.FunctionComponent | React.FC} children JSX component || components
  * 
- * @returns {JSX} Return Layout component
+ * @returns {React.FunctionComponent | React.FC} Return Layout component
  * 
  * @example
  * 
@@ -20,9 +21,9 @@ interface ILayout {
  * import Layout from "./layout";
  * 
  * const App = () => {
- *  return <Layout>
- *   <h1>Hello World!</h1>
- *  </Layout>
+ *   return <Layout>
+ *     <h1>Hello World!</h1>
+ *   </Layout>
  * }
  * 
 */
