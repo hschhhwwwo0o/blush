@@ -18,21 +18,60 @@ import { SET_TRACKLIST } from "../../redux/actions";
  */
 
 const TheTitleBar: React.FunctionComponent = () => {
+
+    /**
+     * 
+     * React/Redux dispath method for change global redux state
+     * 
+     */
     const dispath = useDispatch();
+
+    /**
+     * 
+     * Get isTracklist value from global redux state
+     * 
+     */
     const { isTracklist } = useSelector((state: IStore) => {
         return {
             isTracklist: state.isTracklist,
         };
     });
 
+    /**
+     * 
+     * Use for close application
+     * 
+     * @function windowClose
+     * 
+     * @returns {void}
+     * 
+     */
     const windowClose = () => {
         window.top.close();
     };
 
+    /**
+     * 
+     * Use for minimize application
+     * 
+     * @function windowMinimize
+     * 
+     * @returns {void}
+     * 
+     */
     const windowMinimize = () => {
         remote.getCurrentWindow().minimize();
     };
 
+    /**
+     * 
+     * Use for make Tracklist component visible
+     * 
+     * @function windowOpenTracklist
+     * 
+     * @returns {void}
+     * 
+     */
     const windowOpenTracklist = () => {
         dispath({
             type: SET_TRACKLIST,
