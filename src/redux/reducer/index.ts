@@ -1,10 +1,8 @@
 import { IStore } from "../interface.store";
 import { IAction } from "../actions/type";
 import { 
-    PLAY,
-    PAUSE,
-    NEXT,
-    PREV,
+    PLAY, PAUSE,
+    NEXT, PREV,
     TIMELINE_PLAY,
     TIMELINE_PAUSE,
     CHANGE_TIMELINE,

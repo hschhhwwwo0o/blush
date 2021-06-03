@@ -26,7 +26,7 @@ interface ILayout {
  *   </Layout>
  * }
  * 
-*/
+ */
 
 const Layout: React.FunctionComponent<ILayout> = ({ children }) => {
     return <>
