@@ -14,6 +14,8 @@ import "./index.styl";
  * 
  * @param {string} mainColor Color title
  * 
+ * @returns {JSX} JSX Component
+ * 
 */
 
 const TheMeta: React.FunctionComponent<ITheMeta> = ({ title, artist, mainColor }) => {

@@ -6,6 +6,14 @@ import ListICO from "./ListICO";
 import "./index.styl";
 import { SET_TRACKLIST } from "../../redux/actions";
 
+/**
+ * 
+ * Component JSX Titlebar window
+ * 
+ * @returns {JSX} JSX Component
+ * 
+*/
+
 const TheTitleBar: React.FunctionComponent = () => {
     const dispath = useDispatch();
     const { isTracklist } = useSelector((state: IStore) => {
@@ -13,18 +21,22 @@ const TheTitleBar: React.FunctionComponent = () => {
             isTracklist: state.isTracklist,
         };
     });
+
     const windowClose = () => {
         window.top.close();
     };
+
     const windowMinimize = () => {
         remote.getCurrentWindow().minimize();
     };
+
     const windowOpenTracklist = () => {
         dispath({
             type: SET_TRACKLIST,
             isTracklist: !isTracklist,
         });
     };
+
     return <>
         <header>
             <section id="TheTitlebar">

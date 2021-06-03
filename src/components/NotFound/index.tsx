@@ -10,6 +10,8 @@ import TheMeta from "../TheMeta";
  * 
  * @component
  * 
+ * @returns {JSX} JSX Component
+ * 
  */
 
 const NotFound: React.FunctionComponent<INotFound> = ({ image, color }) => {

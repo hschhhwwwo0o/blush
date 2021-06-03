@@ -10,8 +10,10 @@ import "./index.styl";
  * @component
  * 
  * @param {boolean} online Online / Offline status 
- * 
  * @param {string} image Image string 
+ * 
+ * @returns {JSX} JSX Component
+ * 
 */
 
 const BG: React.FunctionComponent<IBG> = ({ online, image }) => {
