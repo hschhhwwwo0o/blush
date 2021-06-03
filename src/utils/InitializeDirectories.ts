@@ -6,7 +6,7 @@ import { statSync } from "fs";
  * 
  * @param paths String array. Example: ["C:\Users\UserName\Music", "C:\Users\UserName\MoreMusic"] 
  * 
- * @returns Returns only existing folders in the file system
+ * @returns {Array} Returns only existing folders in the file system
 */
 
 function InitializeDirectories(paths: string[]): string[] | [] {

@@ -4,7 +4,7 @@
  * 
  * @param arr Array
  * 
- * @returns Array without undefined
+ * @returns {Array} Array without undefined
  */
 
 function removeUndefined(arr: any): any[] {

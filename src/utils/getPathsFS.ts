@@ -4,6 +4,7 @@ import { readdirSync } from "fs";
  * 
  * The function gets the paths to the files in the folder
  * 
+ * @method
  * @param dirs Array strings
  * 
  * @returns Paths to files in the folder

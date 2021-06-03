@@ -11,9 +11,10 @@ import createMp3ObjectURL from "./createMp3ObjectURL";
  * 
  * Function create music data from filesystem user
  * 
+ * @method
  * @param {number} skinsLength Length fetched skins 
  * 
- * @returns Promise with data
+ * @returns {Promise} Promise with data
  * 
  */
 
