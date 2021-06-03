@@ -14,10 +14,52 @@ import ControlButtons from "./ControlButtons";
 import Time from "./Time";
 import "./index.styl";
 
+
+/**
+ * 
+ * The Player component.
+ * The most important component.
+ * The component responsible for playing music, switching it.
+ * 
+ * @component
+ * 
+ * @param {Object} props ReactJS props. See interface for more info.
+ * 
+ * @returns {JSX}
+ */
+
 const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
+
+    /**
+     * 
+     * Ref for audio tag. 
+     * 
+     * @name audioRef
+     * 
+    */
     const audioRef = useRef(null);
+
+    /**
+     * 
+     * React/Redux function for change global redux state 
+     * 
+     * @hook dispatch
+     * 
+    */
     const dispatch = useDispatch();
+
+    /**
+     * 
+     * React local state.
+     * 
+    */
     const [ interval, setIntervalState ] = useState(null);
+
+    /**
+     * 
+     * React/Redux function for get global redux state
+     * 
+    */
     const { isPlay, isAutoPlay, currentTimeLine, currentTime, nowPlay, isTracklist } = useSelector((state: IStore) => {
         return {
             isPlay: state.isPlay,
@@ -29,19 +71,59 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
         }
     });
 
+    /**
+     * 
+     * Function responsible for timeline changes
+     * Use useState react hook for play/pause setInterval
+     * 
+     * @function currentTimePlay
+     * @method
+     * 
+     * @returns {void}
+     * 
+     * @example currentTimePlay()
+     * 
+    */
     function currentTimePlay() {
         setIntervalState(setInterval( () => {
             dispatch({ type: TIMELINE_PLAY });
         }, 1000 ));
     };
 
+    /**
+     * 
+     * Function responsible for timeline changes
+     * Use useState react hook for play/pause setInterval
+     * 
+     * @function currentTimePause
+     * @method
+     * 
+     * @returns {void}
+     * 
+     * @example currentTimePause()
+     * 
+    */
     function currentTimePause() {
         setIntervalState(clearInterval(interval));
         dispatch({ type: TIMELINE_PAUSE });
     };
 
+    /**
+     * 
+     * Function responsible for play/pause music
+     * Use dispatch hook for change global state
+     * 
+     * 
+     * @function playPause
+     * @method 
+     * 
+     * @returns {void}
+     * 
+     * @example playPause(true)
+     * 
+    */
     function playPause(isPlay: boolean): void {
-        if( isPlay !== true  ) {
+        if(isPlay !== true) {
             dispatch({ type: PLAY });
             dispatch({ type: CHANGE_TIMELINE, currentTimeLine: audioRef.current.currentTime });
             currentTimePlay();
@@ -53,6 +135,22 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
         };
     };
 
+    /**
+     * 
+     * Function responsible for change now play music
+     * Use dispatch hook for change global state
+     * 
+     * Change nowPlay state field (+1)
+     * 
+     * 
+     * @function nextPlay
+     * @method 
+     * 
+     * @returns {void}
+     * 
+     * @example nextPlay()
+     * 
+    */
     function nextPlay(): void {
         if(nowPlay < props.lengthData - 1) {
             currentTimePause();
@@ -64,6 +162,22 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
         };
     };
 
+    /**
+     * 
+     * Function responsible for change now play music
+     * Use dispatch hook for change global state
+     * 
+     * Change nowPlay state field (-1)
+     * 
+     * 
+     * @function prevPlay
+     * @method 
+     * 
+     * @returns {void}
+     * 
+     * @example prevPlay()
+     * 
+    */
     function prevPlay(): void {
         if(nowPlay !== 0){
             currentTimePause();
@@ -75,6 +189,24 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
         };
     };
 
+    /**
+     * 
+     * Function responsible for change now play music
+     * Use dispatch hook for change global state
+     * 
+     * Change nowPlay state field (any number)
+     * 
+     * Used only in the component "TheTracklist"
+     * 
+     * 
+     * @function prevPlay
+     * @method 
+     * 
+     * @returns {void}
+     * 
+     * @example setPlayFromTheTracklist(10)
+     * 
+    */
     function setPlayFromTheTracklist(newPlay: number): void {
         currentTimePause();
         dispatch({ type: CHANGE_TRACK, nowPlay: newPlay });
