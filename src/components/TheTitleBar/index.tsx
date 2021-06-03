@@ -15,6 +15,17 @@ import { SET_TRACKLIST } from "../../redux/actions";
  * 
  * @returns {React.FunctionComponent | React.FC} JSX Component
  * 
+ * @example
+ * 
+ * import React from "react";
+ * import TheTitlebar from "./TheTitlebar";
+ * 
+ * const App: React.FunctionComponent = () => {
+ *   return (
+ *     <TheTitlebar />
+ *   )
+ * }
+ * 
  */
 
 const TheTitleBar: React.FunctionComponent = () => {

@@ -20,7 +20,7 @@ interface ILayout {
  * import React from "react";
  * import Layout from "./layout";
  * 
- * const App = () => {
+ * const App: React.FunctionComponent = () => {
  *   return <Layout>
  *     <h1>Hello World!</h1>
  *   </Layout>

@@ -16,6 +16,7 @@ import "./index.styl";
  * @returns {React.FunctionComponent | React.FC} JSX Component
  * 
  * @example 
+ * 
  * import React from "react";
  * import BG from "./BG";
  * 
