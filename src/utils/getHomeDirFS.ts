@@ -6,6 +6,6 @@ import OS from "os";
  * 
  * @returns {string}
  * 
-*/
+ */
 
 export default OS.userInfo().homedir;

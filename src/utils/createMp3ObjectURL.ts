@@ -9,7 +9,7 @@ import { readFileSync } from "fs";
  * 
  * @returns {string} Created url file
  * 
-*/
+ */
 
 function createMp3ObjectURL(URI: string, format?: string): string {
     const buffer = readFileSync(URI);

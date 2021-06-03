@@ -5,9 +5,10 @@ import fetch from "node-fetch";
  * Async function return skins from json.bin database
  * 
  * @async
+ * @function getSkins
  * @method
  * 
- * @returns Skins data
+ * @returns {Array} Skins data
  * 
  */
 

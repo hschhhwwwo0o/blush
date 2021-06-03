@@ -28,7 +28,7 @@ import "./index.styl";
  * 
  * @returns {React.FunctionComponent | React.FC}
  * 
-*/
+ */
 
 const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
 

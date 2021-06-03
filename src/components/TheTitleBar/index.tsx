@@ -15,7 +15,7 @@ import { SET_TRACKLIST } from "../../redux/actions";
  * 
  * @returns {React.FunctionComponent | React.FC} JSX Component
  * 
-*/
+ */
 
 const TheTitleBar: React.FunctionComponent = () => {
     const dispath = useDispatch();

@@ -8,7 +8,7 @@
  * 
  * @returns {boolean} Return true if format is valid else false
  * 
-*/
+ */
 
 export default (format: string): boolean => {
     if (

@@ -7,7 +7,7 @@ import { statSync } from "fs";
  * @param paths String array. Example: ["C:\Users\UserName\Music", "C:\Users\UserName\MoreMusic"] 
  * 
  * @returns {Array} Returns only existing folders in the file system
-*/
+ */
 
 function InitializeDirectories(paths: string[]): string[] | [] {
     let dirs: string | any = [];

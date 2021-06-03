@@ -23,7 +23,7 @@ import "./index.styl";
  *   return <BG />
  * }
  * 
-*/
+ */
 
 const BG: React.FunctionComponent<IBG> = ({ online, image }) => {
 

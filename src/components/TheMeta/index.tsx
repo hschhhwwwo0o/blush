@@ -24,7 +24,7 @@ import "./index.styl";
  * const App = () => {
  *   return <TheMeta title="Frail State Of Mind" artist="The 1975" mainColor="#fff" />
  * }
-*/
+ */
 
 const TheMeta: React.FunctionComponent<ITheMeta> = ({ title, artist, mainColor }) => {
 
@@ -34,7 +34,7 @@ const TheMeta: React.FunctionComponent<ITheMeta> = ({ title, artist, mainColor }
      * 
      * @name isTracklist
      * 
-    */
+     */
     const isTracklist = useSelector((store: IStore)=>{ 
         return store.isTracklist;
     });

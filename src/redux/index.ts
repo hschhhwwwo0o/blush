@@ -13,6 +13,6 @@ const intialStatePlayer: IStore = {
   
 /**
  * Function create store 
-*/
+ */
 
 export default createStore(reducer, intialStatePlayer);
