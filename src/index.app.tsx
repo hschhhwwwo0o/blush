@@ -33,7 +33,7 @@ interface IApp {
  * @param {Array} skins ISkin[]. Array skins
  * @param {boolean} online Online/Offline status
  * 
- * @returns {JSX}
+ * @returns {React.FunctionComponent}
  */
 
 const App: React.FunctionComponent<IApp> = ({ data, skins, online }) => {
@@ -56,6 +56,8 @@ const App: React.FunctionComponent<IApp> = ({ data, skins, online }) => {
      * 
      * @param {number} nowPlay Current track 
      * 
+     * @returns {ISkin} Return Skin Object
+     * 
     */
     function getSkin(nowPlay: number): ISkin {
         return skins[data[nowPlay].skin_id];
@@ -66,6 +68,8 @@ const App: React.FunctionComponent<IApp> = ({ data, skins, online }) => {
      * Returns the skin for the current track 
      * 
      * @param {number} nowPlay Current track 
+     * 
+     * @returns {ITrack} Return Track Object
      * 
     */
     function getTrack(nowPlay: number): ITrack {
@@ -92,10 +96,7 @@ const App: React.FunctionComponent<IApp> = ({ data, skins, online }) => {
                         thirdColor      = { getSkin(nowPlay).thirdColor }
                     />
                 </section>
-                <BG 
-                    online  = { online } 
-                    image   = { getSkin(nowPlay).image } 
-                />
+                <BG online={online} image={getSkin(nowPlay).image} />
             </>
         }
         {
