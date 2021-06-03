@@ -14,6 +14,13 @@ import "./index.styl";
  * 
  * @returns {JSX} JSX Component
  * 
+ * @example 
+ * import React from "react";
+ * 
+ * const App = () => {
+ *  return <BG />
+ * }
+ * 
 */
 
 const BG: React.FunctionComponent<IBG> = ({ online, image }) => {

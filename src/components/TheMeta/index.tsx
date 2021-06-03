@@ -8,14 +8,21 @@ import "./index.styl";
  * 
  * The component displays the current title and artist of the song
  * 
+ * @component
+ * 
  * @param {string} title Song title
- * 
  * @param {string} artist Song artist
- * 
  * @param {string} mainColor Color title
  * 
  * @returns {JSX} JSX Component
  * 
+ * @example
+ * import React from "react";
+ * import TheMeta from "./TheMeta"
+ * 
+ * const App = () => {
+ *  return <TheMeta title="Frail State Of Mind" artist="The 1975" mainColor="#fff" />
+ * }
 */
 
 const TheMeta: React.FunctionComponent<ITheMeta> = ({ title, artist, mainColor }) => {
