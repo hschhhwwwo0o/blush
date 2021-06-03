@@ -4,6 +4,16 @@ import { IBG } from "./interface";
 import { IStore } from "../../redux/interface.store";
 import "./index.styl";
 
+/**
+ * Component for Background of player.
+ *
+ * @component
+ * 
+ * @param {boolean} online Online / Offline status 
+ * 
+ * @param {string} image Image string 
+*/
+
 const BG: React.FunctionComponent<IBG> = ({ online, image }) => {
     const useImage = { backgroundImage: `url(${image})` };
     const useStandartColor = { backgroundColor: "#461027" };

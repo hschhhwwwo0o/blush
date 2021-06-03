@@ -4,6 +4,18 @@ import { IStore } from "../../redux/interface.store";
 import { ITheTracklist } from "./interface";
 import "./index.styl";
 
+/**
+ * 
+ * Tracklist music component. Absolute postion width: 100vw, height: 100vh
+ * 
+ * @param data Array of music
+ * 
+ * @param setPlayFromTheTracklist Function for changing music. Accepts in itself "nowPlay"
+ * 
+ * @param mainColor Color title current song
+ * 
+*/
+
 const TheTracklist: React.FunctionComponent<ITheTracklist> = ({ data, setPlayFromTheTracklist, mainColor }) => {
     const { nowPlay } = useSelector((store: IStore) => {
         return {

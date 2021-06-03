@@ -4,6 +4,14 @@ import "./index.styl";
 import TheTitlebar from "../TheTitleBar";
 import TheMeta from "../TheMeta";
 
+/**
+ * 
+ * NotFound music 404 page  
+ * 
+ * @component
+ * 
+ */
+
 const NotFound: React.FunctionComponent<INotFound> = ({ image, color }) => {
     return <>
         <TheTitlebar />
