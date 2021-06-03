@@ -12,6 +12,17 @@ import {
     SET_TRACKLIST
 } from "../actions";
 
+/**
+ * 
+ * Redux reducer
+ * 
+ * @param state Old Store
+ * 
+ * @param action Dispathed action
+ *  
+ * @returns New Store 
+ */
+
 function PlayerReducer(state: IStore, action: IAction): IStore {
     switch (action.type) {
         case PLAY:

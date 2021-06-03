@@ -1,5 +1,14 @@
 import { readdirSync } from "fs";
 
+/**
+ * 
+ * The function gets the paths to the files in the folder
+ * 
+ * @param dirs Array strings
+ * 
+ * @returns Paths to files in the folder
+ */
+
 function getPathsFS(dirs: string[]): string[] {
     let fls = new Array();
 

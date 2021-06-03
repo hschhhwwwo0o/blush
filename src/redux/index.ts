@@ -11,4 +11,8 @@ const intialStatePlayer: IStore = {
     isTracklist: false
 }
   
+/**
+ * Function create store 
+*/
+
 export default createStore(reducer, intialStatePlayer);
