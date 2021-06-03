@@ -13,7 +13,7 @@ import "./index.styl";
  * 
  * @param {string} title Song title
  * @param {string} artist Song artist
- * @param {string} mainColor Color title
+ * @param {string} mainColor Color
  * 
  * @returns {React.FunctionComponent | React.FC} JSX Component
  * 
@@ -27,9 +27,18 @@ import "./index.styl";
 */
 
 const TheMeta: React.FunctionComponent<ITheMeta> = ({ title, artist, mainColor }) => {
+
+    /**
+     * 
+     * Boolean value. If true "TheMeta" component make hidden.
+     * 
+     * @name isTracklist
+     * 
+    */
     const isTracklist = useSelector((store: IStore)=>{ 
         return store.isTracklist;
     });
+
     return <>
         <div id="TheMeta" style={{ opacity: isTracklist ? "0" : "1" }}>
             <h1 style={{ color: mainColor }}>{ title }</h1>

@@ -17,9 +17,10 @@ import "./index.styl";
  * 
  * @example 
  * import React from "react";
+ * import BG from "./BG";
  * 
- * const App = () => {
- *  return <BG />
+ * const App: React.FunctionComponent = () => {
+ *   return <BG />
  * }
  * 
 */
