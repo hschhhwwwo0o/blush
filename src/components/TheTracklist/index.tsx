@@ -19,12 +19,26 @@ import "./index.styl";
  * 
  */
 const TheTracklist: React.FunctionComponent<ITheTracklist> = ({ data, setPlayFromTheTracklist, mainColor }) => {
+
+    /**
+     * 
+     * Get nowPlay value from global redux state
+     * 
+     */
     const { nowPlay } = useSelector((store: IStore) => {
         return {
             nowPlay: store.nowPlay,
         };
     });
+
+    /**
+     * Styles object
+     * 
+     * @namespace {Object} selected Styles object
+     * 
+     */
     const selected = { color: mainColor, marginLeft: "20px" };
+
     return <>
         <div id="theTracklist">
             {
