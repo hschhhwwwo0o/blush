@@ -68,15 +68,15 @@ const Time: React.FunctionComponent<ITimeElement> = (props) => {
         <div id="ThePlayer__timer" style={{ borderTop: `4px solid ${props.color}` }}>
             <section>
                 <input 
-                    id          = "ThePlayer__timeline"
-                    ref         = { rangeRef }
-                    type        = "range" 
-                    min         = "0" 
-                    max         = { props.duration } 
-                    step        = "any"
-                    value       = { props.currentTimeLine }
-                    onChange    = { (e) => { onChangeTimeLine(e)} }
-                    style       = { { background: gradient } }
+                    id      = "ThePlayer__timeline"
+                    ref     = { rangeRef }
+                    type    = "range" 
+                    min     = "0" 
+                    max     = { props.duration } 
+                    step    = "any"
+                    value   = { props.currentTimeLine }
+                    onChange= { (e) => { onChangeTimeLine(e)} }
+                    style   = { { background: gradient } }
                 />
                 <div id="ThePlayer__time">
                     <h2 style={{ color: props.color }}>
