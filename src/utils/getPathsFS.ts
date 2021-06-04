@@ -10,12 +10,27 @@ import { readdirSync } from "fs";
  * @returns Paths to files in the folder
  */
 function getPathsFS(dirs: string[]): string[] {
-    let fls = new Array();
+
+    /**
+     * File paths
+     * 
+     */
+    let fls: string[] | any[] = new Array();
 
     dirs.forEach((path: string) => {
         if(path !== "") {
+
+            /**
+             * Files inside a folder 
+             * 
+             */
             const files = readdirSync(path);
-            const paths = files.map((file) => {
+
+            /**
+             * File paths
+             * 
+             */
+            const paths: string[] = files.map((file) => {
                 return `${path}\\${file}`;
             });
 
