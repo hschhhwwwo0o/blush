@@ -1,5 +1,15 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import "./index.styl";
+
+/**
+ * 
+ * Interface
+ * 
+ * @interface IICO
+ */
+interface IICO {
+    isOpen?: boolean
+}
 
 /**
  * 
@@ -7,10 +17,10 @@ import "./index.styl";
  * 
  * @param {boolean} isOpen Affects the appearance of the button
  *  
- * @returns {JSX} JSX Component
+ * @returns {FunctionComponent} JSX Component
  * 
  */
-const ListICO: React.FunctionComponent<{ isOpen?: boolean }> = ({ isOpen }) => {
+const ListICO: FunctionComponent<IICO> = ({ isOpen }) => {
     return <div className={`ListICO ${isOpen ? "closeICO" : ""}`}>
         <div></div>
         <div></div>
