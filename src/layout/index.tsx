@@ -1,5 +1,11 @@
 import React, { ReactChild, ReactChildren } from "react";
 
+/**
+ * App interface 
+ * 
+ * @interface
+ * 
+ */
 interface ILayout {
     children: ReactChild | ReactChildren | JSX.Element [];
 }
