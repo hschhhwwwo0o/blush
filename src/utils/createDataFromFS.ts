@@ -20,27 +20,68 @@ import createMp3ObjectURL from "./createMp3ObjectURL";
  * 
  */
 function createDataFromFS(skinsLength?: number) {
-    const dirs = InitializeDirectories([
+
+    /**
+     * String Array
+     * Array paths to dirs with music 
+     * 
+     */
+    const dirs: string[] = InitializeDirectories([
         `${OS.userInfo().homedir}/Music/test`,
         `${OS.userInfo().homedir}/Music/testy`,
     ]);
 
-    let skin = Math.floor(Math.random() * skinsLength);
+    /**
+     * First load skin ID
+     * @type {number} Initial Skin ID
+     * 
+     */
+    let initialSkin: number = Math.floor(Math.random() * skinsLength);
 
     const data = getPathsFS(dirs).map(async(URI: string) => {
-        let ext = path.extname(URI);
+
+        /**
+         * String extname
+         * 
+         * @example ".mp3", ".ogg"
+         * 
+         */
+        let ext: string = path.extname(URI);
+
+        /**
+         * If extname is audio format.
+         * 
+         * Else return undefined
+         * 
+         */
         if(checkFileExtension(ext)) {
+
+            /**
+             * Metadata audio
+             * 
+             */
             const metadata: IAudioMetadata = await parseFile(URI);
-            skin < skinsLength - 2 ? skin++ : skin = 0;
+
+            /**
+             * Check initialSkin overflow
+             * 
+             */
+            initialSkin < skinsLength - 2 ? initialSkin++ : initialSkin = 0;
+
+            /**
+             * Return metadata
+             * 
+             */
             return {
                 url:        createMp3ObjectURL(URI),
                 artist:     metadata.common?.artist,
                 duration:   metadata.format?.duration,
                 title:      metadata.common?.title,
-                skin_id:    skin
+                skin_id:    initialSkin,
             };
         };
     });
+    
     return Promise.all(data);
 };
 
