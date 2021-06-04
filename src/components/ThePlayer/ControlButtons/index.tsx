@@ -15,7 +15,6 @@ import "./index.styl";
  * @returns {React.FunctionComponent} JSX ControlButtons
  * 
  */
-
 const ControlButtons: React.FunctionComponent<ControlButtonsElement> = (props) => {
     return <>
         <div id="ThePlayer__controls" style={{ backgroundColor: props.mainColor }}>

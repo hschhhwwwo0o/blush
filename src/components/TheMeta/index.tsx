@@ -27,7 +27,6 @@ import "./index.styl";
  * }
  * 
  */
-
 const TheMeta: React.FunctionComponent<ITheMeta> = ({ title, artist, mainColor }) => {
 
     /**

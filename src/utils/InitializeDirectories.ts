@@ -8,7 +8,6 @@ import { statSync } from "fs";
  * 
  * @returns {Array} Returns only existing folders in the file system
  */
-
 function InitializeDirectories(paths: string[]): string[] | [] {
     let dirs: string | any = [];
 

@@ -18,7 +18,6 @@ import "./index.styl";
  * @returns {React.FunctionComponent | React.FC} JSX Component
  * 
  */
-
 const TheTracklist: React.FunctionComponent<ITheTracklist> = ({ data, setPlayFromTheTracklist, mainColor }) => {
     const { nowPlay } = useSelector((store: IStore) => {
         return {

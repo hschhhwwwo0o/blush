@@ -7,7 +7,6 @@
  * @returns {string} Example return "2:34"
  * 
  */
-
 function formatTime(time: number): string {
     let minutes = time / 60;
     let secs = time % 60;

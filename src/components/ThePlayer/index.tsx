@@ -14,7 +14,6 @@ import ControlButtons from "./ControlButtons";
 import Time from "./Time";
 import "./index.styl";
 
-
 /**
  * 
  * The Player component.
@@ -29,7 +28,6 @@ import "./index.styl";
  * @returns {React.FunctionComponent | React.FC}
  * 
  */
-
 const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
 
     /**

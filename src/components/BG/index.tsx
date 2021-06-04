@@ -25,7 +25,6 @@ import "./index.styl";
  * }
  * 
  */
-
 const BG: React.FunctionComponent<IBG> = ({ online, image }) => {
 
     /**

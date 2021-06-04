@@ -25,7 +25,6 @@ import TheMeta from "../TheMeta";
  * }
  * 
  */
-
 const NotFound: React.FunctionComponent<INotFound> = ({ image, color }) => {
     return <>
         <TheTitlebar />

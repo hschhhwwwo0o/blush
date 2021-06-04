@@ -27,7 +27,6 @@ import { SET_TRACKLIST } from "../../redux/actions";
  * }
  * 
  */
-
 const TheTitleBar: React.FunctionComponent = () => {
 
     /**

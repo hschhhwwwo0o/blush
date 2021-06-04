@@ -16,7 +16,6 @@ import BG from "./components/BG";
  * @interface 
  * 
 */
-
 interface IApp {
     data: ITrack[]
     skins?: ISkin[] | undefined
@@ -35,7 +34,6 @@ interface IApp {
  * 
  * @returns {React.FunctionComponent}
  */
-
 const App: React.FunctionComponent<IApp> = ({ data, skins, online }) => {
 
     /**
@@ -43,7 +41,7 @@ const App: React.FunctionComponent<IApp> = ({ data, skins, online }) => {
      * React/Redux function for get global redux state
      * Get nowPlay: number field for music play
      * 
-    */
+     */
     const { nowPlay }: IStoreSample = useSelector((state: IStore) => {
         return {
             nowPlay: state.nowPlay
@@ -58,7 +56,7 @@ const App: React.FunctionComponent<IApp> = ({ data, skins, online }) => {
      * 
      * @returns {ISkin} Return Skin Object
      * 
-    */
+     */
     function getSkin(nowPlay: number): ISkin {
         return skins[data[nowPlay].skin_id];
     };
@@ -71,7 +69,7 @@ const App: React.FunctionComponent<IApp> = ({ data, skins, online }) => {
      * 
      * @returns {ITrack} Return Track Object
      * 
-    */
+     */
     function getTrack(nowPlay: number): ITrack {
         return data[nowPlay];
     };

@@ -17,7 +17,6 @@ import "./index.styl";
  * @returns {React.FunctionComponent}
  * 
  */
-
 const Time: React.FunctionComponent<ITimeElement> = (props) => {
 
     /**

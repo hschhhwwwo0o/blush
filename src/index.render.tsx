@@ -22,8 +22,7 @@ import store from "./redux/index";
  * @async
  * @function  __render
  * 
-*/
-
+ */
 async function __render() {
     getSkins().then((skins: IPromiseSkins) => {
         createDataFromFS(skins.skins.length).then((data) => {

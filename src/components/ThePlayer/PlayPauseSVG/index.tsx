@@ -22,7 +22,6 @@ interface IPlayPauseSVG {
  * @returns {React.FunctionComponent}
  * 
  */
-
 const PlayPauseSVG: React.FunctionComponent<IPlayPauseSVG> = ({ isPlay, color }) => {
     return <>
         { 

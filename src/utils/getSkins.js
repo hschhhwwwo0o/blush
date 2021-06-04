@@ -8,7 +8,7 @@ import fetch from "node-fetch";
  * @function getSkins
  * @method
  * 
- * @returns {Array} Skins data
+ * @returns {Promise} Skins data
  * 
  */
 

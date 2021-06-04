@@ -10,7 +10,6 @@ import "./index.styl";
  * @returns {JSX} JSX Component
  * 
  */
-
 const ListICO: React.FunctionComponent<{ isOpen?: boolean }> = ({ isOpen }) => {
     return <div className={`ListICO ${isOpen ? "closeICO" : ""}`}>
         <div></div>

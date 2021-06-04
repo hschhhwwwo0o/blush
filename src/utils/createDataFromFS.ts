@@ -19,7 +19,6 @@ import createMp3ObjectURL from "./createMp3ObjectURL";
  * @returns {Promise} Promise with data
  * 
  */
-
 function createDataFromFS(skinsLength?: number) {
     const dirs = InitializeDirectories([
         `${OS.userInfo().homedir}/Music/test`,

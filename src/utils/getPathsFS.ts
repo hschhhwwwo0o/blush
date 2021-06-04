@@ -9,7 +9,6 @@ import { readdirSync } from "fs";
  * 
  * @returns Paths to files in the folder
  */
-
 function getPathsFS(dirs: string[]): string[] {
     let fls = new Array();
 

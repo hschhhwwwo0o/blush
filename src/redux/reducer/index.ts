@@ -20,7 +20,6 @@ import {
  * @returns New Store 
  * 
  */
-
 function PlayerReducer(state: IStore, action: IAction): IStore {
     switch (action.type) {
         case PLAY:
