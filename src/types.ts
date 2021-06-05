@@ -1,23 +1,23 @@
 export type ID = number
 
 export interface ITrack {
-    url: string
-    artist: string
-    album: string
-    cover: string
-    duration: number
-    title: string
-    year: number
-    skin_id?: number
+    readonly url: string
+    readonly duration: number
+    readonly title: string
+    readonly artist: string
+    readonly album?: string
+    readonly cover?: string
+    readonly year?: number
+    readonly skin_id?: number
 } 
 
 export interface ISkin {
-    __id: ID
-    image: string
-    mainColor: string
-    secondColor: string
-    thirdColor: string
-    autor?: string
+    readonly __id: ID
+    readonly image: string
+    readonly mainColor: string
+    readonly secondColor: string
+    readonly thirdColor: string
+    readonly autor?: string
 }
 
 export interface IPromiseSkins {
