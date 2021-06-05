@@ -5,10 +5,10 @@ export interface ITrack {
     readonly duration: number
     readonly title: string
     readonly artist: string
+    readonly skin_id?: ID
     readonly album?: string
     readonly cover?: string
     readonly year?: number
-    readonly skin_id?: number
 } 
 
 export interface ISkin {
