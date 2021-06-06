@@ -3,8 +3,10 @@ import { remote } from "electron";
 import { useDispatch, useSelector } from "react-redux";
 import { IStore } from "../../redux/interface.store";
 import ListICO from "./ListICO";
-import "./index.styl";
 import { SET_TRACKLIST } from "../../redux/actions";
+import CloseICO from "./CloseICO";
+import HideICO from "./HideICO";
+import "./index.styl";
 
 /**
  * 
@@ -98,10 +100,10 @@ const TheTitleBar: React.FunctionComponent = () => {
                 </div>
                 <div id="TheTitlebar__controls">
                     <div id="TheTitlebar__hide" onClick={windowMinimize}>
-                        <div />
+                        <HideICO />
                     </div>
                     <div id="TheTitlebar__close" onClick={windowClose}>
-                        <div />
+                        <CloseICO />
                     </div>
                 </div>
             </section>
