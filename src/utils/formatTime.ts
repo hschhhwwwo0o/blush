@@ -8,12 +8,47 @@
  * 
  */
 function formatTime(time: number): string {
-    let minutes = time / 60;
-    let secs = time % 60;
-    let formatSeconds;
-    let formatMinutes = minutes.toString().split(".")[0];
 
+    /**
+     * Initial minutes variable
+     * @type {number}
+     * 
+     */
+    let minutes: number = time / 60;
+
+    /**
+     * Initial seconds variable
+     * @type {number}
+     * 
+     */
+    let secs: number = time % 60;
+
+    /**
+     * Initial string formated seconds
+     * @type {string}
+     * 
+     */
+    let formatSeconds: string;
+
+    /**
+     * Initial string formated minutes
+     * @type {string}
+     * 
+     */
+    let formatMinutes: string = minutes.toString().split(".")[0];
+
+    /**
+     * Set formated seconds
+     * 
+     */
     if(secs.toFixed().toString().length === 1) {
+        
+        /**
+         * if the number is two-digit {
+         *   formatSeconds = "08" // Add "0"
+         * }
+         * 
+         */
         formatSeconds = `0${secs.toFixed().toString()}`;
     } else {
         formatSeconds = secs.toFixed().toString();
