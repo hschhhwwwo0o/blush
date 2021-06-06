@@ -38,15 +38,17 @@ const TheTracklist: React.FunctionComponent<ITheTracklist> = ({ data, setPlayFro
      * @namespace {Object} selected Styles object
      * 
      */
-    const selected = { color: mainColor, marginLeft: "20px" };
+    const selected = { color: mainColor, marginLeft: "20px", opacity: "1" };
 
     return <>
         <div id="theTracklist" className={isTracklist ? "openTracklist" : "closeTracklist"}>
             {
-                data.map(({ title, artist }, index) => {
-                    return <h1 onClick={() => { setPlayFromTheTracklist(index) }} style={nowPlay === index ? selected : {}} key={`${index}`}>
-                        {title} - <span> {artist}</span>
-                    </h1>
+                data.map(({ title, artist }, key) => {
+                    return <div key={key}>
+                        <h1 onClick={() => { setPlayFromTheTracklist(key); }} style={nowPlay === key ? selected : {}}>
+                            {title} - <span> {artist}</span>
+                        </h1>
+                    </div>
                 })
             }
         </div>
