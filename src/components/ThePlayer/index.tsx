@@ -250,15 +250,11 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
                 color               = { props.mainColor }
             />
         </div>
-        {
-            isTracklist && <>
-                <TheTracklist 
-                    data={props.data} 
-                    setPlayFromTheTracklist={setPlayFromTheTracklist}
-                    mainColor={props.mainColor}
-                />
-            </>
-        }
+        <TheTracklist 
+            data={props.data} 
+            setPlayFromTheTracklist={setPlayFromTheTracklist}
+            mainColor={props.mainColor}
+        />
     </>
 }
 

@@ -25,9 +25,10 @@ const TheTracklist: React.FunctionComponent<ITheTracklist> = ({ data, setPlayFro
      * Get nowPlay value from global redux state
      * 
      */
-    const { nowPlay } = useSelector((store: IStore) => {
+    const { nowPlay, isTracklist } = useSelector((store: IStore) => {
         return {
             nowPlay: store.nowPlay,
+            isTracklist: store.isTracklist
         };
     });
 
@@ -40,7 +41,7 @@ const TheTracklist: React.FunctionComponent<ITheTracklist> = ({ data, setPlayFro
     const selected = { color: mainColor, marginLeft: "20px" };
 
     return <>
-        <div id="theTracklist">
+        <div id="theTracklist" className={isTracklist ? "openTracklist" : "closeTracklist"}>
             {
                 data.map(({ title, artist }, index) => {
                     return <h1 onClick={() => { setPlayFromTheTracklist(index) }} key={`${index}`} style={ nowPlay === index ? selected : {} }>
