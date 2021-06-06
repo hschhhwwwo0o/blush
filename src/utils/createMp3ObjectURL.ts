@@ -11,9 +11,23 @@ import { readFileSync } from "fs";
  * 
  */
 function createMp3ObjectURL(URI: string, format?: string): string {
+
+    /**
+     * File buffer
+     * 
+     */
     const buffer = readFileSync(URI);
+
+    /**
+     * Create Blob data from buffer
+     * 
+     */
     const blob: Blob = new Blob([buffer], { type: `audio/${format === undefined ? "mp3" : format}` });
 
+    /**
+     * Return url local
+     * 
+     */
     return window.URL.createObjectURL(blob);
 };
 

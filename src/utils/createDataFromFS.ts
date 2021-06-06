@@ -6,6 +6,7 @@ import InitializeDirectories from "./InitializeDirectories";
 import getPathsFS from "./getPathsFS";
 import checkFileExtension from "./checkFileExtension";
 import createMp3ObjectURL from "./createMp3ObjectURL";
+import { ITrack } from "../types";
 
 /**
  * 
@@ -19,7 +20,7 @@ import createMp3ObjectURL from "./createMp3ObjectURL";
  * @returns {Promise} Promise with data
  * 
  */
-function createDataFromFS(skinsLength?: number) {
+function createDataFromFS(skinsLength?: number): Promise<ITrack[]> {
 
     /**
      * String Array
@@ -38,6 +39,10 @@ function createDataFromFS(skinsLength?: number) {
      */
     let initialSkin: number = Math.floor(Math.random() * skinsLength);
 
+    /**
+     * Finally Array of promises
+     * 
+     */
     const data = getPathsFS(dirs).map(async(URI: string) => {
 
         /**
@@ -82,6 +87,14 @@ function createDataFromFS(skinsLength?: number) {
         };
     });
     
+    /**
+     * We are waiting for the fulfillment of all promises
+     * 
+     * Read more: 
+     * https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise/all
+     * https://learn.javascript.ru/promise-api
+     * 
+     */
     return Promise.all(data);
 };
 
