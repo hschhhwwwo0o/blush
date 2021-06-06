@@ -10,9 +10,25 @@
  * 
  */
 export default (format: string): boolean => {
-    if (format === ".mp3" || format === ".ogg" || format === ".ape" || format === ".flac" || format === ".wav") {
-        return true;
-    } else {
-        return false;
+
+    /**
+     * If the format does not start with a dot
+     * 
+     */
+    if(format[0] !== ".") {
+        console.error("The format must start with a dot");
+        console.log("Examples format: '.mp3', '.ogg' ");
+    }
+
+    /**
+     * Else all ok
+     * 
+     */
+    else {
+        if (format === ".mp3" || format === ".ogg" || format === ".ape" || format === ".flac" || format === ".wav") {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
