@@ -33,7 +33,7 @@ const BG: React.FunctionComponent<IBG> = ({ online, image }) => {
      * 
      * @name useImage
      * 
-    */
+     */
     const useImage = { backgroundImage: `url(${image})` };
 
     /**
@@ -42,12 +42,12 @@ const BG: React.FunctionComponent<IBG> = ({ online, image }) => {
      * 
      * @name useStandartColor
      * 
-    */
+     */
     const useStandartColor = { backgroundColor: "#461027" };
 
     /**
      * Get store values
-    */
+     */
     const { isTracklist } = useSelector((store: IStore) => {
         return {
             isTracklist: store.isTracklist,
