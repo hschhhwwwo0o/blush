@@ -224,14 +224,7 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
     }
 
     return <>
-        <audio 
-            src         = { props.audio }
-            ref         = { audioRef }
-            autoPlay    = { isAutoPlay }
-            onEnded     = {() => {
-                nextPlay();
-            }}
-        />
+        <audio src={props.audio} ref={audioRef} autoPlay={isAutoPlay} onEnded={nextPlay} />
         <div id="ThePlayer" style={{ opacity: isTracklist ? "0" : "1" }}>
             <ControlButtons 
                 isPlay      = { isPlay }
@@ -250,11 +243,7 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
                 color               = { props.mainColor }
             />
         </div>
-        <TheTracklist 
-            data={props.data} 
-            setPlayFromTheTracklist={setPlayFromTheTracklist}
-            mainColor={props.mainColor}
-        />
+        <TheTracklist data={props.data} setPlayFromTheTracklist={setPlayFromTheTracklist} mainColor={props.mainColor} />
     </>
 }
 

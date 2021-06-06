@@ -54,13 +54,7 @@ const BG: React.FunctionComponent<IBG> = ({ online, image }) => {
         }
     });
 
-    return (
-        <div 
-            id="bg" 
-            style={ online ? useImage : useStandartColor } 
-            className={ isTracklist ? "bright" : "" }
-        />
-    )
+    return <div id="bg" style={online ? useImage : useStandartColor} className={isTracklist ? "bright" : ""} />
 }
 
 export default BG;

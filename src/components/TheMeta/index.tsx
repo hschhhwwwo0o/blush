@@ -36,7 +36,7 @@ const TheMeta: React.FunctionComponent<ITheMeta> = ({ title, artist, mainColor }
      * @name isTracklist
      * 
      */
-    const isTracklist = useSelector((store: IStore)=>{ 
+    const isTracklist = useSelector((store: IStore) => { 
         return store.isTracklist;
     });
 
