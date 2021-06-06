@@ -2,7 +2,7 @@
  * 
  * Function remove undefined value from any array
  * 
- * @param arr Array
+ * @param {Array} arr Array
  * 
  * @returns {Array} Array without undefined
  */

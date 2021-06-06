@@ -9,8 +9,17 @@ import { statSync } from "fs";
  * @returns {Array} Returns only existing folders in the file system
  */
 function InitializeDirectories(paths: string[]): string[] | [] {
+
+    /**
+     * Initialize dirs
+     * 
+     */
     let dirs: string | any = [];
 
+    /**
+     * Creating dirs based on paths
+     * 
+     */
     dirs = paths.map((path) => {
         try {
             if(statSync(path).isDirectory()){
