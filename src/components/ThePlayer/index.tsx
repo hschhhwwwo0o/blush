@@ -192,9 +192,7 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
             dispatch({ type: PREV });
             dispatch({ type: CHANGE_TIMELINE, currentTimeLine: 0 });
             currentTimePlay();
-        } else {
-            console.log("overflow");
-        };
+        }
     };
 
     /**
