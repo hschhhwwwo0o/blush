@@ -28,11 +28,7 @@ async function __render() {
         createDataFromFS(skins.skins.length).then((data) => {
             ReactDOM.render( 
                 <Provider store={store}>
-                    <App 
-                        data={removeUndefined(data)} 
-                        skins={skins.skins} 
-                        online={true}
-                    />
+                    <App data={removeUndefined(data)} skins={skins.skins} online={true} />
                 </Provider>, 
                 document.querySelector("#root") 
             );
