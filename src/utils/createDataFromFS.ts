@@ -48,6 +48,8 @@ function createDataFromFS(skinsLength?: number): Promise<ITrack[]> {
         /**
          * String extname
          * 
+         * @type {string}
+         * 
          * @example ".mp3", ".ogg"
          * 
          */
@@ -63,6 +65,10 @@ function createDataFromFS(skinsLength?: number): Promise<ITrack[]> {
 
             /**
              * Metadata audio
+             * 
+             * @type {IAudioMetadata}
+             * 
+             * Path to interface: "node_modules/music-metadata/lib/type"
              * 
              */
             const metadata: IAudioMetadata = await parseFile(URI);

@@ -5,8 +5,6 @@ import { IPicture } from "music-metadata/lib/type";
  * Function create base64 string of image
  * 
  * @function
- * @method
- * 
  * @param cover Cover image metadata. Format: IPicture from "music-metadata/lib/type"
  * 
  * @returns {string} Base64 string image
@@ -15,9 +13,7 @@ import { IPicture } from "music-metadata/lib/type";
 const createBase64String: Function = (cover: IPicture): string => {
 
     /**
-     * 
-     * @namespace {string} base64String Base 64 string image
-     * 
+     * @type {string} Base 64 string image
      */
     let base64String = "";
 

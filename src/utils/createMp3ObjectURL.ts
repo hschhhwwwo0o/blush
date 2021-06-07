@@ -16,7 +16,7 @@ function createMp3ObjectURL(URI: string, format?: string): string {
      * File buffer
      * 
      */
-    const buffer = readFileSync(URI);
+    const buffer: Buffer = readFileSync(URI);
 
     /**
      * Create Blob data from buffer
