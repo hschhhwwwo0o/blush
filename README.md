@@ -26,7 +26,7 @@
 **The original design is presented on <a href="https://dribbble.com/shots/7076055-Play">Dribble</a>** \
 **Author of the original design: <a href="https://dribbble.com/Tamarashvili">Giga Tamarashvili</a>**
 
-**Design instruments: Figma, Adobe Photoshop**
+**Design instruments: Figma**
 
 ## Assets/Pictures
 
