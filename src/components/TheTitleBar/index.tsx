@@ -2,7 +2,7 @@ import React from "react";
 import { remote } from "electron";
 import { useDispatch, useSelector } from "react-redux";
 import { SET_TRACKLIST } from "../../redux/actions";
-import { IStore } from "../../redux/interface.store";
+import { IStore } from "../../redux/interface";
 import ListICO from "./ListICO";
 import CloseICO from "./CloseICO";
 import HideICO from "./HideICO";

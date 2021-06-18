@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { IBG } from "./interface";
-import { IStore } from "../../redux/interface.store";
+import { IStore } from "../../redux/interface";
 import "./index.styl";
 
 /**

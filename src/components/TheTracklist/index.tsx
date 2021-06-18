@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { IStore } from "../../redux/interface.store";
+import { IStore } from "../../redux/interface";
 import { ITheTracklist } from "./interface";
 import "./index.styl";
 

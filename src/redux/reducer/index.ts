@@ -1,4 +1,4 @@
-import { IStore } from "../interface.store";
+import { IStore } from "../interface";
 import { IAction } from "../actions/type";
 import { 
     PLAY, PAUSE,

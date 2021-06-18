@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { ITrack, ISkin } from "./types";
-import { IStore, IStoreSample } from "./redux/interface.store";
+import { IStore, IStoreSample } from "./redux/interface";
 import NotFound from "./components/NotFound";
 import Layout from "./layout/index";
 import TheTitleBar from "./components/TheTitleBar/index";

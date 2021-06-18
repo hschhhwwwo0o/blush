@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { IThePlayer } from "./interface";
-import { IStore } from "../../redux/interface.store";
+import { IStore } from "../../redux/interface";
 import {
     PLAY, PAUSE, NEXT,
     PREV, TIMELINE_PLAY,

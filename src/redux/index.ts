@@ -1,5 +1,5 @@
 import { createStore } from "redux";
-import { IStore } from "./interface.store";
+import { IStore } from "./interface";
 import reducer from "./reducer";
 
 const intialStatePlayer: IStore = {
