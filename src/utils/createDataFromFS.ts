@@ -29,6 +29,7 @@ function createDataFromFS(skinsLength?: number): Promise<ITrack[]> {
      */
     const dirs: string[] = InitializeDirectories([
         `${OS.userInfo().homedir}/Music/test`,
+        `${OS.userInfo().homedir}/Music`,
         `${OS.userInfo().homedir}/Music/testy`,
     ]);
 
