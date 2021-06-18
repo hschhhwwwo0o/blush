@@ -42,8 +42,8 @@ const TheMeta: React.FunctionComponent<ITheMeta> = ({ title, artist, mainColor }
 
     return <>
         <div id="TheMeta" style={{ opacity: isTracklist ? "0" : "1" }}>
-            <h1 style={{ color: mainColor }}>{ title }</h1>
-            <h2>{ artist }</h2>
+            <h1 style={{ color: mainColor }}>{title}</h1>
+            <h2>{artist}</h2>
         </div>
     </>
 }
