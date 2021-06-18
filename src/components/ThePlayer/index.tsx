@@ -93,7 +93,7 @@ const ThePlayer:React.FunctionComponent<IThePlayer> = (props) => {
      * 
      */
     function currentTimePlay() {
-        setIntervalState(setInterval( () => {
+        setIntervalState(setInterval(() => {
             dispatch({ type: TIMELINE_PLAY });
         }, 1000 ));
     };
