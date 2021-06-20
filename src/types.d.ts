@@ -1,6 +1,6 @@
 export type ID = number
-export type ImageURL = string
-export type Color = string
+export type ImageStringURL = string
+export type ColorStringHEX = string
 
 export interface ITrack {
     readonly url: string
