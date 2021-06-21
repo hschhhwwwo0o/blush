@@ -13,6 +13,7 @@ export default (format: string): boolean => {
 
     /**
      * If the format does not start with a dot
+     * @error
      * 
      */
     if(format[0] !== ".") {

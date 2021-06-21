@@ -23,8 +23,8 @@ import { ITrack } from "../types";
 function createDataFromFS(skinsLength?: number): Promise<ITrack[]> {
 
     /**
-     * String Array
      * Array paths to dirs with music 
+     * @type {Array<string>}
      * 
      */
     const dirs: string[] = InitializeDirectories([
@@ -42,6 +42,9 @@ function createDataFromFS(skinsLength?: number): Promise<ITrack[]> {
 
     /**
      * Finally Array of promises
+     * Initialize data
+     * 
+     * @type {Array<Promise>}
      * 
      */
     const data = getPathsFS(dirs).map(async(URI: string) => {
@@ -49,7 +52,7 @@ function createDataFromFS(skinsLength?: number): Promise<ITrack[]> {
         /**
          * String extname
          * 
-         * @type {string}
+         * @type {string} Extname
          * 
          * @example ".mp3", ".ogg"
          * 
@@ -70,6 +73,8 @@ function createDataFromFS(skinsLength?: number): Promise<ITrack[]> {
              * @type {IAudioMetadata}
              * 
              * Path to interface: "node_modules/music-metadata/lib/type"
+             * 
+             * More about npm package: https://www.npmjs.com/package/music-metadata
              * 
              */
             const metadata: IAudioMetadata = await parseFile(URI);

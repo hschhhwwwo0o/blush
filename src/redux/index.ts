@@ -13,5 +13,7 @@ const intialStatePlayer: IStore = {
   
 /**
  * Function create store 
+ * 
+ * More about: https://redux.js.org/api/createstore
  */
 export default createStore(reducer, intialStatePlayer);
