@@ -1,4 +1,4 @@
-import React, { ReactChild, ReactChildren } from "react";
+import React, { ReactChild, ReactChildren, ReactNode } from "react";
 
 /**
  * App interface 
@@ -7,7 +7,7 @@ import React, { ReactChild, ReactChildren } from "react";
  * 
  */
 interface ILayout {
-    children: ReactChild | ReactChildren | JSX.Element [];
+    children: (ReactChild | ReactChildren | JSX.Element[]) & ReactNode;
 }
 
 /**
@@ -17,7 +17,7 @@ interface ILayout {
  * @function
  * @component
  * 
- * @param {React.FunctionComponent | React.FC} children JSX component || components
+ * @param {(React.ReactChild | React.ReactChildren | JSX.Element[]) & React.ReactNode} children JSX component || components
  * 
  * @returns {React.FunctionComponent | React.FC} Return Layout component
  * 
