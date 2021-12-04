@@ -39,21 +39,23 @@
 ## Assets/Fonts
 
 - **[Google-Fonts] / [Open-Sans]**
-- **[Google-Fonts] / [Cormorant-Garamond]** 
+- **[Google-Fonts] / [Cormorant-Garamond]**
 
-[NodeJS]: <https://nodejs.org/en/>
-[ReactJS]: <https://reactjs.org/>
-[ElectronJS]: <https://www.electronjs.org/>
-[TypeScript]: <https://www.typescriptlang.org/>
-[Stylus]: <https://stylus-lang.com/>
-[Redux/React-Redux]: <https://react-redux.js.org/>
-[Webpack]: <https://webpack.js.org/>
-[Figma]: <https://www.figma.com/>
-[Open-Sans]: <https://fonts.google.com/specimen/Open+Sans>
-[Google-Fonts]: <https://fonts.google.com/>
-[Flaticon]: <https://www.flaticon.com/>
-[Yarn]: <https://yarnpkg.com/>
-[Behance]: <https://www.behance.net/gallery/120582893/BLUSH-Music-App>
-[Dribbble]: <https://dribbble.com/shots/15761581-BLUSH-Music-App>
-[Electron-Forge]: <https://www.electronforge.io/>
-[Cormorant-Garamond]: <https://fonts.google.com/specimen/Cormorant+Garamond?query=Cormorant+Garamond>
+[nodejs]: https://nodejs.org/en/
+[reactjs]: https://reactjs.org/
+[electronjs]: https://www.electronjs.org/
+[typescript]: https://www.typescriptlang.org/
+[stylus]: https://stylus-lang.com/
+[redux/react-redux]: https://react-redux.js.org/
+[webpack]: https://webpack.js.org/
+[figma]: https://www.figma.com/
+[open-sans]: https://fonts.google.com/specimen/Open+Sans
+[google-fonts]: https://fonts.google.com/
+[flaticon]: https://www.flaticon.com/
+[yarn]: https://yarnpkg.com/
+[behance]: https://www.behance.net/gallery/120582893/BLUSH-Music-App
+[dribbble]: https://dribbble.com/shots/15761581-BLUSH-Music-App
+[electron-forge]: https://www.electronforge.io/
+[cormorant-garamond]: https://fonts.google.com/specimen/Cormorant+Garamond?query=Cormorant+Garamond
+
+Made with love
