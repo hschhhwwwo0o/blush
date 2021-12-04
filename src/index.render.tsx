@@ -8,32 +8,31 @@ import removeUndefined from "./utils/removeUndefined";
 import App from "./index.app";
 import store from "./redux/index";
 
-
 /**
- * 
+ *
  * Main render. Mount app in html.
- * 
+ *
  * Search music on filesystem.
- * 
+ *
  * Fetch skins.
- * 
+ *
  * Create application.
- * 
+ *
  * @async
  * @function  __render
- * 
+ *
  */
 async function __render() {
-    getSkins().then((skins: IPromiseSkins) => {
-        createDataFromFS(skins.skins.length).then((data) => {
-            ReactDOM.render( 
-                <Provider store={store}>
-                    <App data={removeUndefined(data)} skins={skins.skins} online={true} />
-                </Provider>, 
-                document.querySelector("#root") 
-            );
-        });
+  getSkins().then((skins: IPromiseSkins) => {
+    createDataFromFS(skins.skins.length).then((data) => {
+      ReactDOM.render(
+        <Provider store={store}>
+          <App data={removeUndefined(data)} skins={skins.skins} online={true} />
+        </Provider>,
+        document.querySelector("#root")
+      );
     });
-};
+  });
+}
 
 __render();

@@ -1,4 +1,4 @@
 export interface INotFound {
-    image?: string
-    color?: string
+  image?: string
+  color?: string
 }

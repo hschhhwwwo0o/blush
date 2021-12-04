@@ -11,34 +11,34 @@ import { readdirSync } from "fs";
  */
 function getPathsFS(dirs: string[]): string[] {
 
-    /**
-     * File paths
-     * 
-     */
-    let fls: string[] | any[] = new Array();
+  /**
+   * File paths
+   * 
+   */
+  let fls: string[] | any[] = new Array();
 
-    dirs.forEach((path: string) => {
-        if(path !== "") {
+  dirs.forEach((path: string) => {
+    if(path !== "") {
 
-            /**
-             * Files inside a folder 
-             * 
-             */
-            const files = readdirSync(path);
+      /**
+       * Files inside a folder 
+       * 
+       */
+      const files = readdirSync(path);
 
-            /**
-             * File paths
-             * 
-             */
-            const paths: string[] = files.map((file) => {
-                return `${path}\\${file}`;
-            });
+      /**
+       * File paths
+       * 
+       */
+      const paths: string[] = files.map((file) => {
+          return `${path}\\${file}`;
+      });
 
-            fls = [...fls, paths];
-        };
-    });
+      fls = [...fls, paths];
+    };
+  });
 
-    return fls[0];
+  return fls[0];
 };
 
 export default getPathsFS;

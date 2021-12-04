@@ -3,12 +3,12 @@ import { IStore } from "./interface";
 import reducer from "./reducer";
 
 const intialStatePlayer: IStore = {
-    isPlay: false,
-    isAutoPlay: false,
-    nowPlay: 0,
-    currentTimeLine: 0,
-    currentTime: 0,
-    isTracklist: false
+  isPlay: false,
+  isAutoPlay: false,
+  nowPlay: 0,
+  currentTimeLine: 0,
+  currentTime: 0,
+  isTracklist: false
 }
   
 /**

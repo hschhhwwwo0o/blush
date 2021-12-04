@@ -10,27 +10,27 @@ import { statSync } from "fs";
  */
 function InitializeDirectories(paths: string[]): string[] | [] {
 
-    /**
-     * Initialize dirs
-     * 
-     */
-    let dirs: string | any = [];
+  /**
+   * Initialize dirs
+   * 
+   */
+  let dirs: string | any = [];
 
-    /**
-     * Creating dirs based on paths
-     * 
-     */
-    dirs = paths.map((path) => {
-        try {
-            if(statSync(path).isDirectory()){
-                return path;
-            }
-        } catch(err) {
-            return "";
-        };
-    });
+  /**
+   * Creating dirs based on paths
+   * 
+   */
+  dirs = paths.map((path) => {
+    try {
+      if(statSync(path).isDirectory()){
+        return path;
+      }
+    } catch(err) {
+      return "";
+    };
+  });
 
-    return dirs;
+  return dirs;
 }
 
 export default InitializeDirectories;

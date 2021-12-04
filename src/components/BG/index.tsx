@@ -9,52 +9,57 @@ import "./index.styl";
  *
  * @function
  * @component
- * 
- * @param {boolean} online Online / Offline status 
- * @param {string} image Image string 
- * 
+ *
+ * @param {boolean} online Online / Offline status
+ * @param {string} image Image string
+ *
  * @returns {React.FunctionComponent | React.FC} JSX Component
- * 
- * @example 
- * 
+ *
+ * @example
+ *
  * import React from "react";
  * import BG from "./BG";
- * 
+ *
  * const App: React.FunctionComponent = () => {
  *   return <BG />
  * }
- * 
+ *
  */
 const BG: React.FunctionComponent<IBG> = ({ online, image }) => {
+  /**
+   *
+   * Object for inline styles backgroundImage
+   *
+   * @name useImage
+   *
+   */
+  const useImage = { backgroundImage: `url(${image})` };
 
-    /**
-     * 
-     * Object for inline styles backgroundImage
-     * 
-     * @name useImage
-     * 
-     */
-    const useImage = { backgroundImage: `url(${image})` };
+  /**
+   *
+   * Object for inline styles backgroundColor if online == false
+   *
+   * @name useStandartColor
+   *
+   */
+  const useStandartColor = { backgroundColor: "#461027" };
 
-    /**
-     * 
-     * Object for inline styles backgroundColor if online == false
-     * 
-     * @name useStandartColor
-     * 
-     */
-    const useStandartColor = { backgroundColor: "#461027" };
+  /**
+   * Get store values
+   */
+  const { isTracklist } = useSelector((store: IStore) => {
+    return {
+      isTracklist: store.isTracklist,
+    };
+  });
 
-    /**
-     * Get store values
-     */
-    const { isTracklist } = useSelector((store: IStore) => {
-        return {
-            isTracklist: store.isTracklist,
-        }
-    });
-
-    return <div id="bg" style={online ? useImage : useStandartColor} className={isTracklist ? "bright" : ""} />
-}
+  return (
+    <div
+      id="bg"
+      style={online ? useImage : useStandartColor}
+      className={isTracklist ? "bright" : ""}
+    />
+  );
+};
 
 export default BG;

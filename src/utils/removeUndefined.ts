@@ -7,9 +7,9 @@
  * @returns {Array} Array without undefined
  */
 function removeUndefined(arr: any): any[] {
-    return arr.filter((element: any) => {
-        return element !== undefined;
-    });
+  return arr.filter((element: any) => {
+    return element !== undefined;
+  });
 }
 
 export default removeUndefined;

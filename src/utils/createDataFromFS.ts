@@ -22,92 +22,92 @@ import { ITrack } from "../types";
  */
 function createDataFromFS(skinsLength?: number): Promise<ITrack[]> {
 
-    /**
-     * Array paths to dirs with music 
-     * @type {Array<string>}
-     * 
-     */
-    const dirs: string[] = InitializeDirectories([
-        `${OS.userInfo().homedir}/Music/test`,
-        `${OS.userInfo().homedir}/Music`,
-        `${OS.userInfo().homedir}/Music/testy`,
-    ]);
+  /**
+   * Array paths to dirs with music 
+   * @type {Array<string>}
+   * 
+   */
+  const dirs: string[] = InitializeDirectories([
+    `${OS.userInfo().homedir}/Music/test`,
+    `${OS.userInfo().homedir}/Music`,
+    `${OS.userInfo().homedir}/Music/testy`,
+  ]);
+
+  /**
+   * First load skin ID
+   * @type {number} Initial Skin ID
+   * 
+   */
+  let initialSkin: number = Math.floor(Math.random() * skinsLength);
+
+  /**
+   * Finally Array of promises
+   * Initialize data
+   * 
+   * @type {Array<Promise>}
+   * 
+   */
+  const data = getPathsFS(dirs).map(async(URI: string) => {
 
     /**
-     * First load skin ID
-     * @type {number} Initial Skin ID
+     * String extname
+     * 
+     * @type {string} Extname
+     * 
+     * @example ".mp3", ".ogg"
      * 
      */
-    let initialSkin: number = Math.floor(Math.random() * skinsLength);
+    let ext: string = path.extname(URI);
 
     /**
-     * Finally Array of promises
-     * Initialize data
+     * If extname is audio format.
      * 
-     * @type {Array<Promise>}
+     * Else return undefined
      * 
      */
-    const data = getPathsFS(dirs).map(async(URI: string) => {
+    if(checkFileExtension(ext)) {
 
-        /**
-         * String extname
-         * 
-         * @type {string} Extname
-         * 
-         * @example ".mp3", ".ogg"
-         * 
-         */
-        let ext: string = path.extname(URI);
+      /**
+       * Metadata audio
+       * 
+       * @type {IAudioMetadata}
+       * 
+       * Path to interface: "node_modules/music-metadata/lib/type"
+       * 
+       * More about npm package: https://www.npmjs.com/package/music-metadata
+       * 
+       */
+      const metadata: IAudioMetadata = await parseFile(URI);
 
-        /**
-         * If extname is audio format.
-         * 
-         * Else return undefined
-         * 
-         */
-        if(checkFileExtension(ext)) {
+      /**
+       * Check initialSkin overflow
+       * 
+       */
+      initialSkin < skinsLength - 2 ? initialSkin++ : initialSkin = 0;
 
-            /**
-             * Metadata audio
-             * 
-             * @type {IAudioMetadata}
-             * 
-             * Path to interface: "node_modules/music-metadata/lib/type"
-             * 
-             * More about npm package: https://www.npmjs.com/package/music-metadata
-             * 
-             */
-            const metadata: IAudioMetadata = await parseFile(URI);
-
-            /**
-             * Check initialSkin overflow
-             * 
-             */
-            initialSkin < skinsLength - 2 ? initialSkin++ : initialSkin = 0;
-
-            /**
-             * Return metadata
-             * 
-             */
-            return {
-                url:        createMp3ObjectURL(URI),
-                artist:     metadata.common?.artist,
-                duration:   metadata.format?.duration,
-                title:      metadata.common?.title,
-                skin_id:    initialSkin,
-            };
-        };
-    });
+      /**
+       * Return metadata
+       * 
+       */
+      return {
+          url:        createMp3ObjectURL(URI),
+          artist:     metadata.common?.artist,
+          duration:   metadata.format?.duration,
+          title:      metadata.common?.title,
+          skin_id:    initialSkin,
+      };
+    };
+  });
     
-    /**
-     * We are waiting for the fulfillment of all promises
-     * 
-     * Read more: 
-     * https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise/all
-     * https://learn.javascript.ru/promise-api
-     * 
-     */
-    return Promise.all(data);
+  /**
+   * We are waiting for the fulfillment of all promises
+   * 
+   * Read more: 
+   * https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise/all
+   * https://learn.javascript.ru/promise-api
+   * 
+   */
+  return Promise.all(data);
 };
 
 export default createDataFromFS;

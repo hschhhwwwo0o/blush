@@ -9,65 +9,65 @@
  */
 function formatTime(time: number): string {
 
-    /**
-     * Initial minutes variable
-     * 
-     */
-    let minutes: number = time / 60;
+  /**
+   * Initial minutes variable
+   * 
+   */
+  let minutes: number = time / 60;
+
+  /**
+   * Initial seconds variable
+   * 
+   */
+  let secs: number = time % 60;
+
+  /**
+   * Initial string formated seconds
+   * 
+   */
+  let formatSeconds: string;
+
+  /**
+   * Initial string formated minutes
+   * 
+   */
+  let formatMinutes: string = minutes.toString().split(".")[0];
+
+  /**
+   * Set formated seconds
+   * 
+   */
+  if(secs.toFixed().toString().length === 1) {
 
     /**
-     * Initial seconds variable
-     * 
-     */
-    let secs: number = time % 60;
-
-    /**
-     * Initial string formated seconds
-     * 
-     */
-    let formatSeconds: string;
-
-    /**
-     * Initial string formated minutes
-     * 
-     */
-    let formatMinutes: string = minutes.toString().split(".")[0];
-
-    /**
-     * Set formated seconds
-     * 
-     */
-    if(secs.toFixed().toString().length === 1) {
-
-        /**
-         * if the number is two-digit {
-         *   formatSeconds = "08" // Add "0"
-         * }
-         * 
-         */
-        formatSeconds = `0${secs.toFixed().toString()}`;
-    } else {
-
-        /**
-         * Else, we create a regular string from the number 
-         * 
-         */
-        formatSeconds = secs.toFixed().toString();
-    }
-    
-    /**
-     * If seconds === 60 {
-     *   Add minute;
-     *   Reset Seconds;
+     * if the number is two-digit {
+     *   formatSeconds = "08" // Add "0"
      * }
      * 
      */
-    if(formatSeconds == "60") {
-        minutes++;
-        return `${minutes.toString().split(".")[0]}:00`;
-    }
+    formatSeconds = `0${secs.toFixed().toString()}`;
+  } else {
 
-    return `${formatMinutes}:${formatSeconds}`;
+    /**
+     * Else, we create a regular string from the number 
+     * 
+     */
+    formatSeconds = secs.toFixed().toString();
+  }
+    
+  /**
+   * If seconds === 60 {
+   *   Add minute;
+   *   Reset Seconds;
+   * }
+   * 
+   */
+  if(formatSeconds == "60") {
+    minutes++;
+    return `${minutes.toString().split(".")[0]}:00`;
+  }
+
+  return `${formatMinutes}:${formatSeconds}`;
 }
 
 export default formatTime;
