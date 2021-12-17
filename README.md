@@ -59,3 +59,7 @@
 [cormorant-garamond]: https://fonts.google.com/specimen/Cormorant+Garamond?query=Cormorant+Garamond
 
 Made with love ❤️
+
+My Telegram: **@ssandry0** \
+My Behance: **https://www.behance.net/aftertaste** \
+My Dribbble: **https://dribbble.com/ssandry0**
