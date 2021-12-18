@@ -62,6 +62,6 @@
 
 Made with love ❤️
 
-My Telegram: **@ssandry0** \
-My Behance: **https://www.behance.net/aftertaste** \
-My Dribbble: **https://dribbble.com/ssandry0**
+I'm on Telegram: **@ssandry0** \
+I'm on Behance: **https://www.behance.net/aftertaste** \
+I'm on Dribbble: **https://dribbble.com/ssandry0**
