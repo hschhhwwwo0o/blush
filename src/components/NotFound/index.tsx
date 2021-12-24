@@ -29,10 +29,7 @@ const NotFound: React.FunctionComponent<INotFound> = ({ image, color }) => {
   return (
     <>
       <TheTitlebar />
-      <TheMeta
-        title="Music Not Found"
-        artist="Add your music on E:/Music directory"
-      />
+      <TheMeta title="Music Not Found" artist="Add your music on E:/Music directory" />
     </>
   );
 };

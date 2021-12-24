@@ -8,12 +8,12 @@ const intialStatePlayer: IStore = {
   nowPlay: 0,
   currentTimeLine: 0,
   currentTime: 0,
-  isTracklist: false
-}
-  
+  isTracklist: false,
+};
+
 /**
- * Function create store 
- * 
+ * Function create store
+ *
  * More about: https://redux.js.org/api/createstore
  */
 export default createStore(reducer, intialStatePlayer);

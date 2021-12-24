@@ -79,11 +79,7 @@ const App: React.FunctionComponent<IApp> = ({ data, skins, online }) => {
         <>
           <TheTitleBar />
           <section>
-            <TheMeta
-              title={getTrack(nowPlay).title}
-              artist={getTrack(nowPlay).artist}
-              mainColor={getSkin(nowPlay).mainColor}
-            />
+            <TheMeta title={getTrack(nowPlay).title} artist={getTrack(nowPlay).artist} mainColor={getSkin(nowPlay).mainColor} />
             <ThePlayer
               data={data}
               audio={getTrack(nowPlay).url}

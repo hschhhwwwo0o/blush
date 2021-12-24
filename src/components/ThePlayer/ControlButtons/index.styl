@@ -1,82 +1,82 @@
 #ThePlayer__controls
-    background-color: #F96243
+  background-color: #F96243
+  display: flex
+  align-items: center
+  flex-direction: row
+  margin-left: -16px
+  transition-duration: 1.5s
+
+  > #ThePlayer__empty
+    width: 96px
+    height: 193px
+    background: #0061B0
+    border-radius: 0px 99px 99px 0px
+    transition-duration: 2s
+
+  > #ThePlayer__play
+    width: 193px
+    height: 193px
+    background: #461027
+    border-radius: 100px
     display: flex
     align-items: center
-    flex-direction: row
-    margin-left: -16px
-    transition-duration: 1.5s
+    justify-content: center
+    transition-duration: .25s
+    opacity: 0.9
 
-    > #ThePlayer__empty
-        width: 96px
-        height: 193px
-        background: #0061B0
-        border-radius: 0px 99px 99px 0px
-        transition-duration: 2s
+    &:hover
+      opacity: 1
+        
+      svg
+        transform: translateY(-2px)
 
-    > #ThePlayer__play
-        width: 193px
-        height: 193px
-        background: #461027
-        border-radius: 100px
-        display: flex
-        align-items: center
-        justify-content: center
-        transition-duration: .25s
-        opacity: 0.9
+    svg
+      transition-duration: .35s
 
-        &:hover
-            opacity: 1
-            
-            svg
-                transform: translateY(-2px)
+      path, rect
+        transition-duration: .85s
 
-        svg
-            transition-duration: .35s
+  > #ThePlayer__prev
+    width: 96px
+    height: 193px
+    background: #FFCD36
+    border-radius: 0px 99px 99px 0px
+    transition-duration: .8s
+    opacity: 0.9
+    display: flex
+    align-items: center
+    justify-content: center
 
-            path, rect
-                transition-duration: .85s
+    &:hover
+      opacity: 1
 
-    > #ThePlayer__prev
-        width: 96px
-        height: 193px
-        background: #FFCD36
-        border-radius: 0px 99px 99px 0px
-        transition-duration: .8s
-        opacity: 0.9
-        display: flex
-        align-items: center
-        justify-content: center
+      div
+        transform: translateX(-2px)
 
-        &:hover
-            opacity: 1
+    > div
+      width: 31px
+      height: 30px
+      background-size: cover
+      background-position: center
+      background-image: url("../../../icons/prev.svg")
+      transition-duration: .35s
 
-            div
-                transform: translateX(-2px)
+  > #ThePlayer__next
+    width: 96px
+    height: 193px
+    background: #F2EEE3
+    border-radius: 0px 99px 99px 0px
+    display: flex
+    align-items: center
+    justify-content: center
+    transition-duration: .65s
+    opacity: 0.9
 
-        > div
-            width: 31px
-            height: 30px
-            background-size: cover
-            background-position: center
-            background-image: url("../../../icons/prev.svg")
-            transition-duration: .35s
+    &:hover
+      opacity: 1
 
-    > #ThePlayer__next
-        width: 96px
-        height: 193px
-        background: #F2EEE3
-        border-radius: 0px 99px 99px 0px
-        display: flex
-        align-items: center
-        justify-content: center
-        transition-duration: .65s
-        opacity: 0.9
+      svg
+        transform: translateX(2px)
 
-        &:hover
-            opacity: 1
-
-            svg
-                transform: translateX(2px)
-
-        > svg
-            transition-duration: .35s
+    > svg
+      transition-duration: .35s

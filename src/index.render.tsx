@@ -29,7 +29,7 @@ async function __render() {
         <Provider store={store}>
           <App data={removeUndefined(data)} skins={skins.skins} online={true} />
         </Provider>,
-        document.querySelector("#root")
+        document.querySelector("#root"),
       );
     });
   });

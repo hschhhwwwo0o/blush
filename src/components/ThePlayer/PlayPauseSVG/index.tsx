@@ -22,20 +22,11 @@ interface IPlayPauseSVG {
  * @returns {React.FunctionComponent}
  *
  */
-const PlayPauseSVG: React.FunctionComponent<IPlayPauseSVG> = ({
-  isPlay,
-  color,
-}) => {
+const PlayPauseSVG: React.FunctionComponent<IPlayPauseSVG> = ({ isPlay, color }) => {
   return (
     <>
       {!isPlay && (
-        <svg
-          width="31"
-          height="30"
-          viewBox="0 0 31 30"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clipPath="url(#play)">
             <path
               style={{ fill: color }}
@@ -51,13 +42,7 @@ const PlayPauseSVG: React.FunctionComponent<IPlayPauseSVG> = ({
         </svg>
       )}
       {isPlay && (
-        <svg
-          width="31"
-          height="31"
-          viewBox="0 0 31 31"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="9" y="2" width="3" height="27" rx="1.5" fill={color} />
           <rect x="20" y="2" width="3" height="27" rx="1.5" fill={color} />
         </svg>

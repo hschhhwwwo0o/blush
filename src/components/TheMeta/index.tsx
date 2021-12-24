@@ -27,11 +27,7 @@ import "./index.styl";
  * }
  *
  */
-const TheMeta: React.FunctionComponent<ITheMeta> = ({
-  title,
-  artist,
-  mainColor,
-}) => {
+const TheMeta: React.FunctionComponent<ITheMeta> = ({ title, artist, mainColor }) => {
   /**
    *
    * Boolean value. If true "TheMeta" component make hidden.

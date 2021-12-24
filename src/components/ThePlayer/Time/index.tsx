@@ -58,19 +58,14 @@ const Time: React.FunctionComponent<ITimeElement> = (props) => {
   function onChangeTimeLine(e: any) {
     dispatch({
       type: CHANGE_TIMELINE,
-      currentTimeLine:
-        props.audioRef.current.duration * (+e.target.value / props.duration),
+      currentTimeLine: props.audioRef.current.duration * (+e.target.value / props.duration),
     });
-    props.audioRef.current.currentTime =
-      props.audioRef.current.duration * (+e.target.value / props.duration);
+    props.audioRef.current.currentTime = props.audioRef.current.duration * (+e.target.value / props.duration);
   }
 
   return (
     <>
-      <div
-        id="ThePlayer__timer"
-        style={{ borderTop: `4px solid ${props.color}` }}
-      >
+      <div id="ThePlayer__timer" style={{ borderTop: `4px solid ${props.color}` }}>
         <section>
           <input
             id="ThePlayer__timeline"
@@ -86,9 +81,7 @@ const Time: React.FunctionComponent<ITimeElement> = (props) => {
             style={{ background: gradient }}
           />
           <div id="ThePlayer__time">
-            <h2 style={{ color: props.color }}>
-              {formatTime(props.currentTime)}
-            </h2>
+            <h2 style={{ color: props.color }}>{formatTime(props.currentTime)}</h2>
             <h2>{formatTime(props.duration)}</h2>
           </div>
         </section>

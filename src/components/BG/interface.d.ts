@@ -1,4 +1,4 @@
 export interface IBG {
-  online?: boolean
-  image?: string
+  online?: boolean;
+  image?: string;
 }

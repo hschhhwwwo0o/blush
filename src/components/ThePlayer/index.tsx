@@ -2,16 +2,7 @@ import React, { useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { IThePlayer } from "./interface";
 import { IStore } from "../../redux/interface";
-import {
-  PLAY,
-  PAUSE,
-  NEXT,
-  PREV,
-  TIMELINE_PLAY,
-  TIMELINE_PAUSE,
-  CHANGE_TIMELINE,
-  CHANGE_TRACK,
-} from "../../redux/actions";
+import { PLAY, PAUSE, NEXT, PREV, TIMELINE_PLAY, TIMELINE_PAUSE, CHANGE_TIMELINE, CHANGE_TRACK } from "../../redux/actions";
 import TheTracklist from "../TheTracklist";
 import ControlButtons from "./ControlButtons";
 import Time from "./Time";
@@ -70,14 +61,7 @@ const ThePlayer: React.FunctionComponent<IThePlayer> = (props) => {
    * react-redux documentation: https://react-redux.js.org/api/hooks
    *
    */
-  const {
-    isPlay,
-    isAutoPlay,
-    currentTimeLine,
-    currentTime,
-    nowPlay,
-    isTracklist,
-  } = useSelector((state: IStore) => {
+  const { isPlay, isAutoPlay, currentTimeLine, currentTime, nowPlay, isTracklist } = useSelector((state: IStore) => {
     return {
       isPlay: state.isPlay,
       isAutoPlay: state.isAutoPlay,
@@ -105,7 +89,7 @@ const ThePlayer: React.FunctionComponent<IThePlayer> = (props) => {
     setIntervalState(
       setInterval(() => {
         dispatch({ type: TIMELINE_PLAY });
-      }, 1000)
+      }, 1000),
     );
   }
 
@@ -237,12 +221,7 @@ const ThePlayer: React.FunctionComponent<IThePlayer> = (props) => {
 
   return (
     <>
-      <audio
-        src={props.audio}
-        ref={audioRef}
-        autoPlay={isAutoPlay}
-        onEnded={nextPlay}
-      />
+      <audio src={props.audio} ref={audioRef} autoPlay={isAutoPlay} onEnded={nextPlay} />
       <div id="ThePlayer" style={{ opacity: isTracklist ? "0" : "1" }}>
         <ControlButtons
           isPlay={isPlay}
@@ -253,19 +232,9 @@ const ThePlayer: React.FunctionComponent<IThePlayer> = (props) => {
           secondColor={props.secondColor}
           thirdColor={props.thirdColor}
         />
-        <Time
-          currentTime={currentTime}
-          duration={props.duration}
-          currentTimeLine={currentTimeLine}
-          audioRef={audioRef}
-          color={props.mainColor}
-        />
+        <Time currentTime={currentTime} duration={props.duration} currentTimeLine={currentTimeLine} audioRef={audioRef} color={props.mainColor} />
       </div>
-      <TheTracklist
-        data={props.data}
-        setPlayFromTheTracklist={setPlayFromTheTracklist}
-        mainColor={props.mainColor}
-      />
+      <TheTracklist data={props.data} setPlayFromTheTracklist={setPlayFromTheTracklist} mainColor={props.mainColor} />
     </>
   );
 };

@@ -18,11 +18,7 @@ import "./index.styl";
  * @returns {React.FunctionComponent | React.FC} JSX Component
  *
  */
-const TheTracklist: React.FunctionComponent<ITheTracklist> = ({
-  data,
-  setPlayFromTheTracklist,
-  mainColor,
-}) => {
+const TheTracklist: React.FunctionComponent<ITheTracklist> = ({ data, setPlayFromTheTracklist, mainColor }) => {
   /**
    *
    * Get nowPlay value from global redux state
@@ -45,10 +41,7 @@ const TheTracklist: React.FunctionComponent<ITheTracklist> = ({
 
   return (
     <>
-      <div
-        id="theTracklist"
-        className={isTracklist ? "openTracklist" : "closeTracklist"}
-      >
+      <div id="theTracklist" className={isTracklist ? "openTracklist" : "closeTracklist"}>
         {data.map(({ title, artist }, key) => {
           return (
             <div key={key}>

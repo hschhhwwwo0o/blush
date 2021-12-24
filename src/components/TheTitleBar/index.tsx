@@ -99,18 +99,10 @@ const TheTitleBar: React.FunctionComponent = () => {
             <ListICO isOpen={isTracklist} />
           </div>
           <div id="TheTitlebar__controls">
-            <div
-              id="TheTitlebar__hide"
-              className="button"
-              onClick={windowMinimize}
-            >
+            <div id="TheTitlebar__hide" className="button" onClick={windowMinimize}>
               <HideICO />
             </div>
-            <div
-              id="TheTitlebar__close"
-              className="button"
-              onClick={windowClose}
-            >
+            <div id="TheTitlebar__close" className="button" onClick={windowClose}>
               <CloseICO />
             </div>
           </div>

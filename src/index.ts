@@ -7,7 +7,6 @@ if (require("electron-squirrel-startup")) {
 }
 
 const createWindow = (): void => {
-    
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 1116,
@@ -21,8 +20,8 @@ const createWindow = (): void => {
     webPreferences: {
       contextIsolation: false,
       nodeIntegration: true,
-      enableRemoteModule: true
-    }
+      enableRemoteModule: true,
+    },
   });
 
   // and load the index.html of the app.
