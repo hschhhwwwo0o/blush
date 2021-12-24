@@ -23,13 +23,14 @@ function getPathsFS(dirs: string[]): string[] {
        *
        */
       const files = readdirSync(path);
+      const separate = path.includes("/") ? "/" : "\\";
 
       /**
        * File paths
        *
        */
       const paths: string[] = files.map((file) => {
-        return `${path}\\${file}`;
+        return `${path}${separate}${file}`;
       });
 
       fls = [...fls, paths];
