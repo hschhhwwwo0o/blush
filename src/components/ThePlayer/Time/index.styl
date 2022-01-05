@@ -1,52 +1,52 @@
 #ThePlayer__timer
-    border-top: 4px solid #F96243
+  border-top: 4px solid #F96243
+  display: flex
+  justify-content: center
+  align-items: center
+  transition-duration: 1s
+
+  > section 
+    margin-top: -18px
     display: flex
-    justify-content: center
-    align-items: center
-    transition-duration: 1s
+    flex-direction: column
+    justify-content: space-between
 
-    > section 
-        margin-top: -18px
-        display: flex
-        flex-direction: column
-        justify-content: space-between
+  #ThePlayer__timeline:hover
+    opacity: 0.5
 
-    #ThePlayer__timeline:hover
-        opacity: 0.5
+  #ThePlayer__timeline:hover ~ #ThePlayer__time h2:nth-child(1)
+    opacity: 0.5
 
-    #ThePlayer__timeline:hover ~ #ThePlayer__time h2:nth-child(1)
-        opacity: 0.5
+  #ThePlayer__time
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    order: 1
+    transition-duration: 3s
 
-    #ThePlayer__time
-        display: flex
-        flex-direction: row
-        justify-content: space-between
-        order: 1
-        transition-duration: 3s
+    h2
+      transition-duration: .65s
+      font-family: "Cormorant Garamond"
+      font-style: normal
+      font-weight: 300
+      font-size: 86px
+      line-height: 104px
+      font-feature-settings: "pnum" on, "lnum" on
+      color: #F2EEE3
+      margin-bottom: 10px
 
-        h2
-            transition-duration: .65s
-            font-family: "Cormorant Garamond"
-            font-style: normal
-            font-weight: 300
-            font-size: 86px
-            line-height: 104px
-            font-feature-settings: "pnum" on, "lnum" on
-            color: #F2EEE3
-            margin-bottom: 10px
+      &:nth-child(1)
+        color: #CA5230;
 
-            &:nth-child(1)
-                color: #CA5230;
+  #ThePlayer__timeline
+    order: 2
+    -webkit-appearance: none
+    width: 402px
+    height: 4px
+    transition-duration: .65s
+    border-radius: 4px
+    background-color: #E1D8D0
+    opacity: 90%
 
-    #ThePlayer__timeline
-        order: 2
-        -webkit-appearance: none
-        width: 402px
-        height: 4px
-        transition-duration: .65s
-        border-radius: 4px
-        background-color: #E1D8D0
-        opacity: 90%
-
-        &::-webkit-slider-thumb
-            opacity: 0
+    &::-webkit-slider-thumb
+      opacity: 0

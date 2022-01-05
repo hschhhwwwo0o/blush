@@ -1,54 +1,54 @@
 header
-    -webkit-app-region: drag
-    height: 102px
-    width: 100vw
-    background-color: transparent
-    display: flex
-    flex-direction: column
-    justify-content: center
+  -webkit-app-region: drag
+  height: 102px
+  width: 100vw
+  background-color: transparent
+  display: flex
+  flex-direction: column
+  justify-content: center
 
-    > section#TheTitlebar 
-        width: 100%
-        box-sizing: border-box
-        padding-left: 77px
-        padding-right: 77px
+  > section#TheTitlebar 
+    width: 100%
+    box-sizing: border-box
+    padding-left: 77px
+    padding-right: 77px
 
 
 #TheTitlebar
-    display: flex
-    flex-direction: row
-    justify-content: space-between
+  display: flex
+  flex-direction: row
+  justify-content: space-between
 
-    > #TheTitlebar__logo
-        font-family: "Open Sans"
-        font-style: normal
-        font-weight: bold
-        font-size: 14px
-        line-height: 19px
-        width: 48px
-        color: #FFFFFF
+  > #TheTitlebar__logo
+    font-family: "Open Sans"
+    font-style: normal
+    font-weight: bold
+    font-size: 14px
+    line-height: 19px
+    width: 48px
+    color: #FFFFFF
 
-    > #TheTitlebar__controls
-        width: 48px
-        height: 20px
-        display: grid
-        grid-template-columns: 1fr 1fr
-        gap: 6px
+  > #TheTitlebar__controls
+    width: 48px
+    height: 20px
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 6px
 
-        > .button
-            -webkit-app-region: no-drag
-            display: flex
-            justify-content: center
-            align-items: center
-            transition-duration: .45s
+    > .button
+      -webkit-app-region: no-drag
+      display: flex
+      justify-content: center
+      align-items: center
+      transition-duration: .45s
 
-        > #TheTitlebar__hide
-            &:hover
-                opacity: 0.6
+    > #TheTitlebar__hide
+      &:hover
+        opacity: 0.6
 
-        > #TheTitlebar__close
-            &:hover
-                opacity: 0.6
+    > #TheTitlebar__close
+      &:hover
+        opacity: 0.6
 
-            svg
-                transform: scale(0.85)
+    svg
+      transform: scale(0.85)
