@@ -3,11 +3,11 @@
 
 ## BLUSH Music
 
-**BLUSH Music is a music player written in the [ElectronJS] framework** \
-**The project was built using Electron-Forge** \
-**Used package manager: [Yarn]**
+BLUSH Music is a music player written in the [ElectronJS] framework \
+The project was built using Electron-Forge \
+Used package manager: [Yarn]
 
-**BLUSH Music on [Behance], [Dribbble]**
+BLUSH Music on [Behance], [Dribbble]
 
 ## Tech Stack
 
@@ -23,23 +23,23 @@
 
 ## Design
 
-**The original design is presented on <a href="https://dribbble.com/shots/7076055-Play">Dribble</a>** \
-**Author of the original design: <a href="https://dribbble.com/Tamarashvili">Giga Tamarashvili</a>**
+The original design is presented on <a href="https://dribbble.com/shots/7076055-Play">Dribble</a> \
+Author of the original design: <a href="https://dribbble.com/Tamarashvili">Giga Tamarashvili</a>
 
-**Design instruments: [Figma]**
+Design instruments: [Figma]
 
 ## Assets/Pictures
 
-**The pictures are taken from <a href="https://www.tretyakovgallery.ru/">Tretyakov Gallery</a>**
+The pictures are taken from <a href="https://www.tretyakovgallery.ru/">Tretyakov Gallery</a>
 
 ## Assets/Icons
 
-**Icons to take from [Flaticon]**
+Icons to take from [Flaticon]
 
 ## Assets/Fonts
 
-- **[Google-Fonts] / [Open-Sans]**
-- **[Google-Fonts] / [Cormorant-Garamond]**
+- [Google-Fonts] / [Open-Sans]
+- [Google-Fonts] / [Cormorant-Garamond]
 
 [nodejs]: https://nodejs.org/en/
 [reactjs]: https://reactjs.org/
