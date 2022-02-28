@@ -1,5 +1,5 @@
-![BLUSH](md/fff.jpg "BLUSH")
-![Preview](md/nb.jpg "Preview")
+![BLUSH](md/fff.jpg#gh-light-mode-only)
+![Preview](md/nb.jpg#gh-light-mode-only)
 
 ## BLUSH Music
 
