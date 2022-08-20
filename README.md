@@ -62,5 +62,5 @@ Icons to take from [Flaticon]
 
 Made with love ❤️
 
-I'm on Behance: **https://www.behance.net/aftertaste** \
+I'm on Behance: **https://www.behance.net/hschhhwwwo0o** \
 I'm on Dribbble: **https://dribbble.com/ssandry0**
