@@ -58,9 +58,4 @@ Icons to take from [Flaticon]
 [electron-forge]: https://www.electronforge.io/
 [cormorant-garamond]: https://fonts.google.com/specimen/Cormorant+Garamond?query=Cormorant+Garamond
 
-<br />
-
 Made with love ❤️
-
-I'm on Behance: **https://www.behance.net/hschhhwwwo0o** \
-I'm on Dribbble: **https://dribbble.com/ssandry0**
